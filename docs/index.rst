@@ -10,12 +10,12 @@ Welcome to Locus Lock's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   autodoc
+   introduction
 
 
-Indices and Tables
-==================
+.. Indices and Tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
