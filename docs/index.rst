@@ -13,7 +13,7 @@ Welcome to helloWorld's documentation!
    autodoc
 
 
-Indices and tables
+Indices and Tables
 ==================
 
 * :ref:`genindex`
