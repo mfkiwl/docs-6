@@ -38,11 +38,18 @@ release = '1.0.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+# extensions = [
+#     'sphinx_rtd_theme',
+#     'sphinx.ext.autodoc',
+#     'sphinx.ext.viewcode',
+#     'sphinx.ext.githubpages',
+# ]
+
 extensions = [
     'sphinx_rtd_theme',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx.ext.autosectionlabel',
+    'sphinx_tabs.tabs',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -91,7 +98,7 @@ html_theme = 'sphinx_rtd_theme'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-html_logo = 'images/black4x.png'
+html_logo = 'images/white4x.png'
 # html_favicon = 'images/logo-32x32.ico'
 html_theme_options = {
     'logo_only': False,
@@ -122,7 +129,7 @@ html_js_files = ["js/toggle.js"]
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'locuslockdoc'
+# htmlhelp_basename = 'locuslockdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -179,7 +186,7 @@ htmlhelp_basename = 'locuslockdoc'
 # -- Options for Epub output -------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = project
+## epub_title = project
 
 # The unique identifier of the text. This can be a ISBN number
 # or the project homepage.
@@ -191,7 +198,7 @@ epub_title = project
 # epub_uid = ''
 
 # A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.html']
+## epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
