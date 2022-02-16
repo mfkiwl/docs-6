@@ -20,7 +20,6 @@ ZENITH_DOPPLER_STD = 0.3
 ELEVATION_DEPENDENT_WEIGHTING = TRUE
 INNOVATIONS_TEST_THRESHOLD_FACTOR = 2
 
-
 PLATFORM_ID
 -----------
 Identifier of the receiver platform.
@@ -61,28 +60,28 @@ CLOCK_TYPE
 ----------
 Assumed receiver clock model. Select from the following options:
 
-- ``TCXO_LOW_QUALITY``
-- ``TCXO``
-- ``OCXO_LOW_QUALITY``
-- ``OCXO``
+* ``TCXO_LOW_QUALITY``
+* ``TCXO``
+* ``OCXO_LOW_QUALITY``
+* ``OCXO``
 
 DYNAMICS_MODEL
 --------------
 Assumed antenna motion model. Select from the following options:
 
-- ``STATIC``
-- ``NEARLY_CONSTANT_VELOCITY``
-- ``NEARLY_CONSTANT_ACCELERATION``
-- ``LOW_EARTH_ORBIT``
-- ``IMU_BASED``
+* ``STATIC``
+* ``NEARLY_CONSTANT_VELOCITY``
+* ``NEARLY_CONSTANT_ACCELERATION``
+* ``LOW_EARTH_ORBIT``
+* ``IMU_BASED``
 
 SQRT_Q_TILDE
 ------------
 The process noise for all dynamics models is expressed in terms of ``SQRT_Q_TILDE``, the square root of the noise intensity. See Bar Shalom "Estimation with Applications to Tracking and Navigation" sections 6.2.1 to 6.2.3 for details. The units of ``SQRT_Q_TILDE``are as follows for each dynamics model:
 
-- STATIC                          meters/sqrt(sec)
-- NEARLY_CONSTANT_VELOCITY        meters/sqrt(sec^3)
-- NEARLY_CONSTANT_ACCELERATION    meters/sqrt(sec^5)
+* STATIC                          meters/sqrt(sec)
+* NEARLY_CONSTANT_VELOCITY        meters/sqrt(sec^3)
+* NEARLY_CONSTANT_ACCELERATION    meters/sqrt(sec^5)
 
 ``SQRT_Q_TILDE`` represents the standard deviation of error induced on position, velocity, or acceleration state elements by the process noise over a 1-second propagation step.  The standard deviation corresponding to a T-second step is then approximated as sigmaX = sqrt(T)*``SQRT_Q_TILDE`` (see, e.g., Eq. 6.22-13 in Bar Shalom). This approximation is valid for short T; for long T, one needs to take multiple short propagation steps.
 

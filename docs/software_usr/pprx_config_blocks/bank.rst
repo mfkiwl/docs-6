@@ -174,9 +174,9 @@ PLL_DEFAULT_LOOP_ORDER
 ----------------------
 Possible closed-loop loop orders for phase tracking loops. Select from the following options:
 
-- ``ORDER1`` 
-- ``ORDER2``
-- ``ORDER3``
+* ``ORDER1`` 
+* ``ORDER2``
+* ``ORDER3``
 
 PLL_HYBRID_BANDWIDTH_HZ
 -----------------------
@@ -186,25 +186,25 @@ PLL_HYBRID_LOOP_ORDER
 ---------------------
 Possible closed-loop loop orders for phase tracking loops. Select from the following options:
 
-- ``ORDER1`` 
-- ``ORDER2``
-- ``ORDER3``
+* ``ORDER1`` 
+* ``ORDER2``
+* ``ORDER3``
 
 PLL_DEFAULT_DISCRIMINATOR_TYPE
 ------------------------------
 Types of phase tracking loop discriminators. Select from the following options:
 
-- ``AT_DISC``: Two-quadrant arctangent:  atan(Q/I)
-- ``AT4_DISC``: Four-quadrant arctangent: atan2(Q,I)
+* ``AT_DISC``: Two-quadrant arctangent:  atan(Q/I)
+* ``AT4_DISC``: Four-quadrant arctangent: atan2(Q,I)
 
 TRACKING_STRATEGY
 -----------------
 Signal tracking strategy. Select from the following options:
 
-- ``TRADITIONAL``: Traditional fll/pll/dll tracking loops
-- ``HYBRID``: Vector-aided fll/pll/dll tracking loops
-- ``VECTOR``: Fully vectorized tracking with batch superaccumulation fitting
-- ``DEEP``: Fully vectorized tracking with batch superaccumulation fitting and IMU aiding at the lowest level
+* ``TRADITIONAL``: Traditional fll/pll/dll tracking loops
+* ``HYBRID``: Vector-aided fll/pll/dll tracking loops
+* ``VECTOR``: Fully vectorized tracking with batch superaccumulation fitting
+* ``DEEP``: Fully vectorized tracking with batch superaccumulation fitting and IMU aiding at the lowest level
 
 
 NOISE_FLOOR_CORRECTION_FACTOR
@@ -271,9 +271,9 @@ FLL_DEFAULT_LOOP_ORDER
 ----------------------
 Possible closed-loop loop orders. Select from the following options:
 
-- ``ORDER1`` 
-- ``ORDER2``
-- ``ORDER3``
+* ``ORDER1`` 
+* ``ORDER2``
+* ``ORDER3``
 
 FLL_NBS1_NOM, FLL_NBS1_WEAK
 ---------------------------
@@ -295,11 +295,11 @@ CODEGEN_TYPE
 ------------
 Type of oversampled code generators. Select from the following options:
 
-- ``NONE``
-- ``LOOKUP``
-- ``PSIAKI``
-- ``FULL_PRECISION``
-- ``MULTI_TAP``
+* ``NONE``
+* ``LOOKUP``
+* ``PSIAKI``
+* ``FULL_PRECISION``
+* ``MULTI_TAP``
 
 MSAMPFRAC
 ---------

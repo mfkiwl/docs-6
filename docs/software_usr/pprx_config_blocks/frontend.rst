@@ -36,7 +36,12 @@ An array listing the supported signal types. In the arrays that follow, data at 
 
 FREQ_IF_HZ
 ----------
-Intermediate frequency of the signal, in Hz. See :ref:`calc_fIF_script` python script for how to calculate these numbers.
+Intermediate frequency of the signal, in Hz. See the below python script for how to calculate these numbers.
+
+.. literalinclude:: ./../../../src/calc_fIF.py
+    :linenos:
+    :language: python
+    :lines: 5-15, 36-39
 
 PLL_SIGN_FPLL
 -------------
