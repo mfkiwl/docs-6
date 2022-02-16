@@ -38,9 +38,6 @@ CIRCBUFF_STREAM_IDX = 1
 
 *Repeat for all other signal types*
 
-
-BANK Definitions
-================
 NUM_BANKS
 ---------
 Specifies the number of signals to track. 

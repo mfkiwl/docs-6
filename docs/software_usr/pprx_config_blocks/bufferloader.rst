@@ -8,8 +8,6 @@ The buffer-loader bank consists of the following configurations:
 DEVICE = LION
 TYPE = USB
 
-BUFFER_LOADER Definitions
-=========================
 DEVICE
 ------
 ``LION`` corresponds to the device name.
