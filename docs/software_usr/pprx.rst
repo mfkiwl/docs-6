@@ -21,10 +21,10 @@ To edit the configuration parameters in the ``.config`` file, see the below bloc
    :maxdepth: 4
    :caption: Contents:
 
-   software_usr/pprx_config_blocks/frontend
-   software_usr/pprx_config_blocks/bank
-   software_usr/pprx_config_blocks/bufferloader
-   software_usr/pprx_config_blocks/estimator
+   pprx_config_blocks/frontend
+   pprx_config_blocks/bank
+   pprx_config_blocks/bufferloader
+   pprx_config_blocks/estimator
 
 How to Run
 ----------
