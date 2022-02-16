@@ -1,13 +1,15 @@
 .. _bufferloader:
-
+=============
+BUFFER_LOADER
+=============
 The buffer-loader bank consists of the following configurations:
 
 [BUFFER_LOADER]
 DEVICE = LION
 TYPE = USB
 
-Definitions
-===========
+BUFFER_LOADER Definitions
+=========================
 DEVICE
 ------
 ``LION`` corresponds to the device name.

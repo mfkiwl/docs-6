@@ -1,5 +1,7 @@
 .. _estimator:
-
+=========
+ESTIMATOR
+=========
 The estimator bank consists of the following configurations:
 
 [ESTIMATOR]
@@ -18,6 +20,6 @@ ZENITH_DOPPLER_STD = 0.3
 ELEVATION_DEPENDENT_WEIGHTING = TRUE
 INNOVATIONS_TEST_THRESHOLD_FACTOR = 2
 
-Definitions
-===========
+ESTIMATOR Definitions
+=====================
 

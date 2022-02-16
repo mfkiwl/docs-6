@@ -1,5 +1,7 @@
 .. _frontend:
-
+=========
+FRONT_END
+=========
 The front-end bank consists of the following configurations:
 
 [LION]
@@ -12,8 +14,8 @@ FREQ_IF_HZ = 2.391428571429e6 2.391428571429e6 2.411428571429e6 2.411428571429e6
 PLL_SIGN_FPLL = 1 1 1 1 1 1 1 1
 CODE_PHASE_BIAS_METERS = 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
 
-Definitions
-===========
+FRONT_END Definitions
+=====================
 SAMPLE_FREQ_NUMERATOR
 ---------------------
 It is assumed that the sampling frequency of any RF front end supported by this code can be expressed in Hz as a ratio of two integers.  For example, the sampling frequency for the Zarlink/Plessey front end is 40e6/7 Hz, which would correspond to SAMPLE_FREQ_NUMERATOR = 40e6 and SAMPLE_FREQ_DENOMINATOR = 7. It is further assumed that double precision is sufficient to represent the time within a single interval of SAMPLE_FREQ_DENOMINATOR seconds.

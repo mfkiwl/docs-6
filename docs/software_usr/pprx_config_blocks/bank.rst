@@ -1,5 +1,7 @@
 .. _bank:
-
+====
+BANK
+====
 The BANK consists of the following configurations:
 
 [BANK]
@@ -37,8 +39,8 @@ CIRCBUFF_STREAM_IDX = 1
 *Repeat for all other signal types*
 
 
-Definitions
-===========
+BANK Definitions
+================
 NUM_BANKS
 ---------
 Specifies the number of signals to track. 

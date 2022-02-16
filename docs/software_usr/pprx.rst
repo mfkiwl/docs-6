@@ -19,7 +19,6 @@ To edit the configuration parameters in the ``.config`` file, see the below bloc
 
 .. toctree::
    :maxdepth: 4
-   :caption: Contents:
 
    pprx_config_blocks/frontend
    pprx_config_blocks/bank
