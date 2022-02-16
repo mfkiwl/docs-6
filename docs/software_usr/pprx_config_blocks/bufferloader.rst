@@ -14,6 +14,7 @@ DEVICE
 
 TYPE
 ----
-Pick type ``FILE`` to post-process capture files or type ``USB`` to support live capture operations.
+Operational modes. Select from the following options:
 
-
+- ``FILE``: Post-process capture files
+- ``USB``: Support live capture operations
