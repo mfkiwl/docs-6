@@ -43,7 +43,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
-    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.autosectionlabel'
+    'sphinx.ext.intersphinx',
 ]
 
 # extensions = [

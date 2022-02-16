@@ -36,7 +36,7 @@ An array listing the supported signal types. In the arrays that follow, data at 
 
 FREQ_IF_HZ
 ----------
-Intermediate frequency of the signal, in Hz. See the below python script for how to calculate these numbers.
+Intermediate frequency of the signal, in Hz. See the linked python script :doc:`Calculate fIF <./../../../src/calc_fIF.py>` for how to calculate these numbers.
 
 .. literalinclude:: ./../../../src/calc_fIF.py
     :linenos:
