@@ -9,11 +9,11 @@ DEVICE = LION
 TYPE = USB
 
 DEVICE
-------
+^^^^^^^^^^^^^^
 ``LION`` corresponds to the device name.
 
 TYPE
-----
+^^^^^^^^^^^^^^
 Operational modes. Select from the following options:
 
 - ``FILE``: Post-process capture files

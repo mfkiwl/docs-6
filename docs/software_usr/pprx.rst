@@ -18,7 +18,7 @@ pprx configuration files are broken into configuration blocks. The start of each
 To edit the configuration parameters in the ``.config`` file, see the below blocks:
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
 
    pprx_config_blocks/frontend
    pprx_config_blocks/bank

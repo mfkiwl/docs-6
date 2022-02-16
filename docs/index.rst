@@ -7,7 +7,7 @@ Welcome to Locus Lock's documentation!
 ======================================
 
 .. toctree::
-   :maxdepth: 6
+   :maxdepth: 2
    :caption: Contents:
 
    introduction
