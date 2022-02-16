@@ -11,6 +11,8 @@ Welcome to Locus Lock's documentation!
    :caption: Contents:
 
    introduction
+   hardware_usr/index
+   software_usr/index
 
 
 .. Indices and Tables
