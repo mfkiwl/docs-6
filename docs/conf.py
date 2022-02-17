@@ -114,8 +114,8 @@ master_doc = 'index'
 # directly to the root of the documentation.
 html_extra_path = ["_static/css"]
 
-html_css_files = ["css/toggle.css"]
-html_js_files = ["js/toggle.js"]
+html_css_files = ["_static/css/toggle.css"]
+html_js_files = ["_static/js/toggle.js"]
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
