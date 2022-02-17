@@ -1,5 +1,5 @@
 .. _pprx:
-
+===================================
 Precise Positioning Receiver (pprx)
 ===================================
 
@@ -10,10 +10,12 @@ Editing Options Files
 
 pprx is highly configurable via both command-line options and configuration parameters. Type ``pprx --help`` to see a list of command-line options. These options are specified in a ``.opt`` file as seen in the example below:
 
+.. image:: ./../images/lionopt.png
+   :align: left
+
 Editing Configuration Parameters
 --------------------------------
 pprx configuration files are broken into configuration blocks. The start of each block is indicated by a block header, e.g., ``ESTIMATOR``. An example configuration file can be found here:
-
 
 To edit the configuration parameters in the ``.config`` file, see the below blocks:
 
@@ -24,6 +26,7 @@ To edit the configuration parameters in the ``.config`` file, see the below bloc
    pprx_config_blocks/bank
    pprx_config_blocks/bufferloader
    pprx_config_blocks/estimator
+   pprx_config_blocks/display
 
 How to Run
 ----------

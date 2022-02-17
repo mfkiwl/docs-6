@@ -8,10 +8,8 @@ def calc_fIF(L, fTCXO, RDIV, NDIV, FDIV):
  
     Parameters:
        L: Which L-band is used as the center frequency (1), (2), or (5)
-       fTCXO: (1) corresponds to 16368000 Hz and (2) corresponds to 10000000
-       RDIV: Found upon plugging in the RadioLion and observing the syslog/dmesg
-       NDIV: Found upon plugging in the RadioLion and observing the syslog/dmesg
-       FDIV: Found upon plugging in the RadioLion and observing the syslog/dmesg
+       fTCXO: (1) corresponds to 16368000 Hz and (2) corresponds to 10000000 Hz
+       RDIV, NDIV, FDIV: Found upon plugging in the RadioLion and observing the syslog/dmesg
     """
     L1_fC = 1575420000;
     L2_fC = 1227600000;
@@ -31,7 +29,6 @@ def calc_fIF(L, fTCXO, RDIV, NDIV, FDIV):
        fTCXO = TCXO_freq
     elif fTCXO == 2:
        fTCXO = MEMS_freq
-
 
     fCOMP = fTCXO/RDIV
     fLO_actual = fCOMP * (NDIV + FDIV / 1048576)

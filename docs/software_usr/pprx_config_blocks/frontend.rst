@@ -4,15 +4,8 @@ FRONT-END
 =========
 The front-end bank consists of the following configurations:
 
-[LION]
-SAMPLE_FREQ_NUMERATOR = 19200000
-SAMPLE_FREQ_DENOMINATOR = 2
-QUANTIZATION = 2
-NUM_SUPPORTED_SIGNAL_TYPES = 8
-SUPPORTED_SIGNAL_TYPES = GPS_L1_CA_PRIMARY GPS_L1_CA_ALT1 GPS_L2_CLM_PRIMARY GPS_L2_CLM_ALT1 SBAS_L1_I_PRIMARY SBAS_L1_I_ALT1 GALILEO_E1_BC_PRIMARY GALILEO_E1_BC_ALT1
-FREQ_IF_HZ = 2.391428571429e6 2.391428571429e6 2.411428571429e6 2.411428571429e6 2.391428571429e6 2.391428571429e6 2.391428571429e6 2.391428571429e6
-PLL_SIGN_FPLL = 1 1 1 1 1 1 1 1
-CODE_PHASE_BIAS_METERS = 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+.. image:: ./../../images/lionfrontend.png
+   :align: left
 
 SAMPLE_FREQ_NUMERATOR
 ---------------------
@@ -41,7 +34,7 @@ Intermediate frequency of the signal, in Hz. See the linked python script :doc:`
 .. literalinclude:: ./../../../src/calc_fIF.py
     :linenos:
     :language: python
-    :lines: 5-15, 36-39
+    :lines: 5-36
 
 PLL_SIGN_FPLL
 -------------
