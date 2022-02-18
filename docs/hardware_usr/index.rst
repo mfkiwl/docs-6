@@ -1,5 +1,5 @@
 .. _hardware_usr:
-
+===================
 Hardware User Guide
 ===================
 
