@@ -44,7 +44,6 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.autosectionlabel'
-    'sphinxcontrib.osexample'
 ]
 
 # extensions = [
