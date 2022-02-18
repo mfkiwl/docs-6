@@ -75,9 +75,7 @@ SQRT_Q_TILDE represents the standard deviation of error induced on position, vel
 
 INIT_VELOCITY_STD
 -----------------
-At initialization, velocity and acceleration will be constrained because they are not immediately observable. Those constraints will assume a zero-mean Gaussian distribution with the provided standard-deviation for each scalar element.
-
-Standard deviation of initialization velocity, in meters/sec.
+At initialization, velocity and acceleration will be constrained because they are not immediately observable. Those constraints will assume a zero-mean Gaussian distribution with the provided standard-deviation for each scalar element. Standard deviation of initialization velocity, in meters/sec.
 
 INIT_ACCELERATION_STD
 ---------------------
