@@ -1,5 +1,5 @@
 .. _software_usr:
-
+===================
 Software User Guide
 ===================
 
@@ -7,20 +7,31 @@ This section will describe how to use the GRID Software Suite.
 
 .. toctree::
    :maxdepth: 3
-   :caption: pprx:
+   :caption: Software Overview:
+
+   overview
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Precise Positioning Receiver:
 
    pprx
 
 .. toctree::
    :maxdepth: 3
-   :caption: ppengine:
+   :caption: Precise Positioning Engine:
 
    ppengine
 
 
 .. toctree::
    :maxdepth: 3
-   :caption: binflate:
+   :caption: View GRID Outputs:
 
    binflate
 
+.. toctree::
+   :maxdepth: 3
+   :caption: Putting it all together:
+
+   opmodes

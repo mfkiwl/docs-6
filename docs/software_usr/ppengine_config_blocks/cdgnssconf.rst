@@ -115,7 +115,7 @@ DD_PSEUDORANGE_SCALAR_OUTLIER_THRESH_STD
 Default = +INFINITY
 Threshold, in standard deviations, for scalar DD pseudorange outlier rejection. If the scalar normalized innovations value for a DD pseudorange measurement exceeds this threshold, the corresponding GNSS satellite is excluded on all frequencies for all baselines.
 
-See the section titled "Outlier Rejection using Pseudorange Innovations" `here <http://radionavlab.ae.utexas.edu/wp-content/uploads/2022/01/tightCouplingJournal.pdf>`_
+See the section titled "Outlier Rejection using Pseudorange Innovations" in `this paper <https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/02/tight-coupling-journal.pdf>`_.
 
 
 SOFT_RESET_NIS_HISTORY_WINDOW
@@ -123,7 +123,7 @@ SOFT_RESET_NIS_HISTORY_WINDOW
 Default = 0
 Window size, in epochs, of the false fix detection and recovery mechanism. If the double-difference carrier phase normalized innovations squared (NIS) over this window exceeds a chi-squared test threshold, a "soft reset" is performed, falling back to the "float-only" estimator. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.
 
-See the section titled "False fix detection and recovery" `here <http://radionavlab.ae.utexas.edu/wp-content/uploads/2022/01/tightCouplingJournal.pdf>`_
+See the section titled "False fix detection and recovery" in `this paper <https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/02/tight-coupling-journal.pdf>`_.
 
 SOFT_RESET_TEST_PF
 ------------------
@@ -140,7 +140,7 @@ ALLOW_RESEED
 Default = true
 Enable the "re-seed" mechanism of the POSE_AND_TWIST_15_MULTI_MODEL estimator. If the re-seed criteria are met, the "float-only" estimator state will be "re-seeded" with the latest integer fixed solution. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.
 
-See the section titled "Float-only estimator re-seeding" `here <http://radionavlab.ae.utexas.edu/wp-content/uploads/2022/01/tightCouplingJournal.pdf>`_
+See the section titled "Float-only estimator re-seeding" in `this paper <https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/02/tight-coupling-journal.pdf>`_.
 
 RESEED_LAST_FIX_NIS_THRESHOLD
 -----------------------------
