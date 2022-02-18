@@ -52,7 +52,7 @@ Call binflate like this:
 
 For example, the format of channel.log is documented as below:
 
-.. include:: ./../../src/log_file_definitions/channel.txt
+.. literalinclude:: inclusion.txt
 
 If you'd rather inflate the GBX files to binary Matlab .mat files for easy loading into Matlab, call binflate like this:
 

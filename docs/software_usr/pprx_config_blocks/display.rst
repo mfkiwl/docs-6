@@ -30,8 +30,8 @@ Default = false. When true, Banks that would exceed :ref:`MAXIMUM_BANK_COLUMNS` 
 
 MIX_BANK_ROWS
 -------------
-Default = false. ``MIX_ROWS`` determines whether different GenericTypes can be displayed in the same row. This setting is only meaningful when ``WRAP_COLUMNS`` is true.
+Default = false. MIX_BANK_ROWS determines whether different GenericTypes can be displayed in the same row. This setting is only meaningful when WRAP_COLUMNS is true.
 
 REDRAW_PERIOD
 -------------
-Default = 1. Display data are printed every ``REDRAW_PERIOD`` log intervals
+Default = 1. Display data are printed every REDRAW_PERIOD log intervals

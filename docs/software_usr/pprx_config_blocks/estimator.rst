@@ -30,7 +30,7 @@ Indicates whether to allow fixups to set Observables:tOffset so that receiver ti
 
 ELEVATION_MASK_ANGLE_RAD
 ------------------------
-Elevation mask angle, in radians.  Signals arriving at the receiver from transmitters below the elevation mask angle will be excluded from the estimation solution. Set to -PI/2 to prevent elevation masking. In the receiver config file, the elevation mask angle is given in degrees as ``ELEVATION_MASK_ANGLE_DEG``.
+Elevation mask angle, in radians.  Signals arriving at the receiver from transmitters below the elevation mask angle will be excluded from the estimation solution. Set to -PI/2 to prevent elevation masking. In the receiver config file, the elevation mask angle is given in degrees as ELEVATION_MASK_ANGLE_DEG.
 
 BORESIGHT_ELEVATION_MASK_ANGLE_RAD
 ----------------------------------
@@ -65,13 +65,13 @@ Assumed antenna motion model. Select from the following options:
 
 SQRT_Q_TILDE
 ------------
-The process noise for all dynamics models is expressed in terms of ``SQRT_Q_TILDE``, the square root of the noise intensity. See Bar Shalom "Estimation with Applications to Tracking and Navigation" sections 6.2.1 to 6.2.3 for details. The units of ``SQRT_Q_TILDE``are as follows for each dynamics model:
+The process noise for all dynamics models is expressed in terms of SQRT_Q_TILDE, the square root of the noise intensity. See Bar Shalom "Estimation with Applications to Tracking and Navigation" sections 6.2.1 to 6.2.3 for details. The units of ``SQRT_Q_TILDE``are as follows for each dynamics model:
 
 * STATIC                          meters/sqrt(sec)
 * NEARLY_CONSTANT_VELOCITY        meters/sqrt(sec^3)
 * NEARLY_CONSTANT_ACCELERATION    meters/sqrt(sec^5)
 
-``SQRT_Q_TILDE`` represents the standard deviation of error induced on position, velocity, or acceleration state elements by the process noise over a 1-second propagation step.  The standard deviation corresponding to a T-second step is then approximated as sigmaX = sqrt(T)*``SQRT_Q_TILDE`` (see, e.g., Eq. 6.22-13 in Bar Shalom). This approximation is valid for short T; for long T, one needs to take multiple short propagation steps.
+SQRT_Q_TILDE represents the standard deviation of error induced on position, velocity, or acceleration state elements by the process noise over a 1-second propagation step.  The standard deviation corresponding to a T-second step is then approximated as sigmaX = sqrt(T)*SQRT_Q_TILDE (see, e.g., Eq. 6.22-13 in Bar Shalom). This approximation is valid for short T; for long T, one needs to take multiple short propagation steps.
 
 INIT_VELOCITY_STD
 -----------------
@@ -85,7 +85,7 @@ Standard deviation of initialization acceleration, in meters/sec^2.
 
 INTERCHANNEL_BIAS_STD
 ---------------------
-Applicable only to the multi-antenna Estimator, ``INTERCHANNEL_BIAS_STD`` represents the standard deviation of error induced on the interchannel biases of the ALT channels relative to the primary channel by the process noise over a 1-second propagation step.  In the multi-antenna Estimator, each of the primary and ALT channels have their own receiver-clock offsets that are mutually correlated through a common receiver-clock offset rate. When set to 0, a single receiver-clock offset (and rate) will be used for all channels. The units of ``INTERCHANNEL_BIAS_STD`` are seconds/sqrt(sec).
+Applicable only to the multi-antenna Estimator, INTERCHANNEL_BIAS_STD represents the standard deviation of error induced on the interchannel biases of the ALT channels relative to the primary channel by the process noise over a 1-second propagation step.  In the multi-antenna Estimator, each of the primary and ALT channels have their own receiver-clock offsets that are mutually correlated through a common receiver-clock offset rate. When set to 0, a single receiver-clock offset (and rate) will be used for all channels. The units of INTERCHANNEL_BIAS_STD are seconds/sqrt(sec).
 
 ZENITH_PSEUDORANGE_STD
 ----------------------
@@ -129,4 +129,4 @@ If the norm of the estimated velocity vector is below this value, expressed in m
 
 DELTR_FIXUP_RESOLUTION_SEC
 --------------------------
-This quantity is the time fixup resolution, in seconds.  A time fixup DELTR is always chosen to be an integer multiple of this quantity. This implies that ``DELTR_FIXUP_RESOLUTION_SEC`` must be chosen such that for any carrier frequency fc considered within the code, fc*DELTR_FIXUP_RESOLUTION_SEC is an integer number of cycles.
+This quantity is the time fixup resolution, in seconds.  A time fixup DELTR is always chosen to be an integer multiple of this quantity. This implies that DELTR_FIXUP_RESOLUTION_SEC must be chosen such that for any carrier frequency fc considered within the code, fc*DELTR_FIXUP_RESOLUTION_SEC is an integer number of cycles.

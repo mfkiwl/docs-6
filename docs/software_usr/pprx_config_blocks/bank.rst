@@ -45,7 +45,7 @@ Spacing between early and late correlators, in chips
 
 NUM_CHIPS_PER_SUBACCUM
 ----------------------
-Number of chips per subaccumulation. ``NUM_CHIPS_PER_SUBACCUM`` must be an integer divisor of the number of chips in a PRN code cycle (:ref:`NUM_CHIPS_PER_CODE`).
+Number of chips per subaccumulation. NUM_CHIPS_PER_SUBACCUM must be an integer divisor of the number of chips in a PRN code cycle (:ref:`NUM_CHIPS_PER_CODE`).
 
 NUM_CHIPS_PER_CODE
 ------------------
@@ -61,7 +61,7 @@ Maximum number of channels that the Bank object is allowed to have.
 
 NUM_SUBACCUM_PER_ACCUM
 ----------------------
-Integer number of subaccumulation intervals per accumulation interval. If the signal to be tracked is data modulated, then ``NUM_SUBACCUM_PER_ACCUM`` must be an integer divisor of the number of subaccumulations per data symbol (:ref:`NUM_SUBACCUM_PER_SYMBOL`).
+Integer number of subaccumulation intervals per accumulation interval. If the signal to be tracked is data modulated, then NUM_SUBACCUM_PER_ACCUM must be an integer divisor of the number of subaccumulations per data symbol (:ref:`NUM_SUBACCUM_PER_SYMBOL`).
 
 CH_IQSQ_FILTER_TAU_SEC
 ----------------------
@@ -97,7 +97,7 @@ Maximum number of directed standard acquisition attempts allowed per acquisition
 
 FLOORED_RADIX2_FFT_ACQ_SIZE
 ---------------------------
-Default = false. With radix-2-only FFT libraries, samples are interpolated to next radix-2 size. If ``FLOORED_RADIX2_FFT_ACQ_SIZE`` is set, the interpolation size is the previous radix-2 size, improving computational performance but also reducing bandwidth and causing aliasing.
+Default = false. With radix-2-only FFT libraries, samples are interpolated to next radix-2 size. If FLOORED_RADIX2_FFT_ACQ_SIZE is set, the interpolation size is the previous radix-2 size, improving computational performance but also reducing bandwidth and causing aliasing.
 
 DIRECT_TO_TRACK_ACQ_INITIAL_CN0_DB_HZ
 -------------------------------------
@@ -133,7 +133,7 @@ Signals marked unhealthy may still be useful.  When this flag is asserted, all s
 
 ELEVATION_MASK_ANGLE_ACQ_DEG
 ----------------------------
-Elevation mask angle for acquisition, in radians. Signals arriving at the receiver from transmitters below the elevation mask angle will be excluded from direct-to-track acquisition. Set to -PI/2 to prevent elevation masking. In the receiver config file, the elevation mask angle is given in degrees as ``ELEVATION_MASK_ANGLE_ACQ_DEG``.
+Elevation mask angle for acquisition, in radians. Signals arriving at the receiver from transmitters below the elevation mask angle will be excluded from direct-to-track acquisition. Set to -PI/2 to prevent elevation masking. In the receiver config file, the elevation mask angle is given in degrees as ELEVATION_MASK_ANGLE_ACQ_DEG.
 
 BORESIGHT_ELEVATION_MASK_ANGLE_ACQ_RAD
 --------------------------------------

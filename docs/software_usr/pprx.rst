@@ -16,10 +16,9 @@ pprx is highly configurable via both command-line options and configuration para
 
 Editing Configuration Parameters
 --------------------------------
-pprx configuration files are broken into configuration blocks. The start of each block is indicated by a block header, e.g., ``ESTIMATOR``. An example configuration file can be found here:
+pprx configuration files are broken into configuration blocks. The start of each block is indicated by a block header, e.g., ESTIMATOR. An example configuration file can be found here:
 
 To edit the configuration parameters in the ``.config`` file, see the below blocks:
-
 .. toctree::
    :maxdepth: 1
 

@@ -78,7 +78,7 @@ The spherical grid used in constrained baseline ILS requires grid points to be s
 ELEVATION_MASK_ANGLE_RAD
 ------------------------
 Default = 0.25
-Elevation mask angle, in radians. Signals arriving at the receiver from transmitters below the elevation mask angle will be excluded from the estimation solution. Set to -PI/2 to prevent elevation masking. In the receiver config file, the elevation mask angle is given in degrees as ``ELEVATION_MASK_ANGLE_DEG``.
+Elevation mask angle, in radians. Signals arriving at the receiver from transmitters below the elevation mask angle will be excluded from the estimation solution. Set to -PI/2 to prevent elevation masking. In the receiver config file, the elevation mask angle is given in degrees as ELEVATION_MASK_ANGLE_DEG.
 
 BORESIGHT_ELEVATION_MASK_ANGLE_RAD
 ----------------------------------
@@ -103,12 +103,12 @@ Phase lock statistic threshold for strict selection. See comments for :ref:`ENFO
 INNOVATIONS_TEST_PF
 -------------------
 Default = 1e-5
-Threshold for double-difference pseudorange innovations test. (also known as the "float" innovations test). The innovations test is a chi-squared test using the normalized innovations squared (NIS) statistic, with a threshold corresponding to a constant false alarm rate of ``INNOVATIONS_TEST_PF``. If the test is failed for a batch of DD GNSS observables, the POSITION_RTK and ATTITUDE_2D estimators reinitialize themselves. The POSE_AND_TWIST estimators reject that batch of observables but do not reinitialize.
+Threshold for double-difference pseudorange innovations test. (also known as the "float" innovations test). The innovations test is a chi-squared test using the normalized innovations squared (NIS) statistic, with a threshold corresponding to a constant false alarm rate of INNOVATIONS_TEST_PF. If the test is failed for a batch of DD GNSS observables, the POSITION_RTK and ATTITUDE_2D estimators reinitialize themselves. The POSE_AND_TWIST estimators reject that batch of observables but do not reinitialize.
 
 FIX_INNOVATIONS_TEST_PF
 -----------------------
 Default = 1e-5
-Threshold for double-difference carrier phase innovations test. (also known as the "fix" innovations test). The innovations test is a chi-squared test using the normalized innovations squared (NIS) statistic, with a threshold corresponding to a constant false alarm rate of ``FIX_INNOVATIONS_TEST_PF``. Carrier phase NIS is approximated as chi-square distributed, but this not exactly the case because large residuals "tick over" to the next integer (therefore, large carrier phase residuals are not possible). If the test is failed for a batch of DD GNSS observables, the estimator falls back to a float solution (equivalent to a pseudorange-only solution when performing single-epoch integer ambiguity resolution)
+Threshold for double-difference carrier phase innovations test. (also known as the "fix" innovations test). The innovations test is a chi-squared test using the normalized innovations squared (NIS) statistic, with a threshold corresponding to a constant false alarm rate of FIX_INNOVATIONS_TEST_PF. Carrier phase NIS is approximated as chi-square distributed, but this not exactly the case because large residuals "tick over" to the next integer (therefore, large carrier phase residuals are not possible). If the test is failed for a batch of DD GNSS observables, the estimator falls back to a float solution (equivalent to a pseudorange-only solution when performing single-epoch integer ambiguity resolution)
 
 DD_PSEUDORANGE_SCALAR_OUTLIER_THRESH_STD
 ----------------------------------------
@@ -133,7 +133,7 @@ False-alarm probability used to set the false-fix detection chi-squared threshol
 SOFT_RESET_MIN_NUM_FIXES_IN_WINDOW
 ----------------------------------
 Default = 5
-The false fix detector will only be able to fire if there have been at least ``SOFT_RESET_MIN_NUM_FIXES_IN_WINDOW`` integer fixes in the rolling window. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.
+The false fix detector will only be able to fire if there have been at least SOFT_RESET_MIN_NUM_FIXES_IN_WINDOW integer fixes in the rolling window. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.
 
 ALLOW_RESEED
 ------------
@@ -165,24 +165,24 @@ A re-seed is only performed if there were at least RESEED_MIN_FIXES_IN_WINDOW fi
 SQRT_Q_TILDE_POS
 ----------------
 Default = 0.2
-The position process noise for some dynamics models is expressed in terms of ``SQRT_Q_TILDE_POS``, the square root of the noise intensity. See Bar Shalom "Estimation with Applications to Tracking and Navigation" sections 6.2.1 to 6.2.3 for details. The units of ``SQRT_Q_TILDE_POS`` are as follows for each dynamics model:
+The position process noise for some dynamics models is expressed in terms of SQRT_Q_TILDE_POS, the square root of the noise intensity. See Bar Shalom "Estimation with Applications to Tracking and Navigation" sections 6.2.1 to 6.2.3 for details. The units of SQRT_Q_TILDE_POS are as follows for each dynamics model:
 
 STATIC                          meters/sqrt(sec)
 NEARLY_CONSTANT_VELOCITY        meters/sqrt(sec^3)
 INERTIAL_MEASUREMENT_UNIT       meters/sqrt(sec^3)
 NEARLY_CONSTANT_ACCELERATION    meters/sqrt(sec^5)
 
-``SQRT_Q_TILDE_POS`` represents the standard deviation of error induced on position, velocity, or acceleration state elements by the process noise over a 1-second propagation step. The standard deviation corresponding to a T-second step is then approximated as sigmaX = sqrt(T)*SQRT_Q_TILDE_POS (see, e.g., Eq. 6.22-13 in Bar Shalom). This approximation is valid for short T; for long T, one needs to take multiple short propagation steps. Note that ``SQRT_Q_TILDE_POS`` is only used to generate a Q matrix for the INERTIAL_MEASUREMENT_UNIT dynamics model to cover any propagation step that may be required between thelatest IMU measurement before the measurement update and the measurement update itself.
+SQRT_Q_TILDE_POS represents the standard deviation of error induced on position, velocity, or acceleration state elements by the process noise over a 1-second propagation step. The standard deviation corresponding to a T-second step is then approximated as sigmaX = sqrt(T)*SQRT_Q_TILDE_POS (see, e.g., Eq. 6.22-13 in Bar Shalom). This approximation is valid for short T; for long T, one needs to take multiple short propagation steps. Note that SQRT_Q_TILDE_POS is only used to generate a Q matrix for the INERTIAL_MEASUREMENT_UNIT dynamics model to cover any propagation step that may be required between thelatest IMU measurement before the measurement update and the measurement update itself.
 
 SQRT_Q_TILDE_BODY_VEC
 ---------------------
-Default = 0 0 0 
-``SQRT_Q_TILDE_BODY_VEC`` represents the standard deviation of error induced on position, velocity, or acceleration state elements by the process noise over a 1-second propagation step, in the body X (nominally aligned with forward motion), Y (lateral), and Z (up) directions. This configuration option is used in place of SQRT_Q_TILDE when the BODY_NEARLY_CONSTANT_VELOCITY dynamics model is employed. It allows a simple way to constrain vehicle motion in the lateral and up directions.
+|Default = 0 0 0 
+|SQRT_Q_TILDE_BODY_VEC represents the standard deviation of error induced on position, velocity, or acceleration state elements by the process noise over a 1-second propagation step, in the body X (nominally aligned with forward motion), Y (lateral), and Z (up) directions. This configuration option is used in place of SQRT_Q_TILDE when the BODY_NEARLY_CONSTANT_VELOCITY dynamics model is employed. It allows a simple way to constrain vehicle motion in the lateral and up directions.
 
 SQRT_Q_TILDE_ATT
 ----------------
 Default = 0.05
-The attitude corollary to :ref:`SQRT_Q_TILDE_POS` is ``SQRT_Q_TILDE_ATT``. The units of this quantity depend on if the state includes angular velocity or not and are as follows
+The attitude corollary to :ref:`SQRT_Q_TILDE_POS` is SQRT_Q_TILDE_ATT. The units of this quantity depend on if the state includes angular velocity or not and are as follows
 
 no angular velocity      rad/sqrt(sec)
 with angular velocity    rad/sqrt(sec^3)
@@ -204,7 +204,7 @@ Standard deviation of undifferenced carrier phase measurements assuming a transm
 UNDIFFERENCED_ZENITH_STATIONARY_PSEUDORANGE_STD
 -----------------------------------------------
 Default = 5
-Standard deviation of the undifferenced pseudorange measurements while rover is stationary, assuming a transmitter at zenith, in meters. This value can be set larger ``than UNDIFFERENCED_ZENITH_PSEUDORANGE_STD`` to account for the increased multipath that stationary rover antennas suffer. If unspecified by the user, this parameter defaults to the same value as ``UNDIFFERENCED_ZENITH_PSEUDORANGE_STD``. Stationarity is determined using the velocity component of the rover standard navigation solution.
+Standard deviation of the undifferenced pseudorange measurements while rover is stationary, assuming a transmitter at zenith, in meters. This value can be set larger than UNDIFFERENCED_ZENITH_PSEUDORANGE_STD to account for the increased multipath that stationary rover antennas suffer. If unspecified by the user, this parameter defaults to the same value as UNDIFFERENCED_ZENITH_PSEUDORANGE_STD. Stationarity is determined using the velocity component of the rover standard navigation solution.
 
 UNDIFFERENCED_ZENITH_TRANSIENT_PSEUDORANGE_STD
 ----------------------------------------------
@@ -311,7 +311,7 @@ Observables from GRID/pprx are marked invalid if the transmitter is indicated to
 OUTLIER_EXCLUSION_DEPTH
 -----------------------
 Default = 0
-Depth of outlier exclusion search.  Signals are ordered from most to least likely to cause integer fixing failure and single-signal (N-choose-1) exclusion is attempted on each of the ordered signals up to and including the nth one, with n = ``OUTLIER_EXCLUSION_DEPTH``.  A value of 0 prevents outlier exclusion from being performed. 
+Depth of outlier exclusion search.  Signals are ordered from most to least likely to cause integer fixing failure and single-signal (N-choose-1) exclusion is attempted on each of the ordered signals up to and including the nth one, with n = OUTLIER_EXCLUSION_DEPTH.  A value of 0 prevents outlier exclusion from being performed. 
   
 BACKWARD
 --------
