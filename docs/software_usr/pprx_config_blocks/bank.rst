@@ -9,7 +9,7 @@ The BANK consists of the following configurations:
    :align: center
 
 .. note::
-   These banks must be specified for all reported signal types in the :ref:`BK01, BK02, ...` parameter. 
+  These banks must be specified for all reported signal types in the :ref:`BK01, BK02, ...` parameter. 
 
 NUM_BANKS
 ---------

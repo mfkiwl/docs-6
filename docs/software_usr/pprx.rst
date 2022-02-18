@@ -3,7 +3,7 @@
 Precise Positioning Receiver (pprx)
 ===================================
 
-This page describes how to set up, compile, configure, run, and interpret output from pprx, which is an implementation of GRID, the General Radionavigation Interfusion Device.
+This page describes how to configure, run, and interpret output from pprx, which is an implementation of GRID, the General Radionavigation Interfusion Device.
 
 Editing Options Files
 ---------------------
@@ -32,4 +32,4 @@ To edit the configuration parameters in the ``.config`` file, see the below bloc
 How to Run
 ----------
 
- To run an example
+To run an example
