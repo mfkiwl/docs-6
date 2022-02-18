@@ -11,7 +11,8 @@ Editing Options Files
 pprx is highly configurable via both command-line options and configuration parameters. Type ``pprx --help`` to see a list of command-line options. These options are specified in a ``.opt`` file as seen in the example below:
 
 .. image:: ./../images/lionopt.png
-   :align: left
+   :width: 60 %
+   :align: center
 
 Editing Configuration Parameters
 --------------------------------

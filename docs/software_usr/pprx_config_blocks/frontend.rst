@@ -5,7 +5,8 @@ FRONT-END
 The front-end bank consists of the following configurations:
 
 .. image:: ./../../images/lionfrontend.png
-   :align: left
+   :width: 60 %
+   :align: center
 
 SAMPLE_FREQ_NUMERATOR
 ---------------------

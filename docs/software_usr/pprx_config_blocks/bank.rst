@@ -5,9 +5,11 @@ BANK
 The BANK consists of the following configurations:
 
 .. image:: ./../../images/lionbank.png
-   :align: left
+   :width: 60 %
+   :align: center
 
-*Repeat for all other signal types*
+.. note::
+   These banks must be specified for all reported signal types in the :ref:`BK01, BK02, ...` parameter. 
 
 NUM_BANKS
 ---------

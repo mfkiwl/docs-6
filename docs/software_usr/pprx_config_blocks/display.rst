@@ -5,7 +5,8 @@ DISPLAY
 The display bank consists of the following configurations:
 
 .. image:: ./../../images/liondisplay.png
-   :align: left
+   :width: 60 %
+   :align: center
 
 USE_COLOR
 -----------

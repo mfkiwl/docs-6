@@ -5,7 +5,8 @@ BUFFER_LOADER
 The buffer-loader bank consists of the following configurations:
 
 .. image:: ./../../images/lionbufferloader.png
-   :align: left
+   :width: 60 %
+   :align: center
 
 
 NUM_BUFFER_LOADERS

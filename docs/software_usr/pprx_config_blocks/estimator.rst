@@ -5,7 +5,8 @@ ESTIMATOR
 The estimator bank consists of the following configurations:
 
 .. image:: ./../../images/lionestimator.png
-   :align: left
+   :width: 60 %
+   :align: center
 
 PLATFORM_ID
 -----------
