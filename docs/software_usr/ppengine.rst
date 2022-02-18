@@ -20,7 +20,9 @@ To edit the configuration parameters in the ``.config`` file, see the below bloc
 .. toctree::
    :maxdepth: 1
 
-   ppengine_config_blocks/configs
+   ppengine_config_blocks/cdgnssconf
+   ppengine_config_blocks/baselineconf
+   ppengine_config_blocks/estimatorconf
 
 How to Run
 ----------
