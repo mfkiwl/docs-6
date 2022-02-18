@@ -3,6 +3,7 @@
 ESTIMATOR 
 =========
 
+The estimator bank consists of the following configurations:
 
 ALPHA, BETA, KAPPA
 ------------------
@@ -100,7 +101,7 @@ Sets the number of threads SPF is allowed to use for sigma point evaluation.
 APPLY_VEHICLE_VELOCITY_CONSTRAINTS
 ----------------------------------
 Default = false
-Indicates whether to apply vehicle near-zero-sideslip and near-zero-vertical velocity constraints. See documentation in @hailey ADD LINK TO VEHICLE PDF. Also see :download:`this matlab script <./../../../src/estimateVehicleFrameExtrinsics.m>`. Only relevant to POSE_AND_TWIST estimators.
+Indicates whether to apply vehicle near-zero-sideslip and near-zero-vertical velocity constraints. See documentation in :download:`estimation of vehicle frame extrinsics <./../../../src/velocity_frame_extrinsics_estimation_for_ground_vehicle_todd.pdf>`.. Also see :download:`this matlab script <./../../../src/estimateVehicleFrameExtrinsics.m>`. Only relevant to POSE_AND_TWIST estimators.
 
 ORIENTATION_B2V
 ---------------
