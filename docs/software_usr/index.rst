@@ -34,4 +34,4 @@ This section will describe how to use the GRID Software Suite.
    :maxdepth: 3
    :caption: Putting it all together:
 
-   opmodes
+   opmode
