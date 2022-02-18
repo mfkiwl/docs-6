@@ -1,0 +1,36 @@
+This file defines the columns of data in the iqtaps.mat files produced by the
+GRID software receiver.  The iqtaps.log files contain symaccumulation-length
+in-phase and quadrature symaccumulation data. A symaccumulation is a coherent
+accumulation that is time-aligned with data modulation (if any) and of length
+equal to the minimum of the symbol interval and the standard accumulation
+interval. See channel.txt for a definition of RRT.  Time stamps in RRT
+correspond to the end of the interval over which each in-phase and quadrature
+symaccumulation was computed.
+
+=============================================================================
+
+Column            Quantity
+
+1 --------------- RRT week number.
+
+2 --------------- RRT seconds of week.
+
+3 --------------- Signal GenericType. See signaltype.h for GenericType values.
+
+4 --------------- Transmitter identification number (TXID).
+
+5 --------------- Signal Group.
+
+i=6,...,N+5 ----- In-phase symaccumulation corresponding to the ith tap of N
+                  total taps over the interval ending at the specified RRT, in
+                  receiver front-end units. If the signal is data-bit
+                  modulated, then the data bit modulation has been wiped off
+                  assuming the corresponding data bit value given in iq.log.
+
+i=N+6,...,2*N+5 - Quadrature symaccumulation corresponding to the ith tap of N
+                  total taps over the interval ending at the specified RRT, in
+                  receiver front-end units.  If the signal is data-bit
+                  modulated, then the data bit modulation has been wiped off
+                  assuming the corresponding data bit value given in iq.log.
+
+=============================================================================

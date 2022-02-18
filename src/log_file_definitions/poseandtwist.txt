@@ -1,0 +1,42 @@
+This file defines the columns of data in the poseandtwist.log files produced
+by the GRID software receiver. Each poseandtwist.log file contains
+time-stamped precise relative pose solutions. ORT time stamps indicate the
+time at which the position solution applies. See channel.txt for a definition
+of ORT.
+
+=============================================================================
+
+Column        Quantity
+
+1 ----------- ORT week number. 
+
+2 ----------- ORT whole seconds of week.
+
+3 ----------- ORT fractional second. 
+
+4,5,6 ------- X,Y,Z position rW of the platform reference point (e.g., primary
+              GNSS antenna's L1 phase center), in the W (ENU) frame in meters
+              relative to reference antenna location.
+
+7,8,9,10 ---- Quaternion qBW relating the body and local ENU frames.  Let qBW =
+              [x,y,z,w] be the quaternion composed of these four elements in
+              the order given.  Then vB = RBW*vW relates the expressions of the
+              physical vector v in the world (W) and body (B) frames, where RBW
+              is the direction cosine matrix corresponding to qBW.
+
+11,12,13 ---- X,Y,Z velocity vW: the time rate of change of rW, in meters per
+              second.
+ 
+14,15,16 ---- X,Y,Z angular rate wB: angular rate of B relative to W, expressed
+              in B in radians per second.
+
+17,18,19 ---- X,Y,Z accelerometer bias baU expressed in the U (IMU) frame in
+              meters/second^2.
+
+20,21,22 ---- X,Y,Z rate gyro bias bgU expressed in U in rad/second.
+
+23-40 ------- Diagonal elements of the error covariance matrix corresponding
+              to the state vector [rW;e;vW,wB,baU,bgU], where e is the 3-by-1
+              error state vector corresponding to the quaternion qBW.
+
+=============================================================================

@@ -1,4 +1,3 @@
-.. _calc_fIF_script:
 #!/usr/bin/env python3
 import math
 

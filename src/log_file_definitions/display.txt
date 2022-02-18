@@ -1,0 +1,12 @@
+This is a placeholder for documentation on the GRID text display.
+
+Status indicator decorations:
+
+s --- spoofing detected
+* --- half cycle phase offset possible
+c --- data bit container complete (wipeoff will be highly accurate)
+- --- phase error detected
+
+
+In addition, if the line is blue, this indicates that the DLL has yet to
+settle into its steady-state (most accurate) tracking regime.
