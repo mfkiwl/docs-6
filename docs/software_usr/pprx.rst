@@ -32,12 +32,20 @@ To edit the configuration parameters in the ``.config`` file, see the below bloc
 How to Run
 ----------
 
-**Examining ``--help`` Documentation**
+**Examining** ``--help`` **Documentation**
 Running the following command
-``pprx --help``
+
+.. code-block:: bash
+   
+   pprx --help
+
 will show all the command-line options available for pprx, including a brief description of each.  
 
 **Running pprx**
-Suppose ``pprx.opt`` is a properly-formatted pprx options file as described :ref:`Editing Options Files`. Navigate to the directory where this file is located and type ``pprx -f pprx.opt`` into the terminal window.
+Suppose ``pprx.opt`` is a properly-formatted pprx options file as described :ref:`Editing Options Files`. Navigate to the directory where this file is located and type the following command into the terminal window.
+
+.. code-block:: bash
+
+   pprx -f pprx.opt
 
 

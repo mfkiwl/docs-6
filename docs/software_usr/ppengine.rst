@@ -8,8 +8,10 @@ This page describes how to configure, run, and interpret output from ppengine, w
 Steps to Enable PPengine
 ------------------------
 
-#. Determine if your system has (1) or (2) antennas capability. (2) is preferred if possible. Designate one as the primary antenna.  
+#. Determine if your system has (1) or (2) antennas capability. (2) is preferred if possible. Designate one as the primary antenna. 
+ 
 #. Fix the location of the RadioLion with respect to the antennas.
+
 #. The following steps will describe how to measure the location of the RadioLion IMU with respect to the primary antenna. The RadioLion IMU is located in the red square in the following picture:
 
 .. image:: ./../images/RadioLiondraw.png
@@ -27,6 +29,7 @@ The measurements needed to enable **ppengine** are as follows:
       :align: center
 
 #. In the ``ppose.config``, in the ``IMU`` Bank, there are numerous parameters that need to be filled out:
+
    * For ``IMU_TYPE``, set it to ``IMU_TYPE = CUSTOM2``.
    * ``POS_IMU_B`` is the position of the IMU in the body frame. This is a three coordinate vector (x, y, x), measured in meters. Please be as precise as possible. See the picture below for an example of this calculation on a quadcopter. 
 
@@ -82,10 +85,19 @@ To edit the configuration parameters in the ``.config`` file, see the below bloc
 How to Run
 ----------
 
-**Examining ``--help`` Documentation**
+**Examining** ``--help`` **Documentation**
 Running the following command
-``ppengine --help``
+
+.. code-block:: bash
+   
+   ppengine --help
+
 will show all the command-line options available for pprx, including a brief description of each.  
 
 **Running pprx**
-Suppose ``ppengine.opt`` is a properly-formatted ppengine options file as described :ref:`Editing Options Files`. Navigate to the directory where this file is located and type ``ppengine -f ppengine.opt`` into the terminal window.
+Suppose ``ppengine.opt`` is a properly-formatted ppengine options file as described :ref:`Editing Options Files`. Navigate to the directory where this file is located and type the following command into the terminal window.
+
+.. code-block:: bash
+
+   ppengine -f ppengine.opt
+
