@@ -350,7 +350,7 @@ Position of the ALT_1 GNSS antenna in the body frame. Used for antenna combining
 POS_IMU_B
 ---------
 Default = 0 0 0
-Position of the ALT_1 GNSS antenna in the body frame. Used for inertial aiding of the POSITION_RTK solution. Only used by POSITION_RTK.
+Position of the IMU in the body frame. Used for inertial aiding of the POSITION_RTK solution. Only used by POSITION_RTK.
 
 DO_ANTENNA_COMBINING
 --------------------

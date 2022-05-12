@@ -54,7 +54,7 @@ Indicates the type of sigma-point estimator that will be applied. Select from th
 
 * ``POSE_AND_TWIST_15``
 * ``POSE_AND_TWIST_18``
-* ``POSE_AND_TWIST_24``
+* ``POSE_AND_TWIST_27``
 * ``POSE_AND_TWIST_15_VISION`` 
 * ``POSE_AND_TWIST_15_MULTI_MODEL``
 
