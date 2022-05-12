@@ -10,21 +10,21 @@ Steps to Enable PPengine
 
 #. Determine if your system has (1) or (2) antennas capability. (2) is preferred if possible. Designate one as the primary antenna.  
 #. Fix the location of the RadioLion with respect to the antennas.
-#. Make measurement of the location of the RadioLion IMU with respect to the primary antenna. The RadioLion IMU is located in the red square in the following picture:
+#. The following steps will describe how to measure the location of the RadioLion IMU with respect to the primary antenna. The RadioLion IMU is located in the red square in the following picture:
 
 .. image:: ./../images/RadioLiondraw.png
    :width: 60 %
    :align: center
 
-The measurements needed are as follows:
+The measurements needed to enable **ppengine** are as follows:
 
 #. In the ``a2d.config`` file, change the ``BASELINE_LENGTH_CONSTRAINT`` to the distance between the primary and secondary antenna. This measurement should be the positive X direction between antennas, measured in meters.
 
 #. In the ``ppose.config`` file, change the ``ESTIMATOR_TYPE`` to ``POSE_AND_TWIST_27``. Change the ``POS_ALT1_ANTENNA_B`` to the location of the secondary antenna with respect to the first antenna in the body frame. This is a three coordinate vector (x, y, x), measured in meters. Please be as precise as possible. See the picture below for an example of this calculation on a quadcopter. 
 
-.. image:: ./../images/body_frame.png
-   :width: 80 %
-   :align: center
+   .. image:: ./../images/body_frame.png
+      :width: 80 %
+      :align: center
 
 #. In the ``ppose.config``, in the ``IMU`` Bank, there are numerous parameters that need to be filled out:
    * For ``IMU_TYPE``, set it to ``IMU_TYPE = CUSTOM2``.
