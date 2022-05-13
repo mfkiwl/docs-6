@@ -23,9 +23,10 @@ To edit the configuration parameters in the ``.config`` file, see the below bloc
 .. toctree::
    :maxdepth: 1
 
+   pprx_config_blocks/basetime
    pprx_config_blocks/frontend
-   pprx_config_blocks/bank
    pprx_config_blocks/bufferloader
+   pprx_config_blocks/bank
    pprx_config_blocks/estimator
    pprx_config_blocks/display
 

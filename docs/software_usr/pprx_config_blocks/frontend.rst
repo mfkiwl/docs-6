@@ -11,10 +11,6 @@ The front-end bank consists of the following banks:
 .. note::
    There should be three banks labeled ``[FRONT_END]``, ``[LION]``, and ``[LION_L5]``. The configuration options for ``[FRONT_END]`` are below.
 
------------
-[FRONT_END]
------------
-
 NUM_FRONT_ENDS
 --------------
 **Default:** N/A. Required input. For RadioLion this should be set to 2.
