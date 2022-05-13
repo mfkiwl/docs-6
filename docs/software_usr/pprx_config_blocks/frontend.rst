@@ -2,35 +2,75 @@
 =========
 FRONT-END
 =========
-The front-end bank consists of the following configurations:
+The front-end bank consists of the following banks:
 
 .. image:: ./../../images/lionfrontend.png
    :width: 60 %
    :align: center
 
+.. note::
+   There should be three banks labeled ``[FRONT_END]``, ``[LION]``, and ``[LION_L5]``. The configuration options for ``[FRONT_END]`` are below.
+
+-----------
+[FRONT_END]
+-----------
+
+NUM_FRONT_ENDS
+--------------
+**Default:** N/A. Required input. For RadioLion this should be set to 2.
+
+**Definition:** The number of specified front-ends.
+
+FE01
+----
+**Default:** N/A. Required input. For RadioLion this should be set to LION.
+
+**Definition:** Which bank configurations apply to Front-End 01.
+
+FE02
+----
+**Default:** N/A. Required input. For RadioLion this should be set to LION_L5.
+
+**Definition:** Which bank configurations apply to Front-End 02.
+
+.. note::
+   The configuration options for ``[LION]`` and ``[LION_L5]`` are below.
+
 SAMPLE_FREQ_NUMERATOR
 ---------------------
-It is assumed that the sampling frequency of any RF front end supported by this code can be expressed in Hz as a ratio of two integers.  For example, the sampling frequency for the Zarlink/Plessey front end is 40e6/7 Hz, which would correspond to SAMPLE_FREQ_NUMERATOR = 40e6 and SAMPLE_FREQ_DENOMINATOR = 7. It is further assumed that double precision is sufficient to represent the time within a single interval of SAMPLE_FREQ_DENOMINATOR seconds.
+**Default:** N/A. Required input.
+
+**Definition:** It is assumed that the sampling frequency of any RF front end supported by this code can be expressed in Hz as a ratio of two integers.  For example, the sampling frequency for the Zarlink/Plessey front end is 40e6/7 Hz, which would correspond to SAMPLE_FREQ_NUMERATOR = 40e6 and SAMPLE_FREQ_DENOMINATOR = 7. It is further assumed that double precision is sufficient to represent the time within a single interval of SAMPLE_FREQ_DENOMINATOR seconds.
 
 SAMPLE_FREQ_DENOMINATOR
 -----------------------
-It is assumed that the sampling frequency of any RF front end supported by this code can be expressed in Hz as a ratio of two integers.  For example, the sampling frequency for the Zarlink/Plessey front end is 40e6/7 Hz, which would correspond to SAMPLE_FREQ_NUMERATOR = 40e6 and SAMPLE_FREQ_DENOMINATOR = 7. It is further assumed that double precision is sufficient to represent the time within a single interval of SAMPLE_FREQ_DENOMINATOR seconds.
+**Default:** N/A. Required input.
+
+**Definition:** It is assumed that the sampling frequency of any RF front end supported by this code can be expressed in Hz as a ratio of two integers.  For example, the sampling frequency for the Zarlink/Plessey front end is 40e6/7 Hz, which would correspond to SAMPLE_FREQ_NUMERATOR = 40e6 and SAMPLE_FREQ_DENOMINATOR = 7. It is further assumed that double precision is sufficient to represent the time within a single interval of SAMPLE_FREQ_DENOMINATOR seconds.
 
 QUANTIZATION
 ------------
-The number of bits used in the front end's quantization scheme.
+**Default:** N/A. Required input.
+
+**Definition:** The number of bits used in the front end's quantization scheme.
 
 NUM_SUPPORTED_SIGNAL_TYPES
 --------------------------
-The number of signals desired to track. 
+**Default:** N/A. Required input.
+
+**Definition:** The number of signals desired to track. 
 
 SUPPORTED_SIGNAL_TYPES
 ----------------------
-An array listing the supported signal types. In the arrays that follow, data at the iith index correspond to the signal type at the iith index.
+**Default:** N/A. Required input.
+
+**Definition:** An array listing the supported signal types. In the arrays that follow, data at the iith index correspond to the signal type at the iith index.
 
 FREQ_IF_HZ
 ----------
-Intermediate frequency of the signal, in Hz. See :download:`this python script <./../../../src/calc_fIF.py>` for how to calculate these numbers.
+**Default:** N/A. Required input.
+
+**Definition:** Intermediate frequency of the signal, in Hz. See :download:`this python script <./../../../src/calc_fIF.py>` for how to calculate these numbers.
 
 .. literalinclude:: ./../../../src/calc_fIF.py
     :linenos:
@@ -39,14 +79,14 @@ Intermediate frequency of the signal, in Hz. See :download:`this python script <
 
 PLL_SIGN_FPLL
 -------------
-Indicates high (-1) or low (1) side mixing
+**Default:** N/A. Required input.
+
+**Definition:** Indicates high (-1) or low (1) side mixing
 
 CODE_PHASE_BIAS_METERS
 ----------------------
-The bias below is the amount by which a biased pseudorange exceeds its bias-free representation. Typically, the bias for SignalType GPS_L1_CA is set to zero and all other SignalTypes are referenced to this.
+**Default:** N/A. Required input.
 
-
-
-
+**Definition:** The bias below is the amount by which a biased pseudorange exceeds its bias-free representation. Typically, the bias for SignalType GPS_L1_CA is set to zero and all other SignalTypes are referenced to this.
 
 

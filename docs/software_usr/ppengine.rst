@@ -28,7 +28,7 @@ The measurements needed to enable **ppengine** are as follows:
       :width: 80 %
       :align: center
 
-#. In the ``ppose.config``, in the ``IMU`` Bank, there are numerous parameters that need to be filled out:
+#. In the ``ppose.config`` file, in the ``IMU`` Bank, there are numerous parameters that need to be filled out:
 
    * For ``IMU_TYPE``, set it to ``IMU_TYPE = CUSTOM2``.
    * ``POS_IMU_B`` is the position of the IMU in the body frame. This is a three coordinate vector (x, y, x), measured in meters. Please be as precise as possible. See the picture below for an example of this calculation on a quadcopter. 
@@ -43,24 +43,28 @@ The measurements needed to enable **ppengine** are as follows:
       :width: 80 %
       :align: center
 
-   *Optional:* If you have a properly formatted ``pprx.opt`` file, you can run pprx and in the display, note the raw specific force components (+X, -X, +Y, -Y, +Z, -Z) are printed out. Move the RadioLion's IMU to align with each axis and put the six raw specific force components in :download:`this matlab script <./../../src/accelCalibration.m>`. After running the script, the quaternion for the IMU should be printed out. 
+      *Optional:* If you have a properly formatted ``pprx.opt`` file, you can run pprx and in the display, the raw specific force components (+X, -X, +Y, -Y, +Z, -Z) are printed out. Move the RadioLion's IMU to align with each axis and put the six raw specific force components in :download:`this matlab script <./../../src/accelCalibration.m>`. After running the script, the quaternion for the IMU should be printed out for you. This value is the orientation of the IMU w/r to the body frame.
 
    * To start ``ACCELEROMETER_BIAS_U = 0 0 0`` 
    * To start ``ACCELEROMETER_SCALE_FACTORS_U = 1 1 1`` 
    * To start ``GYRO_BIAS_U = 0 0 0``
    * To start ``GYRO_SCALE_FACTORS_U = 1 1 1`` 
 
-#. Run the start-up script ``stack.py`` for a few minutes to obtain a good pprx and ppengine solution. Make sure ppengine is run with the ``-s mat`` option. Collect the scripts ``diagnostics.log`` and ``poseandtwist.mat`` and export them to Matlab.
+#. Run the start-up script ``stack.py`` (see the page Operational Modes for more details) for a few minutes to obtain a good pprx and ppengine solution. Make sure ppengine is run with the ``-s mat`` option. Collect the output scripts ``diagnostics.log`` and ``poseandtwist.mat``. Save them in a local folder. 
 
 #. Use the following two scripts: :download:`IMU calibration <./../../src/onlineImuCalibration.m>` and :download:`pose and twist analysis <./../../src/poseAndTwistAnal.m>`.
 
-#. In the ``onlineIMUCalibration.m`` script, change the parameters ``ORIENTATION_IMU_B``, ``ACCELEROMETER_SCALE_FACTORS_U``, ``GYRO_SCALE_FACTORS_U``, and ``POS_IMU_B`` to what you have set in the previous few steps. Download :download:`this parser<./../../src/diagsplitppe.sh>` and place it in the same folder that you have placed the ``diagnostics.log`` file. Make sure the datadir variable points to where your files are located. The script should output new parameters for ``ORIENTATION_IMU_B``, ``ACCELEROMETER_SCALE_FACTORS_U``, ``GYRO_SCALE_FACTORS_U``. Take these new values and update the ``ppose.config`` file.
+#. In the ``onlineImuCalibration.m`` script, change the parameters ``ORIENTATION_IMU_B``, ``ACCELEROMETER_SCALE_FACTORS_U``, ``GYRO_SCALE_FACTORS_U``, and ``POS_IMU_B`` to what you have set in the previous few steps. Download :download:`this parser<./../../src/diagsplitppe.sh>` and place it in the same folder that you have placed the ``diagnostics.log`` file. Make sure the datadir variable in the matlab script points to where your files are located. 
 
-#. In the ``poseandTwistAnal.m`` script, set the current_accel_bias to the value of ``ACCELEROMETER_BIAS_U`` (which for the first time will be 0 0 0) and set the current_gyro_bias to the value of ``GYRO_BIAS_U`` (which for the first time will be 0 0 0). The script will output a few different variables, but notable the ``bgU_mean`` and ``baU_mean``. These are the new values for the biases. Take these values and ADD them to the previous biases (the first time this is run, the new means will just become the biases). These new values should be placed in the ``ppose.config`` file.
+The script should output new parameters for ``ORIENTATION_IMU_B``, ``ACCELEROMETER_SCALE_FACTORS_U``, ``GYRO_SCALE_FACTORS_U``. Take these new values and update the ``ppose.config`` file.
 
-#. With the new values, run ppengine again and save the ``diagnostics.log`` and ``poseandtwist.mat`` files. Repeat these steps a few times or until the numbers converge and stop changing (about 3-4 times).
+#. In the ``poseAndTwistAnal.m`` script, set the current_accel_bias to the value of ``ACCELEROMETER_BIAS_U`` (which for the first time will be 0 0 0) and set the current_gyro_bias to the value of ``GYRO_BIAS_U`` (which for the first time will be 0 0 0). Run the script. The script will output a few different variables, but you will want ``bgU_mean`` and ``baU_mean``. These are the new values for the biases. 
 
-#. Once this process is done, go back to ``ppose.config`` file, change the ``ESTIMATOR_TYPE`` to ``POSE_AND_TWIST_18``. The IMU is calibrated and precise positioning mode is now functional. 
+Take these values and **ADD** them to the previous biases. The first time this is run, the current values are (0 0 0) so the new means will just become the new biases, but this will not be the case on subsequenct runs. These new values for ``ACCELEROMETER_BIAS_U`` and ``GYRO_BIAS_U`` should be placed in the ``ppose.config`` file.
+
+#. With the new values from this process, run ppengine again (you can use the same pprx file you've already collected) and save the ``diagnostics.log`` and ``poseandtwist.mat`` files once again. Repeat these steps a few times or until the numbers converge and stop changing (about 3-4 times).
+
+#. Once this process is done, go back to ``ppose.config`` file, change the ``ESTIMATOR_TYPE`` to ``POSE_AND_TWIST_18``. The IMU is calibrated and precise positioning mode is now tuned to your set-up. 
 
 
 Editing Options Files

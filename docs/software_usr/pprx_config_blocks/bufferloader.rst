@@ -11,23 +11,33 @@ The buffer-loader bank consists of the following configurations:
 
 NUM_BUFFER_LOADERS
 ------------------
-How many buffer loaders you have. One RadioLion = 1 Buffer Loader.
+**Default:** N/A. Required input. For RadioLion this should be set to 1.
+
+**Definition:** How many buffer loaders you have. One RadioLion = 1 Buffer Loader.
 
 BL01
 ----
-``BL_LION`` corresponds to buffer loader 1, with device LION.
+**Default:** N/A. Required input.
+
+**Definition:** ``BL_LION`` corresponds to buffer loader 1, with device LION.
 
 DEVICE
 ------
-``LION`` corresponds to the device name.
+**Default:** N/A. Required input.
+
+**Definition:** ``LION`` corresponds to the device name.
 
 TYPE
 ----
-Operational modes. Select from the following options:
+**Default:** N/A. Required input.
+
+**Definition:** Operational modes. Select from the following options:
 
 * ``FILE``: Post-process capture files
 * ``USB``: Support live capture operations
 
 FRONT_ENDS
 ----------
-``LION LION_L5`` corresponds to the RadioLion.
+**Default:** N/A. Required input.
+
+**Definition:** ``LION LION_L5`` corresponds to the RadioLion.
