@@ -56,11 +56,11 @@ The measurements needed to enable **ppengine** are as follows:
 
 #. In the ``onlineImuCalibration.m`` script, change the parameters ``ORIENTATION_IMU_B``, ``ACCELEROMETER_SCALE_FACTORS_U``, ``GYRO_SCALE_FACTORS_U``, and ``POS_IMU_B`` to what you have set in the previous few steps. Download :download:`this parser<./../../src/diagsplitppe.sh>` and place it in the same folder that you have placed the ``diagnostics.log`` file. Make sure the datadir variable in the matlab script points to where your files are located. 
 
-The script should output new parameters for ``ORIENTATION_IMU_B``, ``ACCELEROMETER_SCALE_FACTORS_U``, ``GYRO_SCALE_FACTORS_U``. Take these new values and update the ``ppose.config`` file.
+   The script should output new parameters for ``ORIENTATION_IMU_B``, ``ACCELEROMETER_SCALE_FACTORS_U``, ``GYRO_SCALE_FACTORS_U``. Take these new values and update the ``ppose.config`` file.
 
 #. In the ``poseAndTwistAnal.m`` script, set the current_accel_bias to the value of ``ACCELEROMETER_BIAS_U`` (which for the first time will be 0 0 0) and set the current_gyro_bias to the value of ``GYRO_BIAS_U`` (which for the first time will be 0 0 0). Run the script. The script will output a few different variables, but you will want ``bgU_mean`` and ``baU_mean``. These are the new values for the biases. 
 
-Take these values and **ADD** them to the previous biases. The first time this is run, the current values are (0 0 0) so the new means will just become the new biases, but this will not be the case on subsequenct runs. These new values for ``ACCELEROMETER_BIAS_U`` and ``GYRO_BIAS_U`` should be placed in the ``ppose.config`` file.
+   Take these values and **ADD** them to the previous biases. The first time this is run, the current values are (0 0 0) so the new means will just become the new biases, but this will not be the case on subsequenct runs. These new values for ``ACCELEROMETER_BIAS_U`` and ``GYRO_BIAS_U`` should be placed in the ``ppose.config`` file.
 
 #. With the new values from this process, run ppengine again (you can use the same pprx file you've already collected) and save the ``diagnostics.log`` and ``poseandtwist.mat`` files once again. Repeat these steps a few times or until the numbers converge and stop changing (about 3-4 times).
 
