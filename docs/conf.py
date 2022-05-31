@@ -288,7 +288,7 @@ html_context['downloads'].append( ('epub', '/' +REPO_NAME+ '/' +current_language
 # "EDIT ON GITHUB" LINKS #
 ##########################
  
-html_context['display_github'] = True
+html_context['display_github'] = False
 html_context['github_user'] = 'locuslock'
 html_context['github_repo'] = REPO_NAME
 html_context['github_version'] = 'master/docs/'
