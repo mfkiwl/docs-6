@@ -4,4 +4,4 @@
 
 This repo hosts a sphinx-generated site (with the Read the Docs theme) on GitHub Pages using GitHub Actions.
 
-[Link to Locus Lock's Documentation!](https://locuslock.github.io/ll-docs/)
+[Link to Locus Lock's Documentation!](https://locuslock.github.io/docs/)
