@@ -4,6 +4,9 @@ BASELINE
 ========
 The BASELINE bank consists of the following configurations:
 
+.. literalinclude:: ./../../../src/runtime_files/a2d.config
+    :lines: 1-25
+
 
 REFERENCE_ANT_STREAM
 --------------------
