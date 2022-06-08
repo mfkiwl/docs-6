@@ -76,10 +76,11 @@ ppengine is highly configurable via both command-line options and configuration 
 
 Editing Configuration Parameters
 --------------------------------
+
 ppengine configuration files are broken into configuration blocks. The start of each block is indicated by a block header, e.g., ESTIMATOR. A ppengine ``.opt`` file (i.e. ppengine.opt) has three corresponding configurations files:
-   * ``ppose.config``: See this :download:`*example* ppose configuration file <./../../../src/runtime_files/ppose.config>`.
-   * ``a2d.config``: See this :download:`*example* ppose configuration file <./../../../src/runtime_files/a2d.config>`.
-   * ``sbtrk.config``: See this :download:`*example* ppose configuration file <./../../../src/runtime_files/sbtrk.config>`.
+   * ``ppose.config``: See this :download:`example ppose configuration file <./../../../src/runtime_files/ppose.config>`.
+   * ``a2d.config``: See this :download:`example attitude2d configuration file <./../../../src/runtime_files/a2d.config>`.
+   * ``sbtrk.config``: See this :download:`example sbtrk configuration file <./../../../src/runtime_files/sbtrk.config>`.
 
 @HHH add photos here
 

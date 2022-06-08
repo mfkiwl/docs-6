@@ -15,7 +15,7 @@ pprx is highly configurable via both command-line options and configuration para
 
 Editing Configuration Parameters
 --------------------------------
-pprx configuration files are broken into configuration blocks. The start of each block is indicated by a block header, e.g., ESTIMATOR. A pprx ``.opt`` file (i.e. pprx.opt) has a corresponding configuration file,``.config`` (i.e. pprx.config). See this :download:`*example* configuration file <./../../../src/runtime_files/pprx.config>` for pprx.
+pprx configuration files are broken into configuration blocks. The start of each block is indicated by a block header, e.g., ESTIMATOR. A pprx ``.opt`` file (i.e. pprx.opt) has a corresponding configuration file, ``.config`` (i.e. pprx.config). See this :download:`example configuration file <./../../../src/runtime_files/pprx.config>` for pprx.
 
 Each block in the ``pprx.config`` file contains various configuration parameters. See each block below to view all of its configuration parameter choices and if applicable the choices for each parameter:
 
