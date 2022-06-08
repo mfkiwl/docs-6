@@ -71,7 +71,7 @@ FREQ_IF_HZ
 .. literalinclude:: ./../../../src/calc_fIF.py
     :linenos:
     :language: python
-    :lines: 5-36
+    :lines: 4-16, 50-64
 
 PLL_SIGN_FPLL
 -------------

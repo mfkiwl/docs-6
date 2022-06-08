@@ -2,6 +2,11 @@
 ========
 BASETIME
 ========
+The BASETIME consists of the following configuration:
+
+.. image:: ./../../images/lionbasetime.png
+   :width: 60 %
+   :align: center
 
 GPS_WEEK_REFERENCE
 ------------------

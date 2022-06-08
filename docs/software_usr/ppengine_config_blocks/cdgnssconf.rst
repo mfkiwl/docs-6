@@ -2,7 +2,7 @@
 ======
 CDGNSS 
 ======
-The cdgnss bank consists of the following configurations:
+The CDGNSS bank consists of the following configurations:
 
 .. .. image:: ./../../images/lionbank.png
 ..    :width: 60 %

@@ -1,8 +1,8 @@
-.. _estimatorconf:
-=========
-ESTIMATOR 
-=========
-The ESTIMATOR bank consists of the following configurations:
+.. _pposeestimatorconf:
+===============
+PPOSE_ESTIMATOR 
+===============
+The PPOSE_ESTIMATOR bank consists of the following configurations:
 
 ALPHA
 -----
