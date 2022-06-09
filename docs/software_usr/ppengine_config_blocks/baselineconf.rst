@@ -2,11 +2,12 @@
 ========
 BASELINE 
 ========
-The BASELINE bank consists of the following configurations:
+Below is an *example* of the BASELINE block: 
 
-.. literalinclude:: ./../../../src/runtime_files/a2d.config
-    :lines: 1-25
+.. literalinclude:: ./../../../src/runtime_files/sbrtk.config
+    :lines: 39-43
 
+The BASELINE block contains all of the following configuration parameters:
 
 REFERENCE_ANT_STREAM
 --------------------

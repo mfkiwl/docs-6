@@ -13,11 +13,16 @@ export dstdir=$(pwd)
 srcdir="/Users/haileynichols/git/gss_top/run"
 STRING=".config"
 for srcfile in ${srcdir}/*
+# do 
+#     dstfile=$(basename $srcfile)
+#     if [[ "$dstfile" == *"$STRING" ]]
+#     then 
+#         echo $dstfile
+#         cp $srcfile $dstdir/$dstfile 
+#     fi
+# done
 do 
     dstfile=$(basename $srcfile)
-    if [[ "$dstfile" == *"$STRING" ]]
-    then 
-        echo $dstfile
-        cp $srcfile $dstdir/$dstfile 
-    fi
+    echo $dstfile
+    cp $srcfile $dstdir/$dstfile 
 done

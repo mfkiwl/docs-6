@@ -2,11 +2,12 @@
 ======
 CDGNSS 
 ======
-The CDGNSS bank consists of the following configurations:
+Below is an *example* of the CDGNSS block: 
 
-.. .. image:: ./../../images/lionbank.png
-..    :width: 60 %
-..    :align: center
+.. literalinclude:: ./../../../src/runtime_files/a2d.config
+    :lines: 1-24
+
+The CDGNSS block contains all of the following configuration parameters:
 
 USE_IONO_CORR
 -------------

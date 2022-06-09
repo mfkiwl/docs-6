@@ -1,0 +1,14 @@
+--input-file ./ppengine_read
+--verbose
+--realtime
+--config-file ./sbrtk.config
+--config-file ./a2d.config
+--ppose-config-file ./ppose.config
+--skip 30
+-t -1
+-r 10
+# For output to a gbx file
+# -o ./ppengine.gbx
+# For output to a named pipe
+-o ./ppengine_write
+--binary-only

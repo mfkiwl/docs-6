@@ -2,11 +2,12 @@
 ========
 BASETIME
 ========
-The BASETIME consists of the following configuration:
+Below is an *example* of the BASETIME block: 
 
-.. image:: ./../../images/lionbasetime.png
-   :width: 60 %
-   :align: center
+.. literalinclude:: ./../../../src/runtime_files/pprx.config
+    :lines: 5-6
+
+The BASETIME block contains all of the following configuration parameters:
 
 GPS_WEEK_REFERENCE
 ------------------

@@ -2,11 +2,13 @@
 =======
 DISPLAY
 =======
-The display bank consists of the following configurations:
+Below is an *example* of the DISPLAY block: 
 
 .. image:: ./../../images/liondisplay.png
    :width: 60 %
    :align: center
+
+The DISPLAY block contains all of the following configuration parameters:
 
 USE_COLOR
 -----------

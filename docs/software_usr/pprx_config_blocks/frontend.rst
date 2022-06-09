@@ -2,11 +2,12 @@
 =========
 FRONT-END
 =========
-The front-end bank consists of the following banks:
+Below is an *example* of the FRONT-END block: 
 
-.. image:: ./../../images/lionfrontend.png
-   :width: 60 %
-   :align: center
+.. literalinclude:: ./../../../src/runtime_files/pprx.config
+    :lines: 8-22
+
+The FRONT-END block contains all of the following configuration parameters:
 
 .. note::
    There should be three banks labeled ``[FRONT_END]``, ``[LION]``, and ``[LION_L5]``. The configuration options for ``[FRONT_END]`` are below.

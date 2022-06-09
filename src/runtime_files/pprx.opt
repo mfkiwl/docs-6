@@ -1,0 +1,22 @@
+-i /dev/radiolynx0
+--imu-file /dev/radiolynx1
+-e
+--realtime
+--ref-host=refnet1.ae.utexas.edu
+-c ./pprx.config
+--bitpack lynx
+--depth 8
+-d
+-v
+-t -1
+--log-interval 10
+--ref-interval 20
+--acq-interval 1000
+--binary-only
+# For output to a gbx file
+# -o ./pprx.gbx
+# For output to a named pipe
+-o pprx_write
+-T 4
+
+

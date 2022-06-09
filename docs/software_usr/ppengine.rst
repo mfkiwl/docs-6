@@ -69,44 +69,55 @@ The measurements needed to enable **ppengine** are as follows:
 
 Editing Options Files
 ---------------------
-ppengine is highly configurable via both command-line options and configuration parameters. Type ``ppengine --help`` to see a list of command-line options. These options are specified in a ``.opt`` file as seen in the example below:
+ppengine is highly configurable via both command-line options and configuration parameters. Type ``ppengine --help`` to see a list of command-line options. These options are specified in a ``.opt`` file as seen in the *example* below:
 
-@HHH add photos here
-
+.. literalinclude:: ./../../src/runtime_files/ppengine.opt
+    :lines: 1-14
 
 Editing Configuration Parameters
 --------------------------------
 ppengine configuration files are broken into configuration blocks. The start of each block is indicated by a block header, e.g., ESTIMATOR. A ppengine ``.opt`` file (i.e. ppengine.opt) has three corresponding configurations files:
 
-   * ``ppose.config``: See this :download:`example ppose configuration file <./../../../src/runtime_files/ppose.config>`.
-   * ``a2d.config``: See this :download:`example attitude2d configuration file <./../../../src/runtime_files/a2d.config>`.
-   * ``sbrtk.config``: See this :download:`example single baseline rtk configuration file <./../../../src/runtime_files/sbtrk.config>`.
+   * ``ppose.config``: See this :download:`example ppose configuration file <./../../src/runtime_files/ppose.config>`.
+   * ``a2d.config``: See this :download:`example attitude2d configuration file <./../../src/runtime_files/a2d.config>`.
+   * ``sbrtk.config``: See this :download:`example single baseline rtk configuration file <./../../src/runtime_files/sbtrk.config>`.
 
-@HHH add photos here
-
-Each of the three configuration files uses different combinations of blocks. Each block in the ``.config`` file contains various configuration parameters. See each block below to view all of its configuration parameter choices and if applicable the choices for each parameter.
-
-For ``ppose.config`` you will use the following blocks:
-
-.. toctree::
-   :maxdepth: 1
-
-   ppengine_config_blocks/pposeestimatorconf
-   ppengine_config_blocks/baselineconf
-   ppengine_config_blocks/imuconf
-
-For ``a2d.config`` you will use the following blocks:
+Each of the three configuration files uses different combinations of blocks. Each block in the ``.config`` file contains various configuration parameters. See each block below to view all of its configuration parameter choices and if applicable the choices for each parameter. All available blocks are listed below:
 
 .. toctree::
    :maxdepth: 1
 
    ppengine_config_blocks/cdgnssconf
    ppengine_config_blocks/estimatorconf
+   ppengine_config_blocks/pposeestimatorconf
    ppengine_config_blocks/baselineconf
+   ppengine_config_blocks/imuconf
+   ppengine_config_blocks/difftropoconf
 
-For ``sbtrk.config`` you will use the following blocks:
+For ``ppose.config`` the following blocks are used:
 
 .. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   ppengine_config_blocks/pposeestimatorconf
+   ppengine_config_blocks/baselineconf
+   ppengine_config_blocks/imuconf
+
+For ``a2d.config`` the following blocks are used:
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   ppengine_config_blocks/cdgnssconf
+   ppengine_config_blocks/estimatorconf
+   ppengine_config_blocks/baselineconf
+
+For ``sbrtk.config`` the following blocks are used:
+
+.. toctree::
+   :hidden:
    :maxdepth: 1
 
    ppengine_config_blocks/cdgnssconf

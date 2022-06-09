@@ -2,7 +2,12 @@
 =========
 ESTIMATOR 
 =========
-The ESTIMATOR bank consists of the following configurations:
+Below is an *example* of the ESTIMATOR block: 
+
+.. literalinclude:: ./../../../src/runtime_files/a2d.config
+    :lines: 26-29
+    
+The ESTIMATOR block contains all of the following configuration parameters:
 
 ALPHA
 -----

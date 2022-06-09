@@ -2,7 +2,12 @@
 ===
 IMU 
 ===
-The IMU bank consists of the following configurations:
+Below is an *example* of the IMU block: 
+
+.. literalinclude:: ./../../../src/runtime_files/ppose.config
+    :lines: 22-29
+
+The IMU block contains all of the following configuration parameters:
 
 IMU_TYPE
 --------

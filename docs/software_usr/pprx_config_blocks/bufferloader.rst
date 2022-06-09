@@ -2,12 +2,12 @@
 =============
 BUFFER_LOADER
 =============
-The buffer-loader bank consists of the following configurations:
+Below is an *example* of the BUFFER_LOADER block: 
 
-.. image:: ./../../images/lionbufferloader.png
-   :width: 60 %
-   :align: center
+.. literalinclude:: ./../../../src/runtime_files/pprx.config
+    :lines: 24-27
 
+The BUFFER_LOADER block contains all of the following configuration parameters:
 
 NUM_BUFFER_LOADERS
 ------------------

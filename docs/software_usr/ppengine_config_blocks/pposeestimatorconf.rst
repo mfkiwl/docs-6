@@ -2,7 +2,12 @@
 ===============
 PPOSE_ESTIMATOR 
 ===============
-The PPOSE_ESTIMATOR bank consists of the following configurations:
+Below is an *example* of the PPOSE_ESTIMATOR block: 
+
+.. literalinclude:: ./../../../src/runtime_files/ppose.config
+    :lines: 1-18
+
+The PPOSE_ESTIMATOR block contains all of the following configuration parameters:
 
 ALPHA
 -----

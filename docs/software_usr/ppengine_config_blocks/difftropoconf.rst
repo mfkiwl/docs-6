@@ -2,7 +2,7 @@
 ==========
 DIFF_TROPO 
 ==========
-The DIFF_TROPO bank consists of the following configurations:
+The DIFF_TROPO block contains all of the following configuration parameters:
 
 MODEL_TYPE
 ----------

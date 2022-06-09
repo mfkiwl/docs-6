@@ -2,17 +2,18 @@
 ====
 BANK
 ====
-The BANK consists of the following configurations:
+Below is an *example* of the BANK block: 
 
-.. image:: ./../../images/lionbank.png
-   :width: 60 %
-   :align: center
+.. literalinclude:: ./../../../src/runtime_files/pprx.config
+    :lines: 29-66
+
+The BANK block contains all of the following configuration parameters:
 
 .. warning::
   There will be one bank called ``[BANK]``. Each signal type you specify you want to track in that bank corresponds to an additional bank you must make specifically for that signal. For example, if in the ``[BANK]`` block, you specify you want to track 2 signals, GPS_L1_CA_PRIMARY and GPS_L1_CA_ALT1, then you will have three total banks: ``[BANK]``, ``[GPS_L1_CA_PRIMARY]``, and ``[GPS_L1_CA_ALT1]``. I.e. there must be banks must be specified for all reported signal types in the :ref:`BK01, BK02, ...` parameters. 
 
 .. note::
-  The configuration options for ``[BANK]`` are below. 
+  The configuration options for  ``[BANK]`` are below. 
 
 NUM_BANKS
 ---------

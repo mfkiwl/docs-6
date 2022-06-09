@@ -14,6 +14,6 @@ srcdir="/Users/haileynichols/git/gss_top/src/gss/doc/log_file_definitions"
 for srcfile in ${srcdir}/*
 do 
     dstfile=$(basename $srcfile)
-    echo dstfile
+    echo $dstfile
     cp $srcfile $dstdir/$dstfile 
 done

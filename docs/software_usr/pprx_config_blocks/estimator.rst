@@ -2,11 +2,12 @@
 =========
 ESTIMATOR
 =========
-The estimator bank consists of the following configurations:
+Below is an *example* of the ESTIMATOR block: 
 
-.. image:: ./../../images/lionestimator.png
-   :width: 60 %
-   :align: center
+.. literalinclude:: ./../../../src/runtime_files/pprx.config
+    :lines: 165-183
+
+The ESTIMATOR block contains all of the following configuration parameters:
 
 PLATFORM_ID
 -----------
