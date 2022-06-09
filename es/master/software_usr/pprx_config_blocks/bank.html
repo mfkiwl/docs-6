@@ -1,0 +1,708 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BANK &mdash; documentación de locuslock - 1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script src="../../_static/_static/js/toggle.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/_static/css/toggle.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="ESTIMATOR" href="estimator.html" />
+    <link rel="prev" title="BUFFER_LOADER" href="bufferloader.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> locuslock
+          
+
+          
+            
+            <img src="../../_static/white4x.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_usr/index.html">Hardware User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Software User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Software Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../pprx.html">Precise Positioning Receiver (pprx)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../pprx.html#editing-options-files">Editing Options Files</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../pprx.html#editing-configuration-parameters">Editing Configuration Parameters</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="basetime.html">BASETIME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend.html">FRONT-END</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bufferloader.html">BUFFER_LOADER</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BANK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="estimator.html">ESTIMATOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html">DISPLAY</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pprx.html#how-to-run">How to Run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ppengine.html">Precise Positioning Engine (ppengine)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../binflate.html">Binflate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opmode.html">Operational Modes</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">locuslock</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Software User Guide</a> &raquo;</li>
+        
+          <li><a href="../pprx.html">Precise Positioning Receiver (pprx)</a> &raquo;</li>
+        
+      <li>BANK</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/software_usr/pprx_config_blocks/bank.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>BANK<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Below is an <em>example</em> of the BANK block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">BANK</span><span class="p">]</span>
+<span class="n">NUM_BANKS</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">BK01</span> <span class="o">=</span> <span class="n">GPS_L1_CA_PRIMARY</span>
+<span class="n">BK02</span> <span class="o">=</span> <span class="n">SBAS_L1_I_PRIMARY</span>
+<span class="n">BK03</span> <span class="o">=</span> <span class="n">GALILEO_E1_BC_PRIMARY</span>
+<span class="n">BK04</span> <span class="o">=</span> <span class="n">GPS_L2_CLM_PRIMARY</span>
+<span class="n">BK05</span> <span class="o">=</span> <span class="n">GPS_L1_CA_ALT1</span>
+<span class="n">BK06</span> <span class="o">=</span> <span class="n">SBAS_L1_I_ALT1</span>
+<span class="n">BK07</span> <span class="o">=</span> <span class="n">GALILEO_E1_BC_ALT1</span>
+<span class="n">BK08</span> <span class="o">=</span> <span class="n">GPS_L2_CLM_ALT1</span>
+
+<span class="p">[</span><span class="n">GPS_L1_CA_PRIMARY</span><span class="p">]</span>
+<span class="n">FRONT_END</span> <span class="o">=</span> <span class="n">LYNX</span>
+<span class="n">MAXCHANNELS</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="n">NOM_MIN_DOPPLER_FREQ_HZ</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5000</span>
+<span class="n">NOM_MAX_DOPPLER_FREQ_HZ</span> <span class="o">=</span>  <span class="mi">5000</span>
+<span class="n">NUM_SUBACCUM_PER_ACCUM</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">MAX_ACQ_SEARCH_DEPTH</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">CODEGEN_TYPE</span> <span class="o">=</span> <span class="n">LOOKUP</span> 
+<span class="n">CH_PRUNE_INTERVAL_SUBACCUMS</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">CH_PRUNE_THRESHOLD</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">TRACKING_STRATEGY</span> <span class="o">=</span> <span class="n">HYBRID</span>
+<span class="n">PLL_DEFAULT_BANDWIDTH_HZ</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">PLL_HYBRID_BANDWIDTH_HZ</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">PLL_ENABLE_LOOP_BANDWIDTH_ADAPTATION</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">PLL_DEFAULT_LOOP_ORDER</span> <span class="o">=</span> <span class="n">ORDER2</span>
+<span class="n">PLL_HYBRID_LOOP_ORDER</span> <span class="o">=</span> <span class="n">ORDER2</span>
+<span class="n">PLL_PHASE_FLAG_THRESHOLD</span> <span class="o">=</span> <span class="mf">0.4</span>
+<span class="n">EML_CHIP_SPACING</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">DLL_DEFAULT_BANDWIDTH_HZ</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">CH_IQSQ_FILTER_TAU_SEC</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">ALLOW_DATA_SYMBOL_PREDICTION</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">DATA_SYMBOL_PULL_SNR_THRESHOLD</span> <span class="o">=</span> <span class="mi">23</span> 
+<span class="n">DATA_SYMBOL_PUSH_SNR_THRESHOLD</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">DIRECTED_ACQ_ONLY</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">ELEVATION_MASK_ANGLE_ACQ_DEG</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="n">NOISE_FLOOR_CORRECTION_FACTOR</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">CIRCBUFF_STREAM_IDX</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>The BANK block contains all of the following configuration parameters:</p>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>There will be one bank called <code class="docutils literal notranslate"><span class="pre">[BANK]</span></code>. Each signal type you specify you want to track in that bank corresponds to an additional bank you must make specifically for that signal. For example, if in the <code class="docutils literal notranslate"><span class="pre">[BANK]</span></code> block, you specify you want to track 2 signals, GPS_L1_CA_PRIMARY and GPS_L1_CA_ALT1, then you will have three total banks: <code class="docutils literal notranslate"><span class="pre">[BANK]</span></code>, <code class="docutils literal notranslate"><span class="pre">[GPS_L1_CA_PRIMARY]</span></code>, and <code class="docutils literal notranslate"><span class="pre">[GPS_L1_CA_ALT1]</span></code>. I.e. there must be banks must be specified for all reported signal types in the <a class="reference internal" href="#bk01-bk02"><span class="std std-ref">BK01, BK02, …</span></a> parameters.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>The configuration options for  <code class="docutils literal notranslate"><span class="pre">[BANK]</span></code> are below.</p>
+</div>
+<div class="section" id="num-banks">
+<h2>NUM_BANKS<a class="headerlink" href="#num-banks" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input.</p>
+<p><strong>Definition:</strong> Specifies the number of signals to track.</p>
+</div>
+<div class="section" id="bk01-bk02">
+<h2>BK01, BK02, …<a class="headerlink" href="#bk01-bk02" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input.</p>
+<p><strong>Definition:</strong> Specifies which signal type to track in each bank.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>The configuration options for each signal type are below, for example <code class="docutils literal notranslate"><span class="pre">[GPS_L1_CA_PRIMARY]</span></code>.</p>
+</div>
+</div>
+<div class="section" id="nom-min-doppler-freq-hz">
+<h2>NOM_MIN_DOPPLER_FREQ_HZ<a class="headerlink" href="#nom-min-doppler-freq-hz" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> -7000</p>
+<p><strong>Definition:</strong> Nominal minimum Doppler frequency used in the carrier replica array</p>
+</div>
+<div class="section" id="nom-max-doppler-freq-hz">
+<h2>NOM_MAX_DOPPLER_FREQ_HZ<a class="headerlink" href="#nom-max-doppler-freq-hz" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 7000</p>
+<p><strong>Definition:</strong> Nominal maximum Doppler frequency used in the carrier replica array</p>
+</div>
+<div class="section" id="doppler-freq-step-hz">
+<h2>DOPPLER_FREQ_STEP_HZ<a class="headerlink" href="#doppler-freq-step-hz" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1000</p>
+<p><strong>Definition:</strong> Doppler frequency step used in the carrier replica array</p>
+</div>
+<div class="section" id="nom-chiprate-cps">
+<h2>NOM_CHIPRATE_CPS<a class="headerlink" href="#nom-chiprate-cps" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> Dependent on the Signal Type selected. Nominal rates for each Signal Type are stored and pulled at runtime if you do not specify anything in the configuration file.</p>
+<p><strong>Definition:</strong> Nominal chipping rate of PRN code, in chips per second</p>
+</div>
+<div class="section" id="freq-carrier-hz">
+<h2>FREQ_CARRIER_HZ<a class="headerlink" href="#freq-carrier-hz" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> Dependent on the Signal Type selected. Nominal rates for each Signal Type are stored and pulled at runtime if you do not specify anything in the configuration file.</p>
+<p><strong>Definition:</strong> Nominal carrier frequency, in Hz</p>
+</div>
+<div class="section" id="eml-chip-spacing">
+<h2>EML_CHIP_SPACING<a class="headerlink" href="#eml-chip-spacing" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.3</p>
+<p><strong>Definition:</strong> Spacing between early and late correlators, in chips</p>
+</div>
+<div class="section" id="num-chips-per-subaccum">
+<h2>NUM_CHIPS_PER_SUBACCUM<a class="headerlink" href="#num-chips-per-subaccum" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> Dependent on the Signal Type selected. Nominal rates for each Signal Type are stored and pulled at runtime if you do not specify anything in the configuration file.</p>
+<p><strong>Definition:</strong> Number of chips per subaccumulation. NUM_CHIPS_PER_SUBACCUM must be an integer divisor of the number of chips in a PRN code cycle (<a class="reference internal" href="#num-chips-per-code"><span class="std std-ref">NUM_CHIPS_PER_CODE</span></a>).</p>
+</div>
+<div class="section" id="num-chips-per-code">
+<h2>NUM_CHIPS_PER_CODE<a class="headerlink" href="#num-chips-per-code" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> Dependent on the Signal Type selected. Nominal rates for each Signal Type are stored and pulled at runtime if you do not specify anything in the configuration file.</p>
+<p><strong>Definition:</strong> Number of chips in PRN code</p>
+</div>
+<div class="section" id="num-subaccum-per-symbol">
+<h2>NUM_SUBACCUM_PER_SYMBOL<a class="headerlink" href="#num-subaccum-per-symbol" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> Dependent on the Signal Type selected. Nominal rates for each Signal Type are stored and pulled at runtime if you do not specify anything in the configuration file.</p>
+<p><strong>Definition:</strong> Number of subaccumulations per symbol</p>
+</div>
+<div class="section" id="maxchannels">
+<h2>MAXCHANNELS<a class="headerlink" href="#maxchannels" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 8</p>
+<p><strong>Definition:</strong> Maximum number of channels that the Bank object is allowed to have.</p>
+</div>
+<div class="section" id="num-subaccum-per-accum">
+<h2>NUM_SUBACCUM_PER_ACCUM<a class="headerlink" href="#num-subaccum-per-accum" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 10</p>
+<p><strong>Definition:</strong> Integer number of subaccumulation intervals per accumulation interval. If the signal to be tracked is data modulated, then NUM_SUBACCUM_PER_ACCUM must be an integer divisor of the number of subaccumulations per data symbol (<a class="reference internal" href="#num-subaccum-per-symbol"><span class="std std-ref">NUM_SUBACCUM_PER_SYMBOL</span></a>).</p>
+</div>
+<div class="section" id="ch-iqsq-filter-tau-sec">
+<h2>CH_IQSQ_FILTER_TAU_SEC<a class="headerlink" href="#ch-iqsq-filter-tau-sec" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.5</p>
+<p><strong>Definition:</strong> Time constant for the low-pass filter that smoothes the one-C/A-code-period I^2 + Q^2 quantities to get E[I^2 + Q^2]</p>
+</div>
+<div class="section" id="ch-distortion-filter-tau-sec">
+<h2>CH_DISTORTION_FILTER_TAU_SEC<a class="headerlink" href="#ch-distortion-filter-tau-sec" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.5</p>
+<p><strong>Definition:</strong> As with the I^2 + Q^2 filter, the symmetric difference distortion statistic filter is a digitized low-pass filter.</p>
+</div>
+<div class="section" id="ch-prune-interval-sec">
+<h2>CH_PRUNE_INTERVAL_SEC<a class="headerlink" href="#ch-prune-interval-sec" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1.0</p>
+<p><strong>Definition:</strong> Nominal pruning interval, in seconds</p>
+</div>
+<div class="section" id="ch-prune-threshold">
+<h2>CH_PRUNE_THRESHOLD<a class="headerlink" href="#ch-prune-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 10</p>
+<p><strong>Definition:</strong> Number of consecutive times a signal must fail the pruning criteria, which is called every <a class="reference internal" href="#ch-prune-interval-sec"><span class="std std-ref">CH_PRUNE_INTERVAL_SEC</span></a>, before it gets pruned.</p>
+</div>
+<div class="section" id="ch-prune-cn0-threshold-min">
+<h2>CH_PRUNE_CN0_THRESHOLD_MIN<a class="headerlink" href="#ch-prune-cn0-threshold-min" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 23.0</p>
+<p><strong>Definition:</strong> Minimum C/N0 thresholds for pruning signals, in dB-Hz.</p>
+</div>
+<div class="section" id="ch-prune-cn0-threshold-max">
+<h2>CH_PRUNE_CN0_THRESHOLD_MAX<a class="headerlink" href="#ch-prune-cn0-threshold-max" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 65.0</p>
+<p><strong>Definition:</strong> Maximum C/N0 thresholds for pruning signals, in dB-Hz.</p>
+</div>
+<div class="section" id="max-acq-search-depth">
+<h2>MAX_ACQ_SEARCH_DEPTH<a class="headerlink" href="#max-acq-search-depth" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 5</p>
+<p><strong>Definition:</strong> Maximum acquisition search depth</p>
+</div>
+<div class="section" id="max-directed-standard-acq-attempts-per-cycle">
+<h2>MAX_DIRECTED_STANDARD_ACQ_ATTEMPTS_PER_CYCLE<a class="headerlink" href="#max-directed-standard-acq-attempts-per-cycle" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 2</p>
+<p><strong>Definition:</strong> Maximum number of directed standard acquisition attempts allowed per acquisition cycle.</p>
+</div>
+<div class="section" id="floored-radix2-fft-acq-size">
+<h2>FLOORED_RADIX2_FFT_ACQ_SIZE<a class="headerlink" href="#floored-radix2-fft-acq-size" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> With radix-2-only FFT libraries, samples are interpolated to next radix-2 size. If FLOORED_RADIX2_FFT_ACQ_SIZE is set, the interpolation size is the previous radix-2 size, improving computational performance but also reducing bandwidth and causing aliasing.</p>
+</div>
+<div class="section" id="direct-to-track-acq-initial-cn0-db-hz">
+<h2>DIRECT_TO_TRACK_ACQ_INITIAL_CN0_DB_HZ<a class="headerlink" href="#direct-to-track-acq-initial-cn0-db-hz" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 40</p>
+<p><strong>Definition:</strong> C/N0 estimate used as an initial guess when initializing a channel via direct-to-track acquisition.</p>
+</div>
+<div class="section" id="directed-acq-only">
+<h2>DIRECTED_ACQ_ONLY<a class="headerlink" href="#directed-acq-only" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Allow only directed acquisition (direct-to-track acquisition or directed standard acquisition) after initial acquisition. Note that this flag gets overridden when too few root bank signals have been acquired. The override feature ensures that processing power gets devoted to standard acquisition upon startup or after a complete loss of signals when directed acquisition isn’t yet operable.</p>
+</div>
+<div class="section" id="direct-to-track-acq-only">
+<h2>DIRECT_TO_TRACK_ACQ_ONLY<a class="headerlink" href="#direct-to-track-acq-only" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Allow only direct-to-track acquisition after initial acquisition. Note that this is more restrictive than <a class="reference internal" href="#directed-acq-only"><span class="std std-ref">DIRECTED_ACQ_ONLY</span></a>, which allows direct-to-track acquisition or directed standard acquisition. A runtime error will be thrown if this option is asserted simultaneously with <a class="reference internal" href="#directed-standard-acq-only"><span class="std std-ref">DIRECTED_STANDARD_ACQ_ONLY</span></a>; they are mutually exclusive.</p>
+</div>
+<div class="section" id="directed-standard-acq-only">
+<h2>DIRECTED_STANDARD_ACQ_ONLY<a class="headerlink" href="#directed-standard-acq-only" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Allow only directed standard acquisition after initial acquisition. Note that this is more restrictive than <a class="reference internal" href="#directed-acq-only"><span class="std std-ref">DIRECTED_ACQ_ONLY</span></a>, which allows direct-to-track acquisition or directed standard acquisition. A runtime error will be thrown if this option is asserted simultaneously with <a class="reference internal" href="#direct-to-track-acq-only"><span class="std std-ref">DIRECT_TO_TRACK_ACQ_ONLY</span></a>; they are mutually exclusive.</p>
+</div>
+<div class="section" id="background-acq-only">
+<h2>BACKGROUND_ACQ_ONLY<a class="headerlink" href="#background-acq-only" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Allow only background acquisition; prevent initial acquisition</p>
+</div>
+<div class="section" id="disable-standard-acq">
+<h2>DISABLE_STANDARD_ACQ<a class="headerlink" href="#disable-standard-acq" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Disable standard acquisition during background acquisition. This directive will not be overriden under any circumstance. Note that standard acquisition may be performed during initial (exhaustive) acquisition if <a class="reference internal" href="#background-acq-only"><span class="std std-ref">BACKGROUND_ACQ_ONLY</span></a> is false.</p>
+</div>
+<div class="section" id="force-healthy-when-tracquired">
+<h2>FORCE_HEALTHY_WHEN_TRACQUIRED<a class="headerlink" href="#force-healthy-when-tracquired" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Denote signal as healthy when tracquired so there is no need to wait for the signal’s embedded health indicator to arrive (e.g., in subframe 1 for GPS L1 C/A) before the signal can participate in a navigation solution. (Note that this option typically only applies when ephemeris are imported, since tracquisition is not attempted for signals marked unhealthy. Imported ephemeris do not indicate health status.) The temporary healthy indication forced by this option will be overridden by the signal-borne health indicator as soon as it arrives.</p>
+</div>
+<div class="section" id="force-healthy">
+<h2>FORCE_HEALTHY<a class="headerlink" href="#force-healthy" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Signals marked unhealthy may still be useful.  When this flag is asserted, all signals in the corresponding bank will be marked healthy.</p>
+</div>
+<div class="section" id="elevation-mask-angle-acq-deg">
+<h2>ELEVATION_MASK_ANGLE_ACQ_DEG<a class="headerlink" href="#elevation-mask-angle-acq-deg" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0</p>
+<p><strong>Definition:</strong> Elevation mask angle for acquisition, in radians. Signals arriving at the receiver from transmitters below the elevation mask angle will be excluded from direct-to-track acquisition. Set to -PI/2 to prevent elevation masking. In the receiver config file, the elevation mask angle is given in degrees as ELEVATION_MASK_ANGLE_ACQ_DEG.</p>
+</div>
+<div class="section" id="boresight-elevation-mask-angle-acq-rad">
+<h2>BORESIGHT_ELEVATION_MASK_ANGLE_ACQ_RAD<a class="headerlink" href="#boresight-elevation-mask-angle-acq-rad" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0</p>
+<p><strong>Definition:</strong> Boresight-relative elevation mask angle for acquisition, in radians. See ELEVATION_MASK_ANGLE_ACQ_RAD.</p>
+</div>
+<div class="section" id="pll-default-bandwidth-hz">
+<h2>PLL_DEFAULT_BANDWIDTH_HZ<a class="headerlink" href="#pll-default-bandwidth-hz" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 25.0</p>
+<p><strong>Definition:</strong> Default PLL bandwidth, in Hz.</p>
+</div>
+<div class="section" id="pll-default-loop-order">
+<h2>PLL_DEFAULT_LOOP_ORDER<a class="headerlink" href="#pll-default-loop-order" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> ORDER2</p>
+<p><strong>Definition:</strong> Possible closed-loop loop orders for phase tracking loops. Select from the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ORDER1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ORDER2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ORDER3</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="pll-hybrid-bandwidth-hz">
+<h2>PLL_HYBRID_BANDWIDTH_HZ<a class="headerlink" href="#pll-hybrid-bandwidth-hz" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 25.0</p>
+<p><strong>Definition:</strong> Hybrid PLL bandwidth, in Hz.</p>
+</div>
+<div class="section" id="pll-hybrid-loop-order">
+<h2>PLL_HYBRID_LOOP_ORDER<a class="headerlink" href="#pll-hybrid-loop-order" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> If not specified, defaults to whatever is set for <a class="reference internal" href="#pll-default-loop-order"><span class="std std-ref">PLL_DEFAULT_LOOP_ORDER</span></a>.
+<strong>Definition:</strong> Possible closed-loop loop orders for phase tracking loops. Select from the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ORDER1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ORDER2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ORDER3</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="pll-default-discriminator-type">
+<h2>PLL_DEFAULT_DISCRIMINATOR_TYPE<a class="headerlink" href="#pll-default-discriminator-type" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> AT4_DISC</p>
+<p><strong>Definition:</strong> Types of phase tracking loop discriminators. Select from the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AT_DISC</span></code>: Two-quadrant arctangent:  atan(Q/I)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AT4_DISC</span></code>: Four-quadrant arctangent: atan2(Q,I)</p></li>
+</ul>
+</div>
+<div class="section" id="tracking-strategy">
+<h2>TRACKING_STRATEGY<a class="headerlink" href="#tracking-strategy" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> TRADITIONAL</p>
+<p><strong>Definition:</strong> Signal tracking strategy. Select from the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TRADITIONAL</span></code>: Traditional fll/pll/dll tracking loops</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HYBRID</span></code>: Vector-aided fll/pll/dll tracking loops</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VECTOR</span></code>: Fully vectorized tracking with batch superaccumulation fitting</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DEEP</span></code>: Fully vectorized tracking with batch superaccumulation fitting and IMU aiding at the lowest level</p></li>
+</ul>
+</div>
+<div class="section" id="noise-floor-correction-factor">
+<h2>NOISE_FLOOR_CORRECTION_FACTOR<a class="headerlink" href="#noise-floor-correction-factor" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1.0</p>
+<p><strong>Definition:</strong> Set greater than unity to correct for thermal noise floor underestimation that occurs when the incoming data samples are time correlated. Values less than unity are considered invalid.</p>
+</div>
+<div class="section" id="pll-phase-lock-threshold">
+<h2>PLL_PHASE_LOCK_THRESHOLD<a class="headerlink" href="#pll-phase-lock-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.9</p>
+<p><strong>Definition:</strong> The PLL’s phase lock threshold is compared against the phase lock statistic in Equation 118 on page 393 of the Blue Book, volume 1.</p>
+</div>
+<div class="section" id="pll-phase-flag-threshold">
+<h2>PLL_PHASE_FLAG_THRESHOLD<a class="headerlink" href="#pll-phase-flag-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.4</p>
+<p><strong>Definition:</strong> Determines when a phase lock flag is raised to indicate possible cycle slippage</p>
+</div>
+<div class="section" id="pll-num-sub-per-phaselock">
+<h2>PLL_NUM_SUB_PER_PHASELOCK<a class="headerlink" href="#pll-num-sub-per-phaselock" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 20</p>
+<p><strong>Definition:</strong> Number of subaccumulations per phase lock detection interval.</p>
+</div>
+<div class="section" id="pll-enable-loop-bandwidth-adaptation">
+<h2>PLL_ENABLE_LOOP_BANDWIDTH_ADAPTATION<a class="headerlink" href="#pll-enable-loop-bandwidth-adaptation" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Indicates whether dynamic loop bandwidth adaptation (based in signal power) is enabled for the PLL.</p>
+</div>
+<div class="section" id="pll-freq-update-on-silence">
+<h2>PLL_FREQ_UPDATE_ON_SILENCE<a class="headerlink" href="#pll-freq-update-on-silence" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Set to true to allow the PLL to update the frequency estimate during intervals of known transmitter silence (applicable to TDMA signals).</p>
+</div>
+<div class="section" id="dll-default-bandwidth-hz">
+<h2>DLL_DEFAULT_BANDWIDTH_HZ<a class="headerlink" href="#dll-default-bandwidth-hz" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.03</p>
+<p><strong>Definition:</strong> Default DLL bandwidth, in Hz.</p>
+</div>
+<div class="section" id="dll-carrier-aiding">
+<h2>DLL_CARRIER_AIDING<a class="headerlink" href="#dll-carrier-aiding" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Specifies whether the DLL is aided by the carrier tracking loop.</p>
+</div>
+<div class="section" id="allow-data-symbol-prediction">
+<h2>ALLOW_DATA_SYMBOL_PREDICTION<a class="headerlink" href="#allow-data-symbol-prediction" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> If true, data symbol estimates for purposes of data symbol wipeoff and data parsing and interpretation may be based on predicted values from DatabitManager. If false, data symbol estimates are based only on immediately measured symbol values.</p>
+</div>
+<div class="section" id="data-symbol-pull-snr-threshold">
+<h2>DATA_SYMBOL_PULL_SNR_THRESHOLD<a class="headerlink" href="#data-symbol-pull-snr-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 20</p>
+<p><strong>Definition:</strong> Thresholds governing behavior of data symbols pushed and pulled from DataBitManager. Thresholds are expressed as a signal-to-noise ratio in dB. SNR is defined for the symbol interval so that SNR = Tsym*C/N0, where Tsym is the symbol interval. For example, if Tsym = 0.02, then SNR = 20 dB corresponds to C/N0 = 37 dB-Hz.</p>
+</div>
+<div class="section" id="data-symbol-push-snr-threshold">
+<h2>DATA_SYMBOL_PUSH_SNR_THRESHOLD<a class="headerlink" href="#data-symbol-push-snr-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 22</p>
+<p><strong>Definition:</strong> Thresholds governing behavior of data symbols pushed and pulled from DataBitManager. Thresholds are expressed as a signal-to-noise ratio in dB. SNR is defined for the symbol interval so that SNR = Tsym*C/N0, where Tsym is the symbol interval. For example, if Tsym = 0.02, then SNR = 20 dB corresponds to C/N0 = 37 dB-Hz.</p>
+</div>
+<div class="section" id="export-data-bit-blocks">
+<h2>EXPORT_DATA_BIT_BLOCKS<a class="headerlink" href="#export-data-bit-blocks" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> When asserted, each block of received and error-checked data bits will be exported to the internal GBX stream.  The definition of a block differs by SignalType:GenericType. For GPS_L1_CA, it is an LNAV frame. For SBAS_L1_I, it is a 1-second block.</p>
+</div>
+<div class="section" id="circbuff-stream-idx">
+<h2>CIRCBUFF_STREAM_IDX<a class="headerlink" href="#circbuff-stream-idx" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0</p>
+<p><strong>Definition:</strong> Index of circular buffer stream this bank should use.</p>
+</div>
+<div class="section" id="fll-nom-bandwidth-hz">
+<h2>FLL_NOM_BANDWIDTH_HZ<a class="headerlink" href="#fll-nom-bandwidth-hz" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 5.0</p>
+<p><strong>Definition:</strong> Nominal FLL bandwidth, in Hz.</p>
+</div>
+<div class="section" id="fll-weak-bandwidth-hz">
+<h2>FLL_WEAK_BANDWIDTH_HZ<a class="headerlink" href="#fll-weak-bandwidth-hz" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1.0</p>
+<p><strong>Definition:</strong> Weak-signal FLL bandwidth, in Hz.</p>
+</div>
+<div class="section" id="fll-default-loop-order">
+<h2>FLL_DEFAULT_LOOP_ORDER<a class="headerlink" href="#fll-default-loop-order" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> ORDER1</p>
+<p><strong>Definition:</strong> Possible closed-loop loop orders. Select from the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ORDER1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ORDER2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ORDER3</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="fll-nbs1-nom">
+<h2>FLL_NBS1_NOM<a class="headerlink" href="#fll-nbs1-nom" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 12</p>
+<p><strong>Definition:</strong> Upper thresholds for the histogram-based data bit synchronization process, nominal-strength signals.  See details in Blue Book volume 1 p. 395.</p>
+</div>
+<div class="section" id="fll-nbs1-weak">
+<h2>FLL_NBS1_WEAK<a class="headerlink" href="#fll-nbs1-weak" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 80</p>
+<p><strong>Definition:</strong> Upper thresholds for the histogram-based data bit synchronization process, weak signals.  See details in Blue Book volume 1 p. 395.</p>
+</div>
+<div class="section" id="fll-nbs2-nom">
+<h2>FLL_NBS2_NOM<a class="headerlink" href="#fll-nbs2-nom" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 7</p>
+<p><strong>Definition:</strong> Lower thresholds for the histogram-based data bit synchronization process, nominal-strength signals.  See details in Blue Book volume 1 p. 395.</p>
+</div>
+<div class="section" id="fll-nbs2-weak">
+<h2>FLL_NBS2_WEAK<a class="headerlink" href="#fll-nbs2-weak" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 70</p>
+<p><strong>Definition:</strong> Lower thresholds for the histogram-based data bit synchronization process, weak signals.  See details in Blue Book volume 1 p. 395.</p>
+</div>
+<div class="section" id="fll-freq-update-on-silence">
+<h2>FLL_FREQ_UPDATE_ON_SILENCE<a class="headerlink" href="#fll-freq-update-on-silence" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Set to true to allow the FLL to update the frequency estimate during intervals of known transmitter silence (applicable to TDMA signals).</p>
+</div>
+<div class="section" id="txid-list">
+<h2>TXID_LIST<a class="headerlink" href="#txid-list" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> []</p>
+<p><strong>Definition:</strong> List of TxIds valid for bank. If this list is empty, then all TxIds for the bank’s system are assumed valid.</p>
+</div>
+<div class="section" id="codegen-type">
+<h2>CODEGEN_TYPE<a class="headerlink" href="#codegen-type" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> PSIAKI</p>
+<p><strong>Definition:</strong> Type of oversampled code generators. Select from the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">NONE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOOKUP</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PSIAKI</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FULL_PRECISION</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MULTI_TAP</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="msampfrac">
+<h2>MSAMPFRAC<a class="headerlink" href="#msampfrac" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 14</p>
+<p><strong>Definition:</strong> Parameter governing the adjustment resolution of oversampled code replicas: an oversampled code will have MSAMPFRAC levels of adjustment per sample.  Thus, the location of the first sample within a code can be specified to within the sampling interval divided by MSAMPFRAC of the desired location.</p>
+</div>
+<div class="section" id="num-taps-prompt-tap-early-tap-late-tap">
+<h2>NUM_TAPS, PROMPT_TAP, EARLY_TAP, LATE_TAP<a class="headerlink" href="#num-taps-prompt-tap-early-tap-late-tap" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0</p>
+<p><strong>Definition:</strong> Parameters for the multi-tap generator</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="estimator.html" class="btn btn-neutral float-right" title="ESTIMATOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bufferloader.html" class="btn btn-neutral float-left" title="BUFFER_LOADER" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Locus Lock
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+          
+          <dd><a href="/docs/en/master/">en</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/es/master/">es</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+          
+          <dd><a href="/docs/es/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/es/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/docs/es/master/locuslock-docs_es_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/docs/es/master/locuslock-docs_es_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+<!--   <style>
+         .wy-nav-content { max-width: none; }
+  </style> -->
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ababab;
+    }
+  </style>
+
+
+
+</body>
+</html>

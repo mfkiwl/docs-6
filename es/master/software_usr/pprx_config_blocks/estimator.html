@@ -1,0 +1,479 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ESTIMATOR &mdash; documentación de locuslock - 1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script src="../../_static/_static/js/toggle.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/_static/css/toggle.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="DISPLAY" href="display.html" />
+    <link rel="prev" title="BANK" href="bank.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> locuslock
+          
+
+          
+            
+            <img src="../../_static/white4x.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_usr/index.html">Hardware User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Software User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Software Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../pprx.html">Precise Positioning Receiver (pprx)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../pprx.html#editing-options-files">Editing Options Files</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../pprx.html#editing-configuration-parameters">Editing Configuration Parameters</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="basetime.html">BASETIME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frontend.html">FRONT-END</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bufferloader.html">BUFFER_LOADER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bank.html">BANK</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ESTIMATOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html">DISPLAY</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pprx.html#how-to-run">How to Run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ppengine.html">Precise Positioning Engine (ppengine)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../binflate.html">Binflate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opmode.html">Operational Modes</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">locuslock</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Software User Guide</a> &raquo;</li>
+        
+          <li><a href="../pprx.html">Precise Positioning Receiver (pprx)</a> &raquo;</li>
+        
+      <li>ESTIMATOR</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/software_usr/pprx_config_blocks/estimator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>ESTIMATOR<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Below is an <em>example</em> of the ESTIMATOR block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">ESTIMATOR</span><span class="p">]</span>
+<span class="n">USE_IONO_CORR</span>  <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">USE_TROPO_CORR</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">ELEVATION_MASK_ANGLE_DEG</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">ENFORCE_STRICT_SELECTION</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">ALLOW_ALT_CHANNEL_DATA</span> <span class="o">=</span> <span class="n">FALSE</span>
+<span class="n">DEWEIGHT_NON_GPS_L1_CA_PRIMARY</span> <span class="o">=</span> <span class="n">FALSE</span>
+<span class="n">ALLOW_DELTR_FIXUPS</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">MAX_ABS_DELTR_SEC</span> <span class="o">=</span> <span class="mf">0.0001</span>
+<span class="n">DYNAMICS_MODEL</span> <span class="o">=</span> <span class="n">NEARLY_CONSTANT_VELOCITY</span>
+<span class="n">SQRT_Q_TILDE</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">CLOCK_TYPE</span> <span class="o">=</span> <span class="n">OCXO_LOW_QUALITY</span>
+<span class="n">ZENITH_PSEUDORANGE_STD</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">ZENITH_DOPPLER_STD</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">ELEVATION_DEPENDENT_WEIGHTING</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">INNOVATIONS_TEST_THRESHOLD_FACTOR</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="c1">#ZERO_VELOCITY_UPDATE_THRESHOLD_MPS = 0.15</span>
+<span class="c1">#CONSTRAIN_ECEF_POSITION = TRUE </span>
+<span class="c1">#KNOWN_ECEF_POSITION = -741204.663  -5462368.681 3197945.603</span>
+</pre></div>
+</div>
+<p>The ESTIMATOR block contains all of the following configuration parameters:</p>
+<div class="section" id="platform-id">
+<h2>PLATFORM_ID<a class="headerlink" href="#platform-id" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1</p>
+<p><strong>Definition:</strong> Identifier of the receiver platform.</p>
+</div>
+<div class="section" id="enforce-strict-selection">
+<h2>ENFORCE_STRICT_SELECTION<a class="headerlink" href="#enforce-strict-selection" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Allow only phase-error-free signals with a steady-state DLL to participate in the estimation solution.</p>
+</div>
+<div class="section" id="use-iono-corr">
+<h2>USE_IONO_CORR<a class="headerlink" href="#use-iono-corr" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Set true to correct for ionospheric delay when estimating the state</p>
+</div>
+<div class="section" id="use-tropo-corr">
+<h2>USE_TROPO_CORR<a class="headerlink" href="#use-tropo-corr" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Set true to correct for tropospheric (neutral atmospheric) delay when estimating the state</p>
+</div>
+<div class="section" id="allow-deltr-fixups">
+<h2>ALLOW_DELTR_FIXUPS<a class="headerlink" href="#allow-deltr-fixups" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Indicates whether to allow fixups to set Observables:tOffset so that receiver time remains close to true time.</p>
+</div>
+<div class="section" id="elevation-mask-angle-rad">
+<h2>ELEVATION_MASK_ANGLE_RAD<a class="headerlink" href="#elevation-mask-angle-rad" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.25</p>
+<p><strong>Definition:</strong> Elevation mask angle, in radians.  Signals arriving at the receiver from transmitters below the elevation mask angle will be excluded from the estimation solution. Set to -PI/2 to prevent elevation masking. In the receiver config file, the elevation mask angle is given in degrees as ELEVATION_MASK_ANGLE_DEG.</p>
+</div>
+<div class="section" id="boresight-elevation-mask-angle-rad">
+<h2>BORESIGHT_ELEVATION_MASK_ANGLE_RAD<a class="headerlink" href="#boresight-elevation-mask-angle-rad" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.25</p>
+<p><strong>Definition:</strong> Boresight-relative elevation mask angle, in radians. See <a class="reference internal" href="#elevation-mask-angle-rad"><span class="std std-ref">ELEVATION_MASK_ANGLE_RAD</span></a>.</p>
+</div>
+<div class="section" id="max-abs-deltr-sec">
+<h2>MAX_ABS_DELTR_SEC<a class="headerlink" href="#max-abs-deltr-sec" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.032</p>
+<p><strong>Definition:</strong> Maximum permitted absolute value of receiver clock bias relative to true GPS time, expressed in seconds.  If, due to clock drift or initialization error, the absolute value of receiver clock bias exceeds this value, a receiver clock fixup will be triggered.  As part of this clock fixup, concomitant changes to pseudorange and carrier phase observables will be made to keep the observables consistent, as required by the RINEX standard (See RINEX discussion under «DEFINITION OF THE OBSERVABLES»). Larger values of MAX_ABS_DELTR_METERS will lead to less frequent clock fixups.  Due to constraints in how the fixup is performed and to avoid overflow in the carrier phase container, MAX_ABS_DELTR_SEC must satisfy the following inequality: DELTR_FIXUP_RESOLUTION_SEC() &lt;= MAX_ABS_DELTR_SEC &lt;= DELTR_FIXUP_MAX_SEC()</p>
+</div>
+<div class="section" id="innovations-test-threshold-factor">
+<h2>INNOVATIONS_TEST_THRESHOLD_FACTOR<a class="headerlink" href="#innovations-test-threshold-factor" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 2</p>
+<p><strong>Definition:</strong> Innovations testing within Estimator is based on the inner product of the normalized innovations vector, dzr = dot(zr, zr), which under a consistent estimator is chi-square distributed with zr.n_elem degrees of freedom. The threshold for excluding a set of measurements is taken as the factor below multipled by zr.n_elem.</p>
+</div>
+<div class="section" id="clock-type">
+<h2>CLOCK_TYPE<a class="headerlink" href="#clock-type" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> TCXO_LOW_QUALITY</p>
+<p><strong>Definition:</strong> Assumed receiver clock model. Select from the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TCXO_LOW_QUALITY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TCXO</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OCXO_LOW_QUALITY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OCXO</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="dynamics-model">
+<h2>DYNAMICS_MODEL<a class="headerlink" href="#dynamics-model" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> NEARLY_CONSTANT_VELOCITY</p>
+<p><strong>Definition:</strong> Assumed antenna motion model. Select from the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">STATIC</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NEARLY_CONSTANT_VELOCITY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NEARLY_CONSTANT_ACCELERATION</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOW_EARTH_ORBIT</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IMU_BASED</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="sqrt-q-tilde">
+<h2>SQRT_Q_TILDE<a class="headerlink" href="#sqrt-q-tilde" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 5</p>
+<p><strong>Definition:</strong> The process noise for all dynamics models is expressed in terms of SQRT_Q_TILDE, the square root of the noise intensity. See Bar Shalom «Estimation with Applications to Tracking and Navigation» sections 6.2.1 to 6.2.3 for details. The units of <a href="#id2"><span class="problematic" id="id3">``</span></a>SQRT_Q_TILDE``are as follows for each dynamics model:</p>
+<ul class="simple">
+<li><p>STATIC                          meters/sqrt(sec)</p></li>
+<li><p>NEARLY_CONSTANT_VELOCITY        meters/sqrt(sec^3)</p></li>
+<li><p>NEARLY_CONSTANT_ACCELERATION    meters/sqrt(sec^5)</p></li>
+</ul>
+<p>SQRT_Q_TILDE represents the standard deviation of error induced on position, velocity, or acceleration state elements by the process noise over a 1-second propagation step.  The standard deviation corresponding to a T-second step is then approximated as sigmaX = sqrt(T)*SQRT_Q_TILDE (see, e.g., Eq. 6.22-13 in Bar Shalom). This approximation is valid for short T; for long T, one needs to take multiple short propagation steps.</p>
+</div>
+<div class="section" id="init-velocity-std">
+<h2>INIT_VELOCITY_STD<a class="headerlink" href="#init-velocity-std" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1000.0</p>
+<p><strong>Definition:</strong> At initialization, velocity and acceleration will be constrained because they are not immediately observable. Those constraints will assume a zero-mean Gaussian distribution with the provided standard-deviation for each scalar element. Standard deviation of initialization velocity, in meters/sec.</p>
+</div>
+<div class="section" id="init-acceleration-std">
+<h2>INIT_ACCELERATION_STD<a class="headerlink" href="#init-acceleration-std" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1000.0</p>
+<p><strong>Definition:</strong> Standard deviation of initialization acceleration, in meters/sec^2.</p>
+</div>
+<div class="section" id="interchannel-bias-std">
+<h2>INTERCHANNEL_BIAS_STD<a class="headerlink" href="#interchannel-bias-std" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.0</p>
+<p><strong>Definition:</strong> Applicable only to the multi-antenna Estimator, INTERCHANNEL_BIAS_STD represents the standard deviation of error induced on the interchannel biases of the ALT channels relative to the primary channel by the process noise over a 1-second propagation step.  In the multi-antenna Estimator, each of the primary and ALT channels have their own receiver-clock offsets that are mutually correlated through a common receiver-clock offset rate. When set to 0, a single receiver-clock offset (and rate) will be used for all channels. The units of INTERCHANNEL_BIAS_STD are seconds/sqrt(sec).</p>
+</div>
+<div class="section" id="zenith-pseudorange-std">
+<h2>ZENITH_PSEUDORANGE_STD<a class="headerlink" href="#zenith-pseudorange-std" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 3</p>
+<p><strong>Definition:</strong> Standard deviation of pseudorange measurements assuming a transmitter at zenith, in meters.</p>
+</div>
+<div class="section" id="zenith-doppler-std">
+<h2>ZENITH_DOPPLER_STD<a class="headerlink" href="#zenith-doppler-std" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1</p>
+<p><strong>Definition:</strong> Standard deviation of Doppler measurements assuming a transmitter at zenith, in Hz.</p>
+</div>
+<div class="section" id="elevation-dependent-weighting">
+<h2>ELEVATION_DEPENDENT_WEIGHTING<a class="headerlink" href="#elevation-dependent-weighting" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Assert to weight observables by 1/sin(el), where el is the elevation angle.  This has the effect of de-weighting multipath-corrupted low-elevation signals.  If not asserted, all observables are weighted equally.</p>
+</div>
+<div class="section" id="assume-coincident-groups">
+<h2>ASSUME_COINCIDENT_GROUPS<a class="headerlink" href="#assume-coincident-groups" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Set true to treat all antennas specified in GROUPS as coincident and estimate only a single, common position (and velocity, acceleration, etc.). Set false to estimate independent positions for each antenna.</p>
+</div>
+<div class="section" id="deweight-non-gps-l1-ca-primary">
+<h2>DEWEIGHT_NON_GPS_L1_CA_PRIMARY<a class="headerlink" href="#deweight-non-gps-l1-ca-primary" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Assert to de-weight all non-GPS_L1_CA_PRIMARY SignalTypes in the navigation solution.  The de-weighted signals types may still be incorporated into the solution, but they are de-weighted to the extent that their effect is negligible.  This de-weighting is useful for (1) resorting to a trusted GPS_L1_CA_PRIMARY-only navigation solution, and (2) examining the innovations of non-GPS_L1_CA_PRIMARY signals against a trusted GPS_L1_CA_PRIMARY-based solution.</p>
+</div>
+<div class="section" id="groups">
+<h2>GROUPS<a class="headerlink" href="#groups" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> All Signal Types supported by Primary Antenna</p>
+<p><strong>Definition:</strong> Specify the antenna groups involved in estimation.</p>
+</div>
+<div class="section" id="demand-all">
+<h2>DEMAND_ALL<a class="headerlink" href="#demand-all" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Set true to register demand for all SignalTypes and TxIds. This is the default value and provides the legacy behavior of PpRx. Set false to register demand only for those Groups involved in estimation.</p>
+</div>
+<div class="section" id="constrain-ecef-position">
+<h2>CONSTRAIN_ECEF_POSITION<a class="headerlink" href="#constrain-ecef-position" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Assert to constrain ECEF position to <a class="reference internal" href="#known-ecef-position"><span class="std std-ref">KNOWN_ECEF_POSITION</span></a>. Only applicable when dynamics model is STATIC.</p>
+</div>
+<div class="section" id="known-ecef-position">
+<h2>KNOWN_ECEF_POSITION<a class="headerlink" href="#known-ecef-position" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> [0 0 0]</p>
+<p><strong>Definition:</strong> Known ECEF position of L1 antenna phase center, in meters.</p>
+</div>
+<div class="section" id="zero-velocity-update-threshold-mps">
+<h2>ZERO_VELOCITY_UPDATE_THRESHOLD_MPS<a class="headerlink" href="#zero-velocity-update-threshold-mps" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.0</p>
+<p><strong>Definition:</strong> If the norm of the estimated velocity vector is below this value, expressed in meters per second, then the estimator will assume that thevelocity is actually zero and update the state accordingly.</p>
+</div>
+<div class="section" id="deltr-fixup-resolution-sec">
+<h2>DELTR_FIXUP_RESOLUTION_SEC<a class="headerlink" href="#deltr-fixup-resolution-sec" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.0001</p>
+<p><strong>Definition:</strong> This quantity is the time fixup resolution, in seconds.  A time fixup DELTR is always chosen to be an integer multiple of this quantity. This implies that DELTR_FIXUP_RESOLUTION_SEC must be chosen such that for any carrier frequency fc considered within the code, fc*DELTR_FIXUP_RESOLUTION_SEC is an integer number of cycles.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="display.html" class="btn btn-neutral float-right" title="DISPLAY" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bank.html" class="btn btn-neutral float-left" title="BANK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Locus Lock
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+          
+          <dd><a href="/docs/en/master/">en</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/es/master/">es</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+          
+          <dd><a href="/docs/es/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/es/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/docs/es/master/locuslock-docs_es_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/docs/es/master/locuslock-docs_es_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+<!--   <style>
+         .wy-nav-content { max-width: none; }
+  </style> -->
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ababab;
+    }
+  </style>
+
+
+
+</body>
+</html>

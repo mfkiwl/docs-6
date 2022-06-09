@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CDGNSS &mdash; documentación de locuslock - 1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script src="../../_static/_static/js/toggle.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/_static/css/toggle.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="ESTIMATOR" href="estimatorconf.html" />
+    <link rel="prev" title="Precise Positioning Engine (ppengine)" href="../ppengine.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> locuslock
+          
+
+          
+            
+            <img src="../../_static/white4x.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_usr/index.html">Hardware User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Software User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Software Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pprx.html">Precise Positioning Receiver (pprx)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ppengine.html">Precise Positioning Engine (ppengine)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ppengine.html#steps-to-enable-ppengine">Steps to Enable PPengine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ppengine.html#editing-options-files">Editing Options Files</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ppengine.html#editing-configuration-parameters">Editing Configuration Parameters</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">CDGNSS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="estimatorconf.html">ESTIMATOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pposeestimatorconf.html">PPOSE_ESTIMATOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="baselineconf.html">BASELINE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imuconf.html">IMU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="difftropoconf.html">DIFF_TROPO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ppengine.html#how-to-run">How to Run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../binflate.html">Binflate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opmode.html">Operational Modes</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">locuslock</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Software User Guide</a> &raquo;</li>
+        
+          <li><a href="../ppengine.html">Precise Positioning Engine (ppengine)</a> &raquo;</li>
+        
+      <li>CDGNSS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/software_usr/ppengine_config_blocks/cdgnssconf.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cdgnss">
+<h1>CDGNSS<a class="headerlink" href="#cdgnss" title="Permalink to this heading">¶</a></h1>
+<p>Below is an <em>example</em> of the CDGNSS block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">CDGNSS</span><span class="p">]</span>
+<span class="n">USE_IONO_CORR</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">USE_TROPO_CORR</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">IA_TEST_TYPE</span> <span class="o">=</span> <span class="n">DIFFERENCE</span> 
+<span class="n">IA_OVERRIDE_TEST_RESULT</span> <span class="o">=</span> <span class="n">FALSE</span>
+<span class="n">IA_OVERRIDE_VALUE</span> <span class="o">=</span> <span class="n">FALSE</span>
+<span class="n">IA_USE_FIXED_FAILURE_RATE</span> <span class="o">=</span> <span class="n">TRUE</span> 
+<span class="n">IA_DEFAULT_TEST_PARAM</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">IA_ALLOWABLE_FAILURE_PROBABILITY</span> <span class="o">=</span> <span class="mf">1e-3</span>
+<span class="n">NUM_BASELINES</span> <span class="o">=</span> <span class="mi">1</span>  
+<span class="n">ESTIMATION_STRATEGY</span> <span class="o">=</span> <span class="n">SINGLE_EPOCH</span>
+<span class="n">ADMISSIBLE_GENERIC_TYPES</span> <span class="o">=</span> <span class="n">GPS_L1_CA</span> <span class="n">GALILEO_E1_BC</span> <span class="n">SBAS_L1_I</span> 
+<span class="n">TXID_EXCLUDE_LIST</span> <span class="o">=</span> 
+<span class="n">ELEVATION_MASK_ANGLE_DEG</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">ENFORCE_STRICT_SELECTION</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">STRICT_SELECTION_CN0_THRESHOLD</span> <span class="o">=</span> <span class="mi">39</span>
+<span class="n">STRICT_SELECTION_PHASE_LOCK_STAT_THRESHOLD</span> <span class="o">=</span> <span class="mf">0.7</span> 
+<span class="n">INNOVATIONS_TEST_THRESHOLD_FACTOR</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">SQRT_Q_TILDE_ATT</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">UNDIFFERENCED_ZENITH_PSEUDORANGE_STD</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">UNDIFFERENCED_ZENITH_PHASE_STD</span> <span class="o">=</span> <span class="mf">0.0035</span>
+<span class="n">ELEVATION_DEPENDENT_WEIGHTING</span> <span class="o">=</span> <span class="n">TRUE</span>
+<span class="n">MAXIMUM_AGE_OF_VALID_REFERENCE_DATA_SEC</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">MAX_ELEVATION_FOR_INTEGER_INITIAL_GUESS_DEG</span> <span class="o">=</span> <span class="mi">15</span>
+</pre></div>
+</div>
+<p>The CDGNSS block contains all of the following configuration parameters:</p>
+<div class="section" id="use-iono-corr">
+<h2>USE_IONO_CORR<a class="headerlink" href="#use-iono-corr" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Set true to correct for ionospheric delay when estimating the state</p>
+</div>
+<div class="section" id="use-tropo-corr">
+<h2>USE_TROPO_CORR<a class="headerlink" href="#use-tropo-corr" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Set true to correct for tropospheric (neutral atmospheric) delay when estimating the state</p>
+</div>
+<div class="section" id="ils-num-threads">
+<h2>ILS_NUM_THREADS<a class="headerlink" href="#ils-num-threads" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> &#64;HHH</p>
+<p><strong>Definition:</strong> Sets the number of threads ILS is allowed to use for modes capable of parallelization (e.g., grid search).</p>
+</div>
+<div class="section" id="ia-test-type">
+<h2>IA_TEST_TYPE<a class="headerlink" href="#ia-test-type" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> &#64;HHH</p>
+<p><strong>Definition:</strong> Specifies the type of Integer Aperture test to be performed. Select from the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IALS</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RATIO</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DIFFERENCE</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="ia-override-test-result">
+<h2>IA_OVERRIDE_TEST_RESULT<a class="headerlink" href="#ia-override-test-result" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Additional configuration for selected integer aperture test in configuration parameter <a class="reference internal" href="#ia-test-type"><span class="std std-ref">IA_TEST_TYPE</span></a>. Allows for the Integer Aperture test to be effectively disabled by overriding the output with overrideValue so that all fixed or all float results can be seen. The test will still be performed so that all statistics from the test can be viewed, but the returned result is fixed regardless of the test result.</p>
+</div>
+<div class="section" id="ia-override-value">
+<h2>IA_OVERRIDE_VALUE<a class="headerlink" href="#ia-override-value" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Additional configuration for selected integer aperture test in configuration parameter <a class="reference internal" href="#ia-test-type"><span class="std std-ref">IA_TEST_TYPE</span></a>.</p>
+</div>
+<div class="section" id="ia-use-fixed-failure-rate">
+<h2>IA_USE_FIXED_FAILURE_RATE<a class="headerlink" href="#ia-use-fixed-failure-rate" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Additional configuration for selected integer aperture test in configuration parameter <a class="reference internal" href="#ia-test-type"><span class="std std-ref">IA_TEST_TYPE</span></a>. Allows fixed-failure-rate testing to be turned off with the test parameter set to a fixed default value</p>
+</div>
+<div class="section" id="ia-default-test-param">
+<h2>IA_DEFAULT_TEST_PARAM<a class="headerlink" href="#ia-default-test-param" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.8</p>
+<p><strong>Definition:</strong> Additional configuration for selected integer aperture test in configuration parameter <a class="reference internal" href="#ia-test-type"><span class="std std-ref">IA_TEST_TYPE</span></a>. Sets the default parameter that is used when not using the fixed-failure rate test</p>
+</div>
+<div class="section" id="ia-allowable-failure-probability">
+<h2>IA_ALLOWABLE_FAILURE_PROBABILITY<a class="headerlink" href="#ia-allowable-failure-probability" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1e-3</p>
+<p><strong>Definition:</strong> Additional configuration for selected integer aperture test in configuration parameter <a class="reference internal" href="#ia-test-type"><span class="std std-ref">IA_TEST_TYPE</span></a>. Sets the maximum allowable failure probability for the fixed-failure rate test. Note that some of the Integer Aperture tests have fixed-failure rate algorithms that look up model coefficients from a table based (at least partially) on this failure rate. In these cases, the failure rate is rounded down to the nearest entry in the table. If the specified failure rate is lower than all values in the table, then the Integer Aperture test will throw an ASSERT on configuration.</p>
+</div>
+<div class="section" id="ia-minimum-test-param">
+<h2>IA_MINIMUM_TEST_PARAM<a class="headerlink" href="#ia-minimum-test-param" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> -INFINITY</p>
+<p><strong>Definition:</strong> Additional configuration for selected integer aperture test in configuration parameter <a class="reference internal" href="#ia-test-type"><span class="std std-ref">IA_TEST_TYPE</span></a>. Sets the minimum test statistic that is allowed when using the fixed-failure rate test. This helps to protect against cases when the fixed-failure rate test sets a low or zero threshold due to an overly optimistic high model strength, often caused by unmodeled biases such as multipath.</p>
+</div>
+<div class="section" id="use-point-repelling-model">
+<h2>USE_POINT_REPELLING_MODEL<a class="headerlink" href="#use-point-repelling-model" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Production of the spherical grid used in constrained baseline ILS can employ a point repelling model to refine the grid points by making them more uniformly spaced. However, this model can take a while to run for baselines longer than 1 meter. Only relevant to the ATTITUDE_2D estimator.</p>
+</div>
+<div class="section" id="sphere-grid-spacing-mult">
+<h2>SPHERE_GRID_SPACING_MULT<a class="headerlink" href="#sphere-grid-spacing-mult" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.95</p>
+<p><strong>Definition:</strong> The spherical grid used in constrained baseline ILS requires grid points to be spaced by no more than half the smallest wavelength (L1 wavelength). However, it is usually a good idea to try for a little tighter than this because it is theoretically provable that uniform spacing on a sphere is impossible, past a certain number of points, and our algorithms for producing the grid are just an approximation. This value is a multiplication factor of LAMBDA_L1_M/2 to determine the goal grid spacing. Value cannot be larger than 1 or less than or equal to 0. Only relevant to the ATTITUDE_2D estimator.</p>
+</div>
+<div class="section" id="elevation-mask-angle-rad">
+<h2>ELEVATION_MASK_ANGLE_RAD<a class="headerlink" href="#elevation-mask-angle-rad" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.25</p>
+<p><strong>Definition:</strong> Elevation mask angle, in radians. Signals arriving at the receiver from transmitters below the elevation mask angle will be excluded from the estimation solution. Set to -PI/2 to prevent elevation masking. In the receiver config file, the elevation mask angle is given in degrees as ELEVATION_MASK_ANGLE_DEG.</p>
+</div>
+<div class="section" id="boresight-elevation-mask-angle-rad">
+<h2>BORESIGHT_ELEVATION_MASK_ANGLE_RAD<a class="headerlink" href="#boresight-elevation-mask-angle-rad" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> -INFINITY</p>
+<p><strong>Definition:</strong> Boresight-relative elevation mask angle, in radians. See <a class="reference internal" href="../pprx_config_blocks/estimator.html#elevation-mask-angle-rad"><span class="std std-ref">ELEVATION_MASK_ANGLE_RAD</span></a>. This value is only used when vehicle attitude information is provided in the incoming GBX stream.</p>
+</div>
+<div class="section" id="enforce-strict-selection">
+<h2>ENFORCE_STRICT_SELECTION<a class="headerlink" href="#enforce-strict-selection" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> When true, carrier phase and pseudorange measurements associated with a phase lock statistic below <a class="reference internal" href="#strict-selection-phase-lock-stat-threshold"><span class="std std-ref">STRICT_SELECTION_PHASE_LOCK_STAT_THRESHOLD</span></a> or C/N0 values below <a class="reference internal" href="#strict-selection-cn0-threshold"><span class="std std-ref">STRICT_SELECTION_CN0_THRESHOLD</span></a> will be excluded from the precise navigation solution. When false, such measurements will be permitted.</p>
+</div>
+<div class="section" id="strict-selection-cn0-threshold">
+<h2>STRICT_SELECTION_CN0_THRESHOLD<a class="headerlink" href="#strict-selection-cn0-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 37.5</p>
+<p><strong>Definition:</strong> Carrier-to-noise ratio threshold for strict selection. See comments for <a class="reference internal" href="../pprx_config_blocks/estimator.html#enforce-strict-selection"><span class="std std-ref">ENFORCE_STRICT_SELECTION</span></a>.</p>
+</div>
+<div class="section" id="strict-selection-phase-lock-stat-threshold">
+<h2>STRICT_SELECTION_PHASE_LOCK_STAT_THRESHOLD<a class="headerlink" href="#strict-selection-phase-lock-stat-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.55</p>
+<p><strong>Definition:</strong> Phase lock statistic threshold for strict selection. See comments for <a class="reference internal" href="../pprx_config_blocks/estimator.html#enforce-strict-selection"><span class="std std-ref">ENFORCE_STRICT_SELECTION</span></a>.</p>
+</div>
+<div class="section" id="innovations-test-pf">
+<h2>INNOVATIONS_TEST_PF<a class="headerlink" href="#innovations-test-pf" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1e-5</p>
+<p><strong>Definition:</strong> Threshold for double-difference pseudorange innovations test. (also known as the «float» innovations test). The innovations test is a chi-squared test using the normalized innovations squared (NIS) statistic, with a threshold corresponding to a constant false alarm rate of INNOVATIONS_TEST_PF. If the test is failed for a batch of DD GNSS observables, the POSITION_RTK and ATTITUDE_2D estimators reinitialize themselves. The POSE_AND_TWIST estimators reject that batch of observables but do not reinitialize.</p>
+</div>
+<div class="section" id="fix-innovations-test-pf">
+<h2>FIX_INNOVATIONS_TEST_PF<a class="headerlink" href="#fix-innovations-test-pf" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1e-5</p>
+<p><strong>Definition:</strong> Threshold for double-difference carrier phase innovations test. (also known as the «fix» innovations test). The innovations test is a chi-squared test using the normalized innovations squared (NIS) statistic, with a threshold corresponding to a constant false alarm rate of FIX_INNOVATIONS_TEST_PF. Carrier phase NIS is approximated as chi-square distributed, but this not exactly the case because large residuals «tick over» to the next integer (therefore, large carrier phase residuals are not possible). If the test is failed for a batch of DD GNSS observables, the estimator falls back to a float solution (equivalent to a pseudorange-only solution when performing single-epoch integer ambiguity resolution)</p>
+</div>
+<div class="section" id="dd-pseudorange-scalar-outlier-thresh-std">
+<h2>DD_PSEUDORANGE_SCALAR_OUTLIER_THRESH_STD<a class="headerlink" href="#dd-pseudorange-scalar-outlier-thresh-std" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> +INFINITY</p>
+<p><strong>Definition:</strong> Threshold, in standard deviations, for scalar DD pseudorange outlier rejection. If the scalar normalized innovations value for a DD pseudorange measurement exceeds this threshold, the corresponding GNSS satellite is excluded on all frequencies for all baselines.</p>
+<p>See the section titled «Outlier Rejection using Pseudorange Innovations» in <a class="reference external" href="https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/02/tight-coupling-journal.pdf">this paper</a>.</p>
+</div>
+<div class="section" id="soft-reset-nis-history-window">
+<h2>SOFT_RESET_NIS_HISTORY_WINDOW<a class="headerlink" href="#soft-reset-nis-history-window" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0</p>
+<p><strong>Definition:</strong> Window size, in epochs, of the false fix detection and recovery mechanism. If the double-difference carrier phase normalized innovations squared (NIS) over this window exceeds a chi-squared test threshold, a «soft reset» is performed, falling back to the «float-only» estimator. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.</p>
+<p>See the section titled «False fix detection and recovery» in <a class="reference external" href="https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/02/tight-coupling-journal.pdf">this paper</a>.</p>
+</div>
+<div class="section" id="soft-reset-test-pf">
+<h2>SOFT_RESET_TEST_PF<a class="headerlink" href="#soft-reset-test-pf" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1e-5</p>
+<p><strong>Definition:</strong> False-alarm probability used to set the false-fix detection chi-squared threshold. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.</p>
+</div>
+<div class="section" id="soft-reset-min-num-fixes-in-window">
+<h2>SOFT_RESET_MIN_NUM_FIXES_IN_WINDOW<a class="headerlink" href="#soft-reset-min-num-fixes-in-window" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 5</p>
+<p><strong>Definition:</strong> The false fix detector will only be able to fire if there have been at least SOFT_RESET_MIN_NUM_FIXES_IN_WINDOW integer fixes in the rolling window. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.</p>
+</div>
+<div class="section" id="allow-reseed">
+<h2>ALLOW_RESEED<a class="headerlink" href="#allow-reseed" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Enable the «re-seed» mechanism of the POSE_AND_TWIST_15_MULTI_MODEL estimator. If the re-seed criteria are met, the «float-only» estimator state will be «re-seeded» with the latest integer fixed solution. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.</p>
+<p>See the section titled «Float-only estimator re-seeding» in <a class="reference external" href="https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/02/tight-coupling-journal.pdf">this paper</a>.</p>
+</div>
+<div class="section" id="reseed-last-fix-nis-threshold">
+<h2>RESEED_LAST_FIX_NIS_THRESHOLD<a class="headerlink" href="#reseed-last-fix-nis-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1.0</p>
+<p><strong>Definition:</strong> Maximum (Carrier phase NIS / # carrier phase measurements) for the most recent fixed-integer solution to permit a re-seed. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.</p>
+</div>
+<div class="section" id="reseed-last-window-nis-threshold">
+<h2>RESEED_LAST_WINDOW_NIS_THRESHOLD<a class="headerlink" href="#reseed-last-window-nis-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.5</p>
+<p><strong>Definition:</strong> Maximum (window carrier phase NIS / # carrier phase measurements in window) for a re-seed. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.</p>
+</div>
+<div class="section" id="reseed-last-fix-min-ndd">
+<h2>RESEED_LAST_FIX_MIN_NDD<a class="headerlink" href="#reseed-last-fix-min-ndd" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 10</p>
+<p><strong>Definition:</strong> A re-seed is only performed if there were at least RESEED_LAST_FIX_MIN_NDD double-difference measurements used in the most recent fixed solution. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.</p>
+</div>
+<div class="section" id="reseed-min-fixes-in-window">
+<h2>RESEED_MIN_FIXES_IN_WINDOW<a class="headerlink" href="#reseed-min-fixes-in-window" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 10</p>
+<p><strong>Definition:</strong> A re-seed is only performed if there were at least RESEED_MIN_FIXES_IN_WINDOW fixed solutions in the rolling window used by the false fix detector. Only used by the POSE_AND_TWIST_15_MULTI_MODEL estimator.</p>
+</div>
+<div class="section" id="sqrt-q-tilde-pos">
+<h2>SQRT_Q_TILDE_POS<a class="headerlink" href="#sqrt-q-tilde-pos" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.2</p>
+<p><strong>Definition:</strong> The position process noise for some dynamics models is expressed in terms of SQRT_Q_TILDE_POS, the square root of the noise intensity. See Bar Shalom «Estimation with Applications to Tracking and Navigation» sections 6.2.1 to 6.2.3 for details. The units of SQRT_Q_TILDE_POS are as follows for each dynamics model:</p>
+<p>STATIC                          meters/sqrt(sec)
+NEARLY_CONSTANT_VELOCITY        meters/sqrt(sec^3)
+INERTIAL_MEASUREMENT_UNIT       meters/sqrt(sec^3)
+NEARLY_CONSTANT_ACCELERATION    meters/sqrt(sec^5)</p>
+<p>SQRT_Q_TILDE_POS represents the standard deviation of error induced on position, velocity, or acceleration state elements by the process noise over a 1-second propagation step. The standard deviation corresponding to a T-second step is then approximated as sigmaX = sqrt(T)*SQRT_Q_TILDE_POS (see, e.g., Eq. 6.22-13 in Bar Shalom). This approximation is valid for short T; for long T, one needs to take multiple short propagation steps. Note that SQRT_Q_TILDE_POS is only used to generate a Q matrix for the INERTIAL_MEASUREMENT_UNIT dynamics model to cover any propagation step that may be required between thelatest IMU measurement before the measurement update and the measurement update itself.</p>
+</div>
+<div class="section" id="sqrt-q-tilde-body-vec">
+<h2>SQRT_Q_TILDE_BODY_VEC<a class="headerlink" href="#sqrt-q-tilde-body-vec" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> [0 0 0]</p>
+<p><strong>Definition:</strong> SQRT_Q_TILDE_BODY_VEC represents the standard deviation of error induced on position, velocity, or acceleration state elements by the process noise over a 1-second propagation step, in the body X (nominally aligned with forward motion), Y (lateral), and Z (up) directions. This configuration option is used in place of SQRT_Q_TILDE when the BODY_NEARLY_CONSTANT_VELOCITY dynamics model is employed. It allows a simple way to constrain vehicle motion in the lateral and up directions.</p>
+</div>
+<div class="section" id="sqrt-q-tilde-att">
+<h2>SQRT_Q_TILDE_ATT<a class="headerlink" href="#sqrt-q-tilde-att" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.05</p>
+<p><strong>Definition:</strong> The attitude corollary to <a class="reference internal" href="#sqrt-q-tilde-pos"><span class="std std-ref">SQRT_Q_TILDE_POS</span></a> is SQRT_Q_TILDE_ATT. The units of this quantity depend on if the state includes angular velocity or not and are as follows</p>
+<p>no angular velocity      rad/sqrt(sec)
+with angular velocity    rad/sqrt(sec^3)</p>
+</div>
+<div class="section" id="sqrt-q-tilde-att-vec">
+<h2>SQRT_Q_TILDE_ATT_VEC<a class="headerlink" href="#sqrt-q-tilde-att-vec" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> [0.05 0.05 0.05]</p>
+<p><strong>Definition:</strong> See <a class="reference internal" href="#sqrt-q-tilde-att"><span class="std std-ref">SQRT_Q_TILDE_ATT</span></a>.</p>
+</div>
+<div class="section" id="undifferenced-zenith-pseudorange-std">
+<h2>UNDIFFERENCED_ZENITH_PSEUDORANGE_STD<a class="headerlink" href="#undifferenced-zenith-pseudorange-std" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1.0</p>
+<p><strong>Definition:</strong> Standard deviation of undifferenced pseudorange measurements assuming a transmitter at zenith, in meters. This value applies for all frequencies.</p>
+</div>
+<div class="section" id="undifferenced-zenith-phase-std">
+<h2>UNDIFFERENCED_ZENITH_PHASE_STD<a class="headerlink" href="#undifferenced-zenith-phase-std" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.004</p>
+<p><strong>Definition:</strong> Standard deviation of undifferenced carrier phase measurements assuming a transmitter at zenith, in meters. This value applies for all frequencies.</p>
+</div>
+<div class="section" id="undifferenced-zenith-stationary-pseudorange-std">
+<h2>UNDIFFERENCED_ZENITH_STATIONARY_PSEUDORANGE_STD<a class="headerlink" href="#undifferenced-zenith-stationary-pseudorange-std" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 5</p>
+<p><strong>Definition:</strong> Standard deviation of the undifferenced pseudorange measurements while rover is stationary, assuming a transmitter at zenith, in meters. This value can be set larger than UNDIFFERENCED_ZENITH_PSEUDORANGE_STD to account for the increased multipath that stationary rover antennas suffer. If unspecified by the user, this parameter defaults to the same value as UNDIFFERENCED_ZENITH_PSEUDORANGE_STD. Stationarity is determined using the velocity component of the rover standard navigation solution.</p>
+</div>
+<div class="section" id="undifferenced-zenith-transient-pseudorange-std">
+<h2>UNDIFFERENCED_ZENITH_TRANSIENT_PSEUDORANGE_STD<a class="headerlink" href="#undifferenced-zenith-transient-pseudorange-std" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1</p>
+<p><strong>Definition:</strong> Alternate undifferenced pseudorange standard deviation at zenith, in meters, that is used during the FIRST_TRANSIENT period of the DLL.</p>
+</div>
+<div class="section" id="elevation-dependent-weighting">
+<h2>ELEVATION_DEPENDENT_WEIGHTING<a class="headerlink" href="#elevation-dependent-weighting" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Assert to weight undifferenced observables by 1/sin(el), where el is the elevation angle.  This has the effect of de-weighting multipath-corrupted low-elevation signals.  If not asserted, all observables are weighted equally.</p>
+</div>
+<div class="section" id="outlier-detection">
+<h2>OUTLIER_DETECTION<a class="headerlink" href="#outlier-detection" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Perform outlier detection on pseudorange and carrier phase measurements assuming (A) that the ratio test is passed and (B) that the minimum number of DD carrier phase measurements exceeds <a class="reference internal" href="#minimum-number-dd-signals-for-outlier-detection"><span class="std std-ref">MINIMUM_NUMBER_DD_SIGNALS_FOR_OUTLIER_DETECTION</span></a>. Multiple outliers can be detected during each epoch, if necessary.</p>
+</div>
+<div class="section" id="minimum-number-dd-signals-for-outlier-detection">
+<h2>MINIMUM_NUMBER_DD_SIGNALS_FOR_OUTLIER_DETECTION<a class="headerlink" href="#minimum-number-dd-signals-for-outlier-detection" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 8</p>
+<p><strong>Definition:</strong> If <a class="reference internal" href="#outlier-detection"><span class="std std-ref">OUTLIER_DETECTION</span></a> = true, continue to perform outlier detection on signals until the number of carrier phase measurements drops below this threshold.</p>
+</div>
+<div class="section" id="minimum-number-dd-signals">
+<h2>MINIMUM_NUMBER_DD_SIGNALS<a class="headerlink" href="#minimum-number-dd-signals" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1</p>
+<p><strong>Definition:</strong> Minimum number of double-differenced (DD) signal pairs required to promote a float solution to a fixed solution.  If the most recent solution was a fixed solution, then this minimum is ignored, unless <a class="reference internal" href="#force-ndd-requirement"><span class="std std-ref">FORCE_NDD_REQUIREMENT</span></a> is TRUE.</p>
+</div>
+<div class="section" id="force-ndd-requirement">
+<h2>FORCE_NDD_REQUIREMENT<a class="headerlink" href="#force-ndd-requirement" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> If FALSE, a fixed solution with NDD less than <span class="xref std std-ref">MINIMUM_NUMBER_NDD_SIGNALS</span> will still be accepted if the previous solution was fixed and certain other criteria are met. If TRUE, <span class="xref std std-ref">MINIMUM_NUMBER_NDD_SIGNALS</span> is strictly enforced.</p>
+</div>
+<div class="section" id="maximum-age-of-valid-reference-data-sec">
+<h2>MAXIMUM_AGE_OF_VALID_REFERENCE_DATA_SEC<a class="headerlink" href="#maximum-age-of-valid-reference-data-sec" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.5</p>
+<p><strong>Definition:</strong> Maximum allowed age of reference data relative to current rover epoch for the reference data to be considered valid. Note that if the reference data are more recent than the rover data, then the age will be negative and will always be less than the value below, which is assumed to be positive. Note also that if one sets this value smaller than the reference data’s inter-epoch interval Te then, for each rover epoch processed, the age of data aod will be on the range -Te &lt; aod &lt;= 0.  Thus, one should choose Te to be an acceptably small age of data.</p>
+</div>
+<div class="section" id="reference-ecef-position">
+<h2>REFERENCE_ECEF_POSITION<a class="headerlink" href="#reference-ecef-position" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> &#64;HHH</p>
+<p><strong>Definition:</strong> Precise XYZ ECEF position of the mean L1 phase center of the static reference antenna used in single-baseline RTK, expressed in meters in the same coordinates as the ephemeris records. The Boolean component indicates validity.</p>
+</div>
+<div class="section" id="rover-ecef-position">
+<h2>ROVER_ECEF_POSITION<a class="headerlink" href="#rover-ecef-position" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> &#64;HHH</p>
+<p><strong>Definition:</strong> Precise XYZ ECEF position of the mean L1 phase center of a static rover receiver antenna used in single-baseline RTK, expressed in meters in the same coordinates as the ephemeris records. The Boolean component indicates validity.</p>
+</div>
+<div class="section" id="constrain-rover-ecef-position">
+<h2>CONSTRAIN_ROVER_ECEF_POSITION<a class="headerlink" href="#constrain-rover-ecef-position" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Indicates whether the rover antenna position should be constrained to the value <a class="reference internal" href="#rover-ecef-position"><span class="std std-ref">ROVER_ECEF_POSITION</span></a>.</p>
+</div>
+<div class="section" id="constraint-sigma-meters">
+<h2>CONSTRAINT_SIGMA_METERS<a class="headerlink" href="#constraint-sigma-meters" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1e-4</p>
+<p><strong>Definition:</strong> The rover antenna constraint, in meters. If CONSTRAIN_ROVER_ECEF_POSITION is asserted, then an artificial constraint with a standard deviation of CONSTRAINT_SIGMA_METERS will tie the rover position to <a class="reference internal" href="#rover-ecef-position"><span class="std std-ref">ROVER_ECEF_POSITION</span></a>.</p>
+</div>
+<div class="section" id="constrain-rover-to-truth-position">
+<h2>CONSTRAIN_ROVER_TO_TRUTH_POSITION<a class="headerlink" href="#constrain-rover-to-truth-position" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> If true, constrains the rover to positions supplied via incoming «truth» PoseAndTwist GBX messages. This option requires the STATIC dynamics model.</p>
+</div>
+<div class="section" id="truth-position-offset-enu">
+<h2>TRUTH_POSITION_OFFSET_ENU<a class="headerlink" href="#truth-position-offset-enu" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> &#64;HHH</p>
+<p><strong>Definition:</strong> ENU frame offset added to incoming «truth» PoseAndTwist messages</p>
+</div>
+<div class="section" id="admissible-generic-types">
+<h2>ADMISSIBLE_GENERIC_TYPES<a class="headerlink" href="#admissible-generic-types" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> &#64;HHH</p>
+<p><strong>Definition:</strong> To avoid mismatched double differences, only a single SignalType:GenericType is admissible for each System at each center frequency. For example, at L2 only one of GPS_L2_CL, GPS_L2_CM, or GPS_L2_CLM is allowed. The following vector lists all admissible GenericTypes.
+.. .. code-block:: c
+..      std::vector&lt;SignalType::GenericType&gt; ADMISSIBLE_GENERIC_TYPES{
+..     SignalType::GPS_L1_CA, SignalType::SBAS_L1_I, SignalType::GALILEO_E1_BC,
+..     SignalType::GPS_L2_CLM
+..   };</p>
+</div>
+<div class="section" id="txid-exclude-list">
+<h2>TXID_EXCLUDE_LIST<a class="headerlink" href="#txid-exclude-list" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> []</p>
+<p><strong>Definition:</strong> List of TxIds and frequencies to exclude from participating in PpEstimator solution.  Each element in the list is entered by the user according to the format</p>
+<p>[Alphabetic System Designator][Number][Frequency Code]</p>
+<p>The alphabetic system designator is the same as the RINEX convention: G (GPS), E (Galileo), S (SBAS), etc.  The frequency code is either L1 or L2.  For example, to exclude GPS PRN 23 only on L2, Galileo PRN 13 on all frequencies, and SBAS PRN 138 on L1:</p>
+<p>TXID_EXCLUDE_LIST G23L2 E13L1 E13L2 S138L1</p>
+</div>
+<div class="section" id="force-pivot-list">
+<h2>FORCE_PIVOT_LIST<a class="headerlink" href="#force-pivot-list" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> []</p>
+<p><strong>Definition:</strong> List of TxIds and frequencies that are commanded to be used as pivots in double differencing. The input format is the same as for <a class="reference internal" href="#txid-exclude-list"><span class="std std-ref">TXID_EXCLUDE_LIST</span></a>.  If this list is empty, then pivots will be chosen according to the default internal algorithm.</p>
+</div>
+<div class="section" id="galileo-e1-bc-to-gps-l1-ca-dd-dcb">
+<h2>GALILEO_E1_BC_TO_GPS_L1_CA_DD_DCB<a class="headerlink" href="#galileo-e1-bc-to-gps-l1-ca-dd-dcb" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0</p>
+<p><strong>Definition:</strong> Differential code bias in the double difference pseudorange observation for a pivot satellite with GenericType GPS_L1_CA and a non-pivot satellite with the GenericType indicated.  If the pivot and non-pivot roles are reversed, then the negative of this DCB value is applied. This type of DCB arises when the rover receiver and the reference receiver have dissimilar front ends or code replica generator configuration.</p>
+</div>
+<div class="section" id="sbas-l1-i-to-gps-l1-ca-dd-dcb">
+<h2>SBAS_L1_I_TO_GPS_L1_CA_DD_DCB<a class="headerlink" href="#sbas-l1-i-to-gps-l1-ca-dd-dcb" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0</p>
+<p><strong>Definition:</strong> Differential code bias in the double difference pseudorange observation for a pivot satellite with GenericType GPS_L1_CA and a non-pivot satellite with the GenericType indicated.  If the pivot and non-pivot roles are reversed, then the negative of this DCB value is applied. This type of DCB arises when the rover receiver and the reference receiver have dissimilar front ends or code replica generator configuration.</p>
+</div>
+<div class="section" id="force-valid-reference-observables">
+<h2>FORCE_VALID_REFERENCE_OBSERVABLES<a class="headerlink" href="#force-valid-reference-observables" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Observables from GRID/pprx are marked invalid if the transmitter is indicated to be unhealthy, or if the health status is not known.  When the following flag is asserted, all processed observables from the reference stream are considered valid. Rover stream observables are never forced valid; their validity can only be overriden by appropriate pprx configuration.</p>
+</div>
+<div class="section" id="outlier-exclusion-depth">
+<h2>OUTLIER_EXCLUSION_DEPTH<a class="headerlink" href="#outlier-exclusion-depth" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0</p>
+<p><strong>Definition:</strong> Depth of outlier exclusion search.  Signals are ordered from most to least likely to cause integer fixing failure and single-signal (N-choose-1) exclusion is attempted on each of the ordered signals up to and including the nth one, with n = OUTLIER_EXCLUSION_DEPTH.  A value of 0 prevents outlier exclusion from being performed.</p>
+</div>
+<div class="section" id="backward">
+<h2>BACKWARD<a class="headerlink" href="#backward" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> When true, the estimator is configured to run backward in time. Setting this parameter to true merely configures the estimator to expect and operate on a time-reversed data stream. It does not cause a normal data stream to be reversed.</p>
+</div>
+<div class="section" id="a2d-max-elevation-for-integer-initial-guess-rad">
+<h2>A2D_MAX_ELEVATION_FOR_INTEGER_INITIAL_GUESS_RAD<a class="headerlink" href="#a2d-max-elevation-for-integer-initial-guess-rad" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> -1</p>
+<p><strong>Definition:</strong> Initial relative position guesses will be confined to +/- this elevation value, which should be positive, in radians. A value of -1 indicates that no elevation constraint should be applied.</p>
+</div>
+<div class="section" id="a2d-solution-elevation-mask-rad">
+<h2>A2D_SOLUTION_ELEVATION_MASK_RAD<a class="headerlink" href="#a2d-solution-elevation-mask-rad" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> PI/2</p>
+<p><strong>Definition:</strong> If the solution lies outside the region +/- this threshold the integrityCheckPassed flag will be lowered. This parameter should be positive and in radians. A value of -1 indicates that no elevation threshold should be applied to the attitude solution.</p>
+</div>
+<div class="section" id="use-unscented-update">
+<h2>USE_UNSCENTED_UPDATE<a class="headerlink" href="#use-unscented-update" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> &#64;HHH</p>
+</div>
+<div class="section" id="disable-after-ppose-init">
+<h2>DISABLE_AFTER_PPOSE_INIT<a class="headerlink" href="#disable-after-ppose-init" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> If true, this estimator will stop consuming incoming GBX reports whenever the attached PPose reports it is initialized. (this is a measure to save CPU usage when using PosRTK/A2D only for PPose initialization)</p>
+</div>
+<div class="section" id="pos-pri-antenna-b">
+<h2>POS_PRI_ANTENNA_B<a class="headerlink" href="#pos-pri-antenna-b" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> [0 0 0]</p>
+<p><strong>Definition:</strong> Position of the PRIMARY GNSS antenna in the body frame. Used for antenna combining and inertial aiding of the POSITION_RTK solution. Only used by POSITION_RTK.</p>
+</div>
+<div class="section" id="pos-alt1-antenna-b">
+<h2>POS_ALT1_ANTENNA_B<a class="headerlink" href="#pos-alt1-antenna-b" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> [0 0 0]</p>
+<p><strong>Definition:</strong> Position of the ALT_1 GNSS antenna in the body frame. Used for antenna combining and inertial aiding of the POSITION_RTK solution. Only used by POSITION_RTK.</p>
+</div>
+<div class="section" id="pos-imu-b">
+<h2>POS_IMU_B<a class="headerlink" href="#pos-imu-b" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> [0 0 0]</p>
+<p><strong>Definition:</strong> Position of the IMU in the body frame. Used for inertial aiding of the POSITION_RTK solution. Only used by POSITION_RTK.</p>
+</div>
+<div class="section" id="do-antenna-combining">
+<h2>DO_ANTENNA_COMBINING<a class="headerlink" href="#do-antenna-combining" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> If true, attitude-aided antenna combining is performed by POSITION_RTK using a fixed a priori vehicle attitude given by incoming MEASUREMENTS GBX reports. Only used by POSITION_RTK.</p>
+</div>
+<div class="section" id="antenna-combining-body-frame-bias-state">
+<h2>ANTENNA_COMBINING_BODY_FRAME_BIAS_STATE<a class="headerlink" href="#antenna-combining-body-frame-bias-state" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> If true, an additional additive bias to POS_ALT1_ANTENNA_B is estimated online when performing antenna combining in POSITION_RTK. This bias is modeled as an Ornstein-Uhlenbeck process with the given steady-state uncertainty and time constant. Only used by POSITION_RTK.</p>
+</div>
+<div class="section" id="antenna-combining-body-frame-bias-uncertainty-m">
+<h2>ANTENNA_COMBINING_BODY_FRAME_BIAS_UNCERTAINTY_M<a class="headerlink" href="#antenna-combining-body-frame-bias-uncertainty-m" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> NaN</p>
+<p><strong>Definition:</strong> &#64;HHH</p>
+</div>
+<div class="section" id="antenna-combining-bias-time-constant-sec">
+<h2>ANTENNA_COMBINING_BIAS_TIME_CONSTANT_SEC<a class="headerlink" href="#antenna-combining-bias-time-constant-sec" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> NaN</p>
+<p><strong>Definition:</strong> &#64;HHH</p>
+</div>
+<div class="section" id="condition-on-fixed-solution">
+<h2>CONDITION_ON_FIXED_SOLUTION<a class="headerlink" href="#condition-on-fixed-solution" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> If false, a fixed solution (if available) will be reported in the GBX output, but only the float solution will be committed to the filter state. Only used by POSITION_RTK.</p>
+</div>
+<div class="section" id="max-vertical-separation-for-fix">
+<h2>MAX_VERTICAL_SEPARATION_FOR_FIX<a class="headerlink" href="#max-vertical-separation-for-fix" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> +INFINITY</p>
+<p><strong>Definition:</strong> If the vertical separation between the reference and rover (in meters) (determined by the rover’s standard navigation solution) is greater than this threshold, an integer fix is not attempted. Only used by POSITION_RTK.</p>
+</div>
+<div class="section" id="max-horizontal-separation-for-fix">
+<h2>MAX_HORIZONTAL_SEPARATION_FOR_FIX<a class="headerlink" href="#max-horizontal-separation-for-fix" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> +INFINITY</p>
+<p><strong>Definition:</strong> If the horizontal separation between the reference and rover (in meters) (determined by the rover’s standard navigation solution) is greater than this threshold, an integer fix is not attempted. Only used by POSITION_RTK.</p>
+</div>
+<div class="section" id="vertical-separation-for-reset">
+<h2>VERTICAL_SEPARATION_FOR_RESET<a class="headerlink" href="#vertical-separation-for-reset" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> +INFINITY</p>
+<p><strong>Definition:</strong> If this configuration option is set, an estimator reset is performed if the vertical separation between the reference and rover (in meters) as determined by the rover’s standard navigation solution is between VERTICAL_SEPARATION_FOR_RESET and VERTICAL_SEPARATION_FOR_RESET+200.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="estimatorconf.html" class="btn btn-neutral float-right" title="ESTIMATOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../ppengine.html" class="btn btn-neutral float-left" title="Precise Positioning Engine (ppengine)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Locus Lock
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+          
+          <dd><a href="/docs/en/master/">en</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/es/master/">es</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+          
+          <dd><a href="/docs/es/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/es/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/docs/es/master/locuslock-docs_es_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/docs/es/master/locuslock-docs_es_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+<!--   <style>
+         .wy-nav-content { max-width: none; }
+  </style> -->
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ababab;
+    }
+  </style>
+
+
+
+</body>
+</html>

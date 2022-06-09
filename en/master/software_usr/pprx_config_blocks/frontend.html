@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FRONT-END &mdash; locuslock 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/_static/js/toggle.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/_static/css/toggle.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BUFFER_LOADER" href="bufferloader.html" />
+    <link rel="prev" title="BASETIME" href="basetime.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> locuslock
+          
+
+          
+            
+            <img src="../../_static/white4x.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_usr/index.html">Hardware User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Software User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Software Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../pprx.html">Precise Positioning Receiver (pprx)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../pprx.html#editing-options-files">Editing Options Files</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../pprx.html#editing-configuration-parameters">Editing Configuration Parameters</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="basetime.html">BASETIME</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">FRONT-END</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bufferloader.html">BUFFER_LOADER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bank.html">BANK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="estimator.html">ESTIMATOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html">DISPLAY</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pprx.html#how-to-run">How to Run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ppengine.html">Precise Positioning Engine (ppengine)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../binflate.html">Binflate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opmode.html">Operational Modes</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">locuslock</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Software User Guide</a> &raquo;</li>
+        
+          <li><a href="../pprx.html">Precise Positioning Receiver (pprx)</a> &raquo;</li>
+        
+      <li>FRONT-END</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/software_usr/pprx_config_blocks/frontend.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="front-end">
+<h1>FRONT-END<a class="headerlink" href="#front-end" title="Permalink to this heading">¶</a></h1>
+<p>Below is an <em>example</em> of the FRONT-END block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">FRONT_END</span><span class="p">]</span>
+<span class="n">NUM_FRONT_ENDS</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">FE01</span> <span class="o">=</span> <span class="n">LYNX</span>
+
+<span class="p">[</span><span class="n">LYNX</span><span class="p">]</span>
+<span class="c1"># Lynx clock frequency is slightly slower than nominal 19.2 MHz; see note E1 in ut16.config.</span>
+<span class="n">SAMPLE_FREQ_NUMERATOR</span> <span class="o">=</span> <span class="mi">19199984</span> 
+<span class="n">SAMPLE_FREQ_DENOMINATOR</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">QUANTIZATION</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">NUM_SUPPORTED_SIGNAL_TYPES</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">SUPPORTED_SIGNAL_TYPES</span> <span class="o">=</span> <span class="n">GPS_L1_CA_PRIMARY</span> <span class="n">GPS_L1_CA_ALT1</span> <span class="n">GPS_L2_CLM_PRIMARY</span> <span class="n">GPS_L2_CLM_ALT1</span> <span class="n">SBAS_L1_I_PRIMARY</span> <span class="n">SBAS_L1_I_ALT1</span> <span class="n">GALILEO_E1_BC_PRIMARY</span> <span class="n">GALILEO_E1_BC_ALT1</span>
+<span class="c1"># Frequencies corrected for slower Lynx clock; see note E1 in ut16.config for details.</span>
+<span class="n">FREQ_IF_HZ</span> <span class="o">=</span> <span class="mf">2.392739428572e6</span> <span class="mf">2.392739428572e6</span> <span class="mf">2.412449561905206e+06</span> <span class="mf">2.412449561905206e6</span> <span class="mf">2.392739428572e6</span> <span class="mf">2.392739428572e6</span> <span class="mf">2.392739428572e6</span> <span class="mf">2.392739428572e6</span> 
+<span class="n">PLL_SIGN_FPLL</span> <span class="o">=</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span>
+<span class="n">CODE_PHASE_BIAS_METERS</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="mf">0.0</span> <span class="mf">0.0</span> <span class="mf">0.0</span> <span class="mf">0.0</span> <span class="mf">0.0</span> <span class="mf">0.0</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
+<p>The FRONT-END block contains all of the following configuration parameters:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There should be three banks labeled <code class="docutils literal notranslate"><span class="pre">[FRONT_END]</span></code>, <code class="docutils literal notranslate"><span class="pre">[LION]</span></code>, and <code class="docutils literal notranslate"><span class="pre">[LION_L5]</span></code>. The configuration options for <code class="docutils literal notranslate"><span class="pre">[FRONT_END]</span></code> are below.</p>
+</div>
+<div class="section" id="num-front-ends">
+<h2>NUM_FRONT_ENDS<a class="headerlink" href="#num-front-ends" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input. For RadioLion this should be set to 2.</p>
+<p><strong>Definition:</strong> The number of specified front-ends.</p>
+</div>
+<div class="section" id="fe01">
+<h2>FE01<a class="headerlink" href="#fe01" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input. For RadioLion this should be set to LION.</p>
+<p><strong>Definition:</strong> Which bank configurations apply to Front-End 01.</p>
+</div>
+<div class="section" id="fe02">
+<h2>FE02<a class="headerlink" href="#fe02" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input. For RadioLion this should be set to LION_L5.</p>
+<p><strong>Definition:</strong> Which bank configurations apply to Front-End 02.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The configuration options for <code class="docutils literal notranslate"><span class="pre">[LION]</span></code> and <code class="docutils literal notranslate"><span class="pre">[LION_L5]</span></code> are below.</p>
+</div>
+</div>
+<div class="section" id="sample-freq-numerator">
+<h2>SAMPLE_FREQ_NUMERATOR<a class="headerlink" href="#sample-freq-numerator" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input.</p>
+<p><strong>Definition:</strong> It is assumed that the sampling frequency of any RF front end supported by this code can be expressed in Hz as a ratio of two integers.  For example, the sampling frequency for the Zarlink/Plessey front end is 40e6/7 Hz, which would correspond to SAMPLE_FREQ_NUMERATOR = 40e6 and SAMPLE_FREQ_DENOMINATOR = 7. It is further assumed that double precision is sufficient to represent the time within a single interval of SAMPLE_FREQ_DENOMINATOR seconds.</p>
+</div>
+<div class="section" id="sample-freq-denominator">
+<h2>SAMPLE_FREQ_DENOMINATOR<a class="headerlink" href="#sample-freq-denominator" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input.</p>
+<p><strong>Definition:</strong> It is assumed that the sampling frequency of any RF front end supported by this code can be expressed in Hz as a ratio of two integers.  For example, the sampling frequency for the Zarlink/Plessey front end is 40e6/7 Hz, which would correspond to SAMPLE_FREQ_NUMERATOR = 40e6 and SAMPLE_FREQ_DENOMINATOR = 7. It is further assumed that double precision is sufficient to represent the time within a single interval of SAMPLE_FREQ_DENOMINATOR seconds.</p>
+</div>
+<div class="section" id="quantization">
+<h2>QUANTIZATION<a class="headerlink" href="#quantization" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input.</p>
+<p><strong>Definition:</strong> The number of bits used in the front end’s quantization scheme.</p>
+</div>
+<div class="section" id="num-supported-signal-types">
+<h2>NUM_SUPPORTED_SIGNAL_TYPES<a class="headerlink" href="#num-supported-signal-types" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input.</p>
+<p><strong>Definition:</strong> The number of signals desired to track.</p>
+</div>
+<div class="section" id="supported-signal-types">
+<h2>SUPPORTED_SIGNAL_TYPES<a class="headerlink" href="#supported-signal-types" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input.</p>
+<p><strong>Definition:</strong> An array listing the supported signal types. In the arrays that follow, data at the iith index correspond to the signal type at the iith index.</p>
+</div>
+<div class="section" id="freq-if-hz">
+<h2>FREQ_IF_HZ<a class="headerlink" href="#freq-if-hz" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input.</p>
+<p><strong>Definition:</strong> Intermediate frequency of the signal, in Hz. See <a class="reference download internal" download="" href="../../_downloads/3f934dd5bd0a3f1b7309e05acd9d6e40/calc_fIF.py"><code class="xref download docutils literal notranslate"><span class="pre">this</span> <span class="pre">python</span> <span class="pre">script</span></code></a> for how to calculate these numbers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">calc_fIF</span><span class="p">():</span>
+<span class="linenos"> 2</span>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 3</span><span class="sd">    This function calculates the intermediate frequencies necessary for the options file. </span>
+<span class="linenos"> 4</span><span class="sd"> </span>
+<span class="linenos"> 5</span><span class="sd">    Please paste in the output of the syslog/dmesg log when plugging in the RadioLion. You can paste the </span>
+<span class="linenos"> 6</span><span class="sd">    output directly into the appropriate configuration file for pprx. </span>
+<span class="linenos"> 7</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos"> 8</span>      
+<span class="linenos"> 9</span>    <span class="n">iS1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter first dmesg log: &quot;</span><span class="p">)</span>
+<span class="linenos">10</span>    <span class="n">iS2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter second dmesg log: &quot;</span><span class="p">)</span>
+<span class="linenos">11</span>    <span class="n">iS3</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter third dmesg log: &quot;</span><span class="p">)</span>
+<span class="linenos">12</span>    <span class="n">iS4</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter fourth dmesg log: &quot;</span><span class="p">)</span>
+<span class="linenos">13</span>    <span class="n">iS5</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter fifth dmesg log: &quot;</span><span class="p">)</span>
+<span class="linenos">14</span>       <span class="n">fCOMP</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fTCXO</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">RDIV</span><span class="p">)</span>
+<span class="linenos">15</span>       <span class="n">fLO_actual</span> <span class="o">=</span> <span class="n">fCOMP</span> <span class="o">*</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">NDIV</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">FDIV</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1048576</span><span class="p">)</span>
+<span class="linenos">16</span>       <span class="n">fIF_actual</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fC</span><span class="p">)</span> <span class="o">-</span> <span class="n">fLO_actual</span>
+<span class="linenos">17</span>       <span class="n">fIF_actual_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fIF_actual</span><span class="p">)</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------ L1 and L1 alt ------------&quot;</span><span class="p">)</span> 
+<span class="linenos">20</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FREQ_IF_HZ = </span><span class="si">%.6f</span><span class="s2"> </span><span class="si">%.6f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">fIF_actual_list</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">fIF_actual_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> 
+<span class="linenos">21</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------ L2 and L2 alt ------------&quot;</span><span class="p">)</span> 
+<span class="linenos">22</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FREQ_IF_HZ = </span><span class="si">%.6f</span><span class="s2"> </span><span class="si">%.6f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">fIF_actual_list</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">fIF_actual_list</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span> 
+<span class="linenos">23</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------ L5 and L5 alt ------------&quot;</span><span class="p">)</span> 
+<span class="linenos">24</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FREQ_IF_HZ = </span><span class="si">%.6f</span><span class="s2"> </span><span class="si">%.6f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">fIF_actual_list</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">fIF_actual_list</span><span class="p">[</span><span class="mi">5</span><span class="p">]))</span> 
+<span class="linenos">25</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="n">calc_fIF</span><span class="p">()</span>
+<span class="linenos">28</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pll-sign-fpll">
+<h2>PLL_SIGN_FPLL<a class="headerlink" href="#pll-sign-fpll" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input.</p>
+<p><strong>Definition:</strong> Indicates high (-1) or low (1) side mixing</p>
+</div>
+<div class="section" id="code-phase-bias-meters">
+<h2>CODE_PHASE_BIAS_METERS<a class="headerlink" href="#code-phase-bias-meters" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> N/A. Required input.</p>
+<p><strong>Definition:</strong> The bias below is the amount by which a biased pseudorange exceeds its bias-free representation. Typically, the bias for SignalType GPS_L1_CA is set to zero and all other SignalTypes are referenced to this.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bufferloader.html" class="btn btn-neutral float-right" title="BUFFER_LOADER" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="basetime.html" class="btn btn-neutral float-left" title="BASETIME" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Locus Lock
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+           <strong> 
+          <dd><a href="/docs/en/master/">en</a></dd>
+           </strong> 
+        
+          
+          <dd><a href="/docs/es/master/">es</a></dd>
+          
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+          
+          <dd><a href="/docs/en/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/en/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/docs/en/master/locuslock-docs_en_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/docs/en/master/locuslock-docs_en_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+<!--   <style>
+         .wy-nav-content { max-width: none; }
+  </style> -->
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ababab;
+    }
+  </style>
+
+
+
+</body>
+</html>

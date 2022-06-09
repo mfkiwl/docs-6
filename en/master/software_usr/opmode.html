@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Operational Modes &mdash; locuslock 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/_static/js/toggle.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/_static/css/toggle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Binflate" href="binflate.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> locuslock
+          
+
+          
+            
+            <img src="../_static/white4x.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware_usr/index.html">Hardware User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Software User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Software Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pprx.html">Precise Positioning Receiver (pprx)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ppengine.html">Precise Positioning Engine (ppengine)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binflate.html">Binflate</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Operational Modes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#receiver-autonomous-operation">Receiver Autonomous Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#carrier-phase-differential-rtk-operation">Carrier-Phase Differential (RTK) Operation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">locuslock</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Software User Guide</a> &raquo;</li>
+        
+      <li>Operational Modes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/software_usr/opmode.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Operational Modes<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<div class="section" id="receiver-autonomous-operation">
+<h2>Receiver Autonomous Operation<a class="headerlink" href="#receiver-autonomous-operation" title="Permalink to this heading">¶</a></h2>
+<p>Receiver Autonomous Operation is defined as when the GNSS receiver <strong>is not</strong> connected to a reference station. Refer to the Sofware User Guide on pprx to set up the receiver for autonomous operation.</p>
+</div>
+<div class="section" id="carrier-phase-differential-rtk-operation">
+<h2>Carrier-Phase Differential (RTK) Operation<a class="headerlink" href="#carrier-phase-differential-rtk-operation" title="Permalink to this heading">¶</a></h2>
+<p>Carrier-Phase Differential (RTK) Operation is defined as when the GNSS receiver <strong>is</strong> connected to a reference station via wifi. Refer to the Sofware User Guide on pprx and ppengine to set up the rover receiver.</p>
+<p>The default configuration files described above are for a rover receiver connected to a reference network.  To be able to use these as provided, set up a local reference station running pprx and refnet_server. Ensure that the reference station’s IP address is accessible to the rover computer. Put the reference station’s IP address in pprx’s options file; e.g., <code class="docutils literal notranslate"><span class="pre">~git/gss_top/run/pprx.opt</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--ref-host<span class="o">=</span><span class="m">10</span>.0.0.2    <span class="c1"># &lt;---- Put the reference station&#39;s IP address here</span>
+</pre></div>
+</div>
+<p>To ensure the reference station is connected to the rover receiver:</p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">refnet_monitor</span></code> is a simple utility that allows one to connect to and monitor GBX traffic received from a reference server. <code class="docutils literal notranslate"><span class="pre">refnet_monitor</span> <span class="pre">--help</span></code> offers rather straight-forward command-line options. When done, kill it using Ctrl-C. Example usage:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>refnet_monitor --hostname <span class="m">10</span>.0.0.2
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Instructions on how run the rover receiver with reference station:</p>
+<ol class="arabic">
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">refnet_monitor</span></code> to check that the reference receiver is working and the network connection is good:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>refnet_monitor --hostname <span class="m">10</span>.0.0.2
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Create pipes for realtime operation:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/git/gss_top/scripts
+./make_pipes
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Run the Python startup script:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/git/gss_top/scripts
+./stack.py
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>tmux window 2 will show the progress of PpEngine as it processes signals tracked by pprx.</p></li>
+<li><p>After 30 seconds, pprx will be stably tracking several satellites.  At this point, PpEngine will attemp to obtain a precise Attitude 2D fix, a Single Baseline RTK fix, or both, depending on how ppengine.opt is configured.  If there are enough satellites with clean enough measurements, the indicator ‘fixed’ will appear.  If PpEngine fails to obtain a fix, see below for troubleshooting.</p></li>
+<li><p>If PpEngine has been configured in ppengine.opt to produce a Pose solution, it will display this solution at the bottom of the text display.  This solution gives the East-North-Up (ENU) coordinates of the primary snapon-antenna-assembly antenna relative to the reference antenna, and the pitch, roll, and yaw (3-1-2 Euler rotation) angles that define the antenna assembly’s attitude relative to the local ENU frame.</p></li>
+<li><p>To quit, go to the tmux window where PpEngine is running (tmux window 2), hit ‘’Ctrl-C’’, and then type ‘’tkill’’ at the prompt.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="binflate.html" class="btn btn-neutral float-left" title="Binflate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Locus Lock
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+           <strong> 
+          <dd><a href="/docs/en/master/">en</a></dd>
+           </strong> 
+        
+          
+          <dd><a href="/docs/es/master/">es</a></dd>
+          
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+          
+          <dd><a href="/docs/en/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/en/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/docs/en/master/locuslock-docs_en_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/docs/en/master/locuslock-docs_en_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+<!--   <style>
+         .wy-nav-content { max-width: none; }
+  </style> -->
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ababab;
+    }
+  </style>
+
+
+
+</body>
+</html>

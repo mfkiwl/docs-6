@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ESTIMATOR &mdash; documentación de locuslock - 1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script src="../../_static/_static/js/toggle.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/_static/css/toggle.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="PPOSE_ESTIMATOR" href="pposeestimatorconf.html" />
+    <link rel="prev" title="CDGNSS" href="cdgnssconf.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> locuslock
+          
+
+          
+            
+            <img src="../../_static/white4x.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_usr/index.html">Hardware User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Software User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Software Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pprx.html">Precise Positioning Receiver (pprx)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ppengine.html">Precise Positioning Engine (ppengine)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ppengine.html#steps-to-enable-ppengine">Steps to Enable PPengine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ppengine.html#editing-options-files">Editing Options Files</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ppengine.html#editing-configuration-parameters">Editing Configuration Parameters</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cdgnssconf.html">CDGNSS</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ESTIMATOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pposeestimatorconf.html">PPOSE_ESTIMATOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="baselineconf.html">BASELINE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imuconf.html">IMU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="difftropoconf.html">DIFF_TROPO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ppengine.html#how-to-run">How to Run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../binflate.html">Binflate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opmode.html">Operational Modes</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">locuslock</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Software User Guide</a> &raquo;</li>
+        
+          <li><a href="../ppengine.html">Precise Positioning Engine (ppengine)</a> &raquo;</li>
+        
+      <li>ESTIMATOR</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/software_usr/ppengine_config_blocks/estimatorconf.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="estimator">
+<h1>ESTIMATOR<a class="headerlink" href="#estimator" title="Permalink to this heading">¶</a></h1>
+<p>Below is an <em>example</em> of the ESTIMATOR block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">ESTIMATOR</span><span class="p">]</span>
+<span class="n">ESTIMATOR_TYPE</span> <span class="o">=</span> <span class="n">ATTITUDE_2D</span>
+<span class="n">DYNAMICS_MODEL</span> <span class="o">=</span> <span class="n">STATIC</span> 
+<span class="n">SPF_NUM_THREADS</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>The ESTIMATOR block contains all of the following configuration parameters:</p>
+<div class="section" id="alpha">
+<h2>ALPHA<a class="headerlink" href="#alpha" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1e-3</p>
+<p><strong>Definition:</strong> Standard sigma point filter parameter alpha that governs the reach of the sigma points around the current best estimate</p>
+</div>
+<div class="section" id="beta">
+<h2>BETA<a class="headerlink" href="#beta" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 2</p>
+<p><strong>Definition:</strong> Standard sigma point filter parameter beta that governs the reach of the sigma points around the current best estimate</p>
+</div>
+<div class="section" id="kappa">
+<h2>KAPPA<a class="headerlink" href="#kappa" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0</p>
+<p><strong>Definition:</strong> Standard sigma point filter parameter kappa that governs the reach of the sigma points around the current best estimate</p>
+</div>
+<div class="section" id="dynamics-model">
+<h2>DYNAMICS_MODEL<a class="headerlink" href="#dynamics-model" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> STATIC</p>
+<p><strong>Definition:</strong> Assumed relative vector dynamics model, used by PositionRtk and Attitude2D estimators. (PoseAndTwist estimators require an IMU). Select from the following options:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">STATIC</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NEARLY_CONSTANT_VELOCITY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NEARLY_CONSTANT_ACCELERATION</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BODY_NEARLY_CONSTANT_VELOCITY</span></code> Applies a nearly constant velocity model in the body reference frame.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">INERTIAL_MEASUREMENT_UNIT</span></code></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="tau-p">
+<h2>TAU_P<a class="headerlink" href="#tau-p" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1000</p>
+<p><strong>Definition:</strong> The bias in the standard navigation solution position has various different intensities and time constants associated with multipath, satellite clock modeling errors, satellite ephemeris errors, and ionospheric modeling errors.  We eliminate some of these with a turn-on-bias removal.  The remainder we try to capture with a single Gauss-Markov bias model. We make the time constant long so that the bias estimate reverts only slowly to zero after a loss of the precise positioning solution. Standard navigation solution position bias time constant, in seconds. Only relevant to POSE_AND_TWIST_18.</p>
+</div>
+<div class="section" id="sigma-p-standard">
+<h2>SIGMA_P_STANDARD<a class="headerlink" href="#sigma-p-standard" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1</p>
+<p><strong>Definition:</strong> Standard navigation solution position bias steady-state standard deviation, in meters Only relevant to POSE_AND_TWIST_18.</p>
+</div>
+<div class="section" id="pos-alt1-antenna-b-pos-alt2-antenna-b">
+<h2>POS_ALT1_ANTENNA_B, POS_ALT2_ANTENNA_B<a class="headerlink" href="#pos-alt1-antenna-b-pos-alt2-antenna-b" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> &#64;HHH</p>
+<p><strong>Definition:</strong> Position of the ALT1 and ALT2 antennas” L1 phase centers in meters in body coordinates (note that the position of the primary antenna’s L1 phase center in body coordinates is (0;0;0)). Only relevant to POSE_AND_TWIST estimators. Initialize to nan to force user to input these before use</p>
+</div>
+<div class="section" id="sigma-constrained-baseline-error-rad">
+<h2>SIGMA_CONSTRAINED_BASELINE_ERROR_RAD<a class="headerlink" href="#sigma-constrained-baseline-error-rad" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.1</p>
+<p><strong>Definition:</strong> The standard deviation of the angular error in the constrained baseline vector, in radians.  This is a parameter in the QUEST formulation of the error covariance model for the unit vector correponding to the constrained baseline. This default is appropriate for short-baseline setups such as quads or VR array. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="azimuth-only-from-constrained-baseline">
+<h2>AZIMUTH_ONLY_FROM_CONSTRAINED_BASELINE<a class="headerlink" href="#azimuth-only-from-constrained-baseline" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> Only exploit the azimuth angle from the constrained baseline vector. The standard deviation of the azimuth angle will continue to be <a class="reference internal" href="pposeestimatorconf.html#sigma-constrained-baseline-error-rad"><span class="std std-ref">SIGMA_CONSTRAINED_BASELINE_ERROR_RAD</span></a>. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="estimator-type">
+<h2>ESTIMATOR_TYPE<a class="headerlink" href="#estimator-type" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> POSE_AND_TWIST_15</p>
+<p><strong>Definition:</strong> Indicates the type of sigma-point estimator that will be applied. Select from the following options:</p>
+<p><em>PPose Estimators</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">POSE_AND_TWIST_15</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POSE_AND_TWIST_18</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POSE_AND_TWIST_27</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POSE_AND_TWIST_15_VISION</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POSE_AND_TWIST_15_MULTI_MODEL</span></code></p></li>
+</ul>
+</div></blockquote>
+<p><em>Position-only estimator</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">POSITION_RTK</span></code></p></li>
+</ul>
+</div></blockquote>
+<p><em>Constrained-baseline estimator</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ATTITUDE_2D</span></code></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="include-standard-navigation-solution-velocity-measurement">
+<h2>INCLUDE_STANDARD_NAVIGATION_SOLUTION_VELOCITY_MEASUREMENT<a class="headerlink" href="#include-standard-navigation-solution-velocity-measurement" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Indicates whether the standard navigation solution velocity measurement should be included in the estimator</p>
+</div>
+<div class="section" id="precise-pos-measurement-sigma-inflation-factor">
+<h2>PRECISE_POS_MEASUREMENT_SIGMA_INFLATION_FACTOR<a class="headerlink" href="#precise-pos-measurement-sigma-inflation-factor" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 3</p>
+<p><strong>Definition:</strong> Inflation factor by which the precise position measurement error standard deviation is inflated to compensate for its being optimistic due to neglect of multipath errors. Only relevant to POSE_AND_TWIST estimators when consuming SBRTK and A2D reports.</p>
+</div>
+<div class="section" id="output-event">
+<h2>OUTPUT_EVENT<a class="headerlink" href="#output-event" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> MEASUREMENT_UPDATE</p>
+<p><strong>Definition:</strong> The event that triggers output of the estimator’s solution. Only relevant to POSE_AND_TWIST estimators. POSITION_RTK and ATTITUDE_2D output on every rover epoch. Select from the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TIME_UPDATE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MEASUREMENT_UPDATE</span></code></p></li>
+</ul>
+<p>Note that we don’t allow output at both time and measurement updates to avoid updates with different solutions but marked at the same time.</p>
+</div>
+<div class="section" id="integrator-type">
+<h2>INTEGRATOR_TYPE<a class="headerlink" href="#integrator-type" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> EULER_METHOD</p>
+<p><strong>Definition:</strong> Which type of dynamics integration to use. Only relevant to POSE_AND_TWIST estimators. Select from the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">EULER_METHOD</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PIECEWISE_CONSTANT_AW_OMEGAB</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="spf-num-threads">
+<h2>SPF_NUM_THREADS<a class="headerlink" href="#spf-num-threads" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> &#64;HHH</p>
+<p><strong>Definition:</strong> Sets the number of threads SPF is allowed to use for sigma point evaluation.</p>
+</div>
+<div class="section" id="apply-vehicle-velocity-constraints">
+<h2>APPLY_VEHICLE_VELOCITY_CONSTRAINTS<a class="headerlink" href="#apply-vehicle-velocity-constraints" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Indicates whether to apply vehicle near-zero-sideslip and near-zero-vertical velocity constraints. See documentation in <a class="reference download internal" download="" href="../../_downloads/b890d5e5edcecae0af6fa9106d8b1a1a/velocity_frame_extrinsics_estimation_for_ground_vehicle_todd.pdf"><code class="xref download docutils literal notranslate"><span class="pre">estimation</span> <span class="pre">of</span> <span class="pre">vehicle</span> <span class="pre">frame</span> <span class="pre">extrinsics</span></code></a>.. Also see <a class="reference download internal" download="" href="../../_downloads/5b8eb8188da8776d26330b6fb6d26690/estimateVehicleFrameExtrinsics.m"><code class="xref download docutils literal notranslate"><span class="pre">this</span> <span class="pre">matlab</span> <span class="pre">script</span></code></a>. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="orientation-b2v">
+<h2>ORIENTATION_B2V<a class="headerlink" href="#orientation-b2v" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> &#64;HHH</p>
+<p><strong>Definition:</strong> Orientation of the body (B) frame relative to the vehicle (V) frame, expressed as a quaternion.  The quaternion should be formed such that RVB = navtbx:quat2dc(ORIENTATION_B2V) is the direction cosine matrix that translates a vector expressed in the B frame to one expressed in the V frame: vV = RVB*vB. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="pos-v0-b">
+<h2>POS_V0_B<a class="headerlink" href="#pos-v0-b" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> &#64;HHH</p>
+<p><strong>Definition:</strong> Position of the vehicle center of rotation V0 (which is also the vehicle frame origin) in meters in body coordinates. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="sigma-vehicle-velocity-constraint-mps">
+<h2>SIGMA_VEHICLE_VELOCITY_CONSTRAINT_MPS<a class="headerlink" href="#sigma-vehicle-velocity-constraint-mps" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.2 0.3</p>
+<p><strong>Definition:</strong> The standard deviations of the near-zero vehicle velocity constraints in the vehicle Y and Z directions, in meters per second. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="polynomial-coefficients-omegabz-to-v0vy">
+<h2>POLYNOMIAL_COEFFICIENTS_OMEGABZ_TO_V0VY<a class="headerlink" href="#polynomial-coefficients-omegabz-to-v0vy" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0 0</p>
+<p><strong>Definition:</strong> Polynomial coefficients relating the angular rate in the body Z direction and vVy, the y-component of the vehicle velocity with respect to W and expressed in V: vVy = P(0) + P(1)*omegaBz + P(2)*omegaBz^2 + …, where [P(0) P(1) … P(N)] is the ordering from the config file. Beware that this coefficient order convention is opposite Matlab’s. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="apply-zero-velocity-constraint">
+<h2>APPLY_ZERO_VELOCITY_CONSTRAINT<a class="headerlink" href="#apply-zero-velocity-constraint" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> Indicates whether to apply a zero-velocity constraint triggered by the inertial sensor. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="sigma-zero-translational-velocity-constraint-mps">
+<h2>SIGMA_ZERO_TRANSLATIONAL_VELOCITY_CONSTRAINT_MPS<a class="headerlink" href="#sigma-zero-translational-velocity-constraint-mps" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.02</p>
+<p><strong>Definition:</strong> The standard deviation of the zero translational velocity constraint triggered by the inertial sensor, in meters per second.  This sigma applies to the vehicle Y and Z directions; the sigma in the vehicle X (forward) direction is scaled up internally to account for the greater uncertainty in the X direction (e.g., due to a slow vehicle roll). Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="sigma-zero-rotational-velocity-constraint-rps">
+<h2>SIGMA_ZERO_ROTATIONAL_VELOCITY_CONSTRAINT_RPS<a class="headerlink" href="#sigma-zero-rotational-velocity-constraint-rps" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.002</p>
+<p><strong>Definition:</strong> The standard deviation of the zero rotational velocity constraint triggered by the inertial sensor, in radians per second. This sigma applies equivalently to the IMU (U) roll, pitch, and yaw directions. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="innovations-test-pf">
+<h2>INNOVATIONS_TEST_PF<a class="headerlink" href="#innovations-test-pf" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 1e-6</p>
+<p><strong>Definition:</strong> Innovations testing within SigmaPointFilter is based on the normalized innovations squared (NIS) statistic, NIS = dot(dzn, dzn), which under a consistent estimator is chi-square distributed with zr.n_elem degrees of freedom.  A constant false-alarm rate test is performed using an NIS with a false-alarm probability of INNOVATIONS_TEST_PF (see chisquaredtest.h/cpp in gss). Only relevant to POSE_AND_TWIST estimators. GNSS-related innovations testing is configured in CdgnssConfig.</p>
+</div>
+<div class="section" id="perform-innovations-testing">
+<h2>PERFORM_INNOVATIONS_TESTING<a class="headerlink" href="#perform-innovations-testing" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> When false, innovations testing using INNOVATIONS_TEST_PF is not performed.</p>
+</div>
+<div class="section" id="backward">
+<h2>BACKWARD<a class="headerlink" href="#backward" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> False</p>
+<p><strong>Definition:</strong> When true, the estimator is configured to run backward in time. Setting this parameter to true merely configures the estimator to expect and operate on a time-reversed data stream. It does not cause a normal data stream to be reversed.</p>
+</div>
+<div class="section" id="consume-external-cdgnss-reports">
+<h2>CONSUME_EXTERNAL_CDGNSS_REPORTS<a class="headerlink" href="#consume-external-cdgnss-reports" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> True</p>
+<p><strong>Definition:</strong> When true, measurement updates are performed with incoming SingleBaselineRtk and Attitude2D GBX reports. Otherwise, SingleBaselineRtk and Attitude2D GBX reports are only used for filter initialization</p>
+</div>
+<div class="section" id="zero-velocity-update-df-magnitude-threshold">
+<h2>ZERO_VELOCITY_UPDATE_DF_MAGNITUDE_THRESHOLD<a class="headerlink" href="#zero-velocity-update-df-magnitude-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.8</p>
+<p><strong>Definition:</strong> Accelerometer and gyro thresholds used to detect vehicle stationarity for zero-velocity updates. The vehicle is considered stationary when the vector norms of deltas between the two most recent accelerometer (DF) and gyroscope (DOMEGATILDE) measurements are both below these thresholds for at least ZERO_VELOCITY_UPDATE_CONSECUTIVE_COUNT_THRESHOLD IMU measurements. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="zero-velocity-update-domegatilde-magnitude-threshold">
+<h2>ZERO_VELOCITY_UPDATE_DOMEGATILDE_MAGNITUDE_THRESHOLD<a class="headerlink" href="#zero-velocity-update-domegatilde-magnitude-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 0.006</p>
+<p><strong>Definition:</strong> Accelerometer and gyro thresholds used to detect vehicle stationarity for zero-velocity updates. The vehicle is considered stationary when the vector norms of deltas between the two most recent accelerometer (DF) and gyroscope (DOMEGATILDE) measurements are both below these thresholds for at least ZERO_VELOCITY_UPDATE_CONSECUTIVE_COUNT_THRESHOLD IMU measurements. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+<div class="section" id="zero-velocity-update-consecutive-count-threshold">
+<h2>ZERO_VELOCITY_UPDATE_CONSECUTIVE_COUNT_THRESHOLD<a class="headerlink" href="#zero-velocity-update-consecutive-count-threshold" title="Permalink to this heading">¶</a></h2>
+<p><strong>Default:</strong> 10</p>
+<p><strong>Definition:</strong> Accelerometer and gyro thresholds used to detect vehicle stationarity for zero-velocity updates. The vehicle is considered stationary when the vector norms of deltas between the two most recent accelerometer (DF) and gyroscope (DOMEGATILDE) measurements are both below these thresholds for at least ZERO_VELOCITY_UPDATE_CONSECUTIVE_COUNT_THRESHOLD IMU measurements. Only relevant to POSE_AND_TWIST estimators.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pposeestimatorconf.html" class="btn btn-neutral float-right" title="PPOSE_ESTIMATOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cdgnssconf.html" class="btn btn-neutral float-left" title="CDGNSS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Locus Lock
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+          
+          <dd><a href="/docs/en/master/">en</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/es/master/">es</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+          
+          <dd><a href="/docs/es/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/es/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/docs/es/master/locuslock-docs_es_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/docs/es/master/locuslock-docs_es_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+<!--   <style>
+         .wy-nav-content { max-width: none; }
+  </style> -->
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ababab;
+    }
+  </style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Precise Positioning Receiver (pprx) &mdash; documentación de locuslock - 1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/_static/js/toggle.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/_static/css/toggle.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="BASETIME" href="pprx_config_blocks/basetime.html" />
+    <link rel="prev" title="Software Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> locuslock
+          
+
+          
+            
+            <img src="../_static/white4x.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware_usr/index.html">Hardware User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Software User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Software Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Precise Positioning Receiver (pprx)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#editing-options-files">Editing Options Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-configuration-parameters">Editing Configuration Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pprx_config_blocks/basetime.html">BASETIME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pprx_config_blocks/frontend.html">FRONT-END</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pprx_config_blocks/bufferloader.html">BUFFER_LOADER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pprx_config_blocks/bank.html">BANK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pprx_config_blocks/estimator.html">ESTIMATOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pprx_config_blocks/display.html">DISPLAY</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-run">How to Run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ppengine.html">Precise Positioning Engine (ppengine)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binflate.html">Binflate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opmode.html">Operational Modes</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">locuslock</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Software User Guide</a> &raquo;</li>
+        
+      <li>Precise Positioning Receiver (pprx)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/software_usr/pprx.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="precise-positioning-receiver-pprx">
+<h1>Precise Positioning Receiver (pprx)<a class="headerlink" href="#precise-positioning-receiver-pprx" title="Permalink to this heading">¶</a></h1>
+<p>This page describes how to configure, run, and interpret output from pprx, which is an implementation of GRID, the General Radionavigation Interfusion Device.</p>
+<div class="section" id="editing-options-files">
+<h2>Editing Options Files<a class="headerlink" href="#editing-options-files" title="Permalink to this heading">¶</a></h2>
+<p>pprx is highly configurable via both command-line options and configuration parameters. Type <code class="docutils literal notranslate"><span class="pre">pprx</span> <span class="pre">--help</span></code> to see a list of command-line options. These options are specified in a <code class="docutils literal notranslate"><span class="pre">.opt</span></code> file as seen in the <em>example</em> below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">i</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">radiolynx0</span>
+<span class="o">--</span><span class="n">imu</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">radiolynx1</span>
+<span class="o">-</span><span class="n">e</span>
+<span class="o">--</span><span class="n">realtime</span>
+<span class="o">--</span><span class="n">ref</span><span class="o">-</span><span class="n">host</span><span class="o">=</span><span class="n">refnet1</span><span class="o">.</span><span class="n">ae</span><span class="o">.</span><span class="n">utexas</span><span class="o">.</span><span class="n">edu</span>
+<span class="o">-</span><span class="n">c</span> <span class="o">./</span><span class="n">pprx</span><span class="o">.</span><span class="n">config</span>
+<span class="o">--</span><span class="n">bitpack</span> <span class="n">lynx</span>
+<span class="o">--</span><span class="n">depth</span> <span class="mi">8</span>
+<span class="o">-</span><span class="n">d</span>
+<span class="o">-</span><span class="n">v</span>
+<span class="o">-</span><span class="n">t</span> <span class="o">-</span><span class="mi">1</span>
+<span class="o">--</span><span class="n">log</span><span class="o">-</span><span class="n">interval</span> <span class="mi">10</span>
+<span class="o">--</span><span class="n">ref</span><span class="o">-</span><span class="n">interval</span> <span class="mi">20</span>
+<span class="o">--</span><span class="n">acq</span><span class="o">-</span><span class="n">interval</span> <span class="mi">1000</span>
+<span class="o">--</span><span class="n">binary</span><span class="o">-</span><span class="n">only</span>
+<span class="c1"># For output to a gbx file</span>
+<span class="c1"># -o ./pprx.gbx</span>
+<span class="c1"># For output to a named pipe</span>
+<span class="o">-</span><span class="n">o</span> <span class="n">pprx_write</span>
+<span class="o">-</span><span class="n">T</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="editing-configuration-parameters">
+<h2>Editing Configuration Parameters<a class="headerlink" href="#editing-configuration-parameters" title="Permalink to this heading">¶</a></h2>
+<p>pprx configuration files are broken into configuration blocks. The start of each block is indicated by a block header, e.g., ESTIMATOR. A pprx <code class="docutils literal notranslate"><span class="pre">.opt</span></code> file (i.e. pprx.opt) has a corresponding configuration file, <code class="docutils literal notranslate"><span class="pre">.config</span></code> (i.e. pprx.config). See this <a class="reference download internal" download="" href="../_downloads/0dca053d759096429f5ba6ba785390d8/pprx.config"><code class="xref download docutils literal notranslate"><span class="pre">example</span> <span class="pre">configuration</span> <span class="pre">file</span></code></a> for pprx.</p>
+<p>Each block in the <code class="docutils literal notranslate"><span class="pre">pprx.config</span></code> file contains various configuration parameters. See each block below to view all of its configuration parameter choices and if applicable the choices for each parameter:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pprx_config_blocks/basetime.html">BASETIME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pprx_config_blocks/frontend.html">FRONT-END</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pprx_config_blocks/bufferloader.html">BUFFER_LOADER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pprx_config_blocks/bank.html">BANK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pprx_config_blocks/estimator.html">ESTIMATOR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pprx_config_blocks/display.html">DISPLAY</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-to-run">
+<h2>How to Run<a class="headerlink" href="#how-to-run" title="Permalink to this heading">¶</a></h2>
+<p><strong>Examining</strong> <code class="docutils literal notranslate"><span class="pre">--help</span></code> <strong>Documentation</strong>
+Running the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pprx --help
+</pre></div>
+</div>
+<p>will show all the command-line options available for pprx, including a brief description of each.</p>
+<p><strong>Running pprx</strong>
+Suppose <code class="docutils literal notranslate"><span class="pre">pprx.opt</span></code> is a properly-formatted pprx options file as described <a class="reference internal" href="#editing-options-files"><span class="std std-ref">Editing Options Files</span></a>. Navigate to the directory where this file is located and type the following command into the terminal window.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pprx -f pprx.opt
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pprx_config_blocks/basetime.html" class="btn btn-neutral float-right" title="BASETIME" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral float-left" title="Software Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Locus Lock
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+          
+          <dd><a href="/docs/en/master/">en</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/es/master/">es</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+          
+          <dd><a href="/docs/es/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/docs/es/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/docs/es/master/locuslock-docs_es_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/docs/es/master/locuslock-docs_es_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+<!--   <style>
+         .wy-nav-content { max-width: none; }
+  </style> -->
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ababab;
+    }
+  </style>
+
+
+
+</body>
+</html>
