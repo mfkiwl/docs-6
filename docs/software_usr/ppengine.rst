@@ -80,11 +80,12 @@ ppengine configuration files are broken into configuration blocks. The start of 
 
    * ``ppose.config``: See this :download:`example ppose configuration file <./../../src/runtime_files/ppose.config>`.
    * ``a2d.config``: See this :download:`example attitude2d configuration file <./../../src/runtime_files/a2d.config>`.
-   * ``sbrtk.config``: See this :download:`example single baseline rtk configuration file <./../../src/runtime_files/sbtrk.config>`.
+   * ``sbrtk.config``: See this :download:`example single baseline rtk configuration file <./../../src/runtime_files/sbrtk.config>`.
 
-Each of the three configuration files uses different combinations of blocks. Each block in the ``.config`` file contains various configuration parameters. See each block below to view all of its configuration parameter choices and if applicable the choices for each parameter. All available blocks are listed below:
+Each of the three configuration files uses different combinations of blocks. Each block in the ``.config`` file contains various configuration parameters. See each block below to view all of its configuration parameter choices and if applicable the choices for each parameter. 
 
 .. toctree::
+   :includehidden:
    :maxdepth: 1
 
    ppengine_config_blocks/cdgnssconf
