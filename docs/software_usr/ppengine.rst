@@ -82,10 +82,9 @@ ppengine configuration files are broken into configuration blocks. The start of 
    * ``a2d.config``: See this :download:`example attitude2d configuration file <./../../src/runtime_files/a2d.config>`.
    * ``sbrtk.config``: See this :download:`example single baseline rtk configuration file <./../../src/runtime_files/sbrtk.config>`.
 
-Each of the three configuration files uses different combinations of blocks. Each block in the ``.config`` file contains various configuration parameters. See each block below to view all of its configuration parameter choices and if applicable the choices for each parameter. 
+Each of the three configuration files uses different combinations of blocks. Each block in the ``.config`` file contains various configuration parameters. See each block below to view all of its configuration parameter choices and if applicable the choices for each parameter:
 
 .. toctree::
-   :includehidden:
    :maxdepth: 1
 
    ppengine_config_blocks/cdgnssconf
@@ -97,35 +96,23 @@ Each of the three configuration files uses different combinations of blocks. Eac
 
 For ``ppose.config`` the following blocks are used:
 
-.. toctree::
-   :hidden:
-   :maxdepth: 1
-
-   ppengine_config_blocks/pposeestimatorconf
-   ppengine_config_blocks/baselineconf
-   ppengine_config_blocks/imuconf
+   * ``PPOSE_ESTIMATOR``
+   * ``BASELINE``
+   * ``IMU``
 
 For ``a2d.config`` the following blocks are used:
 
-.. toctree::
-   :hidden:
-   :maxdepth: 1
-
-   ppengine_config_blocks/cdgnssconf
-   ppengine_config_blocks/estimatorconf
-   ppengine_config_blocks/baselineconf
+   * ``CDGNSS``
+   * ``ESTIMATOR``
+   * ``BASELINE``
 
 For ``sbrtk.config`` the following blocks are used:
 
-.. toctree::
-   :hidden:
-   :maxdepth: 1
-
-   ppengine_config_blocks/cdgnssconf
-   ppengine_config_blocks/estimatorconf
-   ppengine_config_blocks/baselineconf
-   ppengine_config_blocks/difftropoconf
-
+   * ``CDGNSS``
+   * ``ESTIMATOR``
+   * ``BASELINE``
+   * ``DIFF_TROPO``
+   
 How to Run
 ----------
 
