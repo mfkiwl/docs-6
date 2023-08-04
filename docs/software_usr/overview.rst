@@ -3,4 +3,8 @@
 Software Overview
 =================
 
-Insert pictures here of the data flow and how the pieces are all connected. Yay
+See the high-level diagram below for how the RadioLion RF Front-End interacts with GRID. 
+
+.. image:: ./../images/software_diagram.png
+   :width: 100 %
+   :align: center
