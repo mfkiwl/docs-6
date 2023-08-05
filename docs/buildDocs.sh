@@ -8,8 +8,8 @@ set -x
 #
 # Authors: Michael Altfield <michael@michaelaltfield.net>
 # Created: 2020-07-17
-# Updated: 2020-07-20
-# Version: 0.2
+# Updated: 2023-03-26
+# Version: 0.3
 ################################################################################
  
 ###################
@@ -24,7 +24,10 @@ python3 -m pip install docutils==0.16
 #####################
 # DECLARE VARIABLES #
 #####################
- 
+
+# prevent git "detected dubious ownership" errors
+git config --global --add safe.directory "*"
+
 pwd
 ls -lah
 export SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct)
