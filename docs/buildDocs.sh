@@ -291,6 +291,7 @@ cat > index.html <<EOF
    </body>
 </html>
 EOF
+cd ../
 
 # copy the resulting html pages built from sphinx above to our new git repo
 git add .
