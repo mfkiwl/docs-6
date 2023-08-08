@@ -277,18 +277,17 @@ For more information on how this documentation is built using Sphinx, Read the D
  * https://tech.michaelaltfield.net/2020/07/18/sphinx-rtd-github-pages-1
 EOF
 
-mkdir ee6d5702ebeead784de2cb71f35ac5b5cc66a965
-cd ee6d5702ebeead784de2cb71f35ac5b5cc66a965
+mkdir ee6d5702ebeead784de2cb71f35ac5b5cc66a965 && cd $_
 # add redirect from the docroot to our default docs language/version
 cat > index.html <<EOF
 <!DOCTYPE html>
 <html>
    <head>
       <title>Locus Lock Docs</title>
-      <meta http-equiv = "refresh" content="0; url='/${REPO_NAME}/en/master/'" />
+      <meta http-equiv = "refresh" content="0; url='/${REPO_NAME}/ee6d5702ebeead784de2cb71f35ac5b5cc66a965/en/master/'" />
    </head>
    <body>
-      <p>Please wait while you're redirected to our <a href="/${REPO_NAME}/en/master/">documentation</a>.</p>
+      <p>Please wait while you're redirected to our <a href="/${REPO_NAME}/ee6d5702ebeead784de2cb71f35ac5b5cc66a965/en/master/">documentation</a>.</p>
    </body>
 </html>
 EOF
